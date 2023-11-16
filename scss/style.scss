@@ -1,0 +1,4 @@
+@use "colors" as c;
+html {
+  background-color: c.$color1;
+}
