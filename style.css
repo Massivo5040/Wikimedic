@@ -1,3 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+  background-color: orchid;
+}
+header .logo {
+  width: 15%;
+}
+header .logo img {
+  width: 100%;
+}
+header a {
+  color: black;
+  text-decoration: none;
+}
+
 html {
   background-color: firebrick;
 }

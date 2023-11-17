@@ -1,4 +1,7 @@
+@use "reset";
 @use "colors" as c;
+@use "header";
+
 html {
   background-color: c.$color1;
 }

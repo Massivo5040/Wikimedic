@@ -1,0 +1,18 @@
+@use "colors" as c;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+  background-color: c.$color2;
+  .logo {
+    width: 15%;
+  }
+  .logo img {
+    width: 100%;
+  }
+  a {
+    color: c.$font-color;
+    text-decoration: none;
+  }
+}
