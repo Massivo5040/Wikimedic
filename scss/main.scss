@@ -1,0 +1,42 @@
+@use "colors" as c;
+@use "fonts" as f;
+
+main {
+  margin-top: 13vh;
+  .inicial {
+    height: 87vh;
+    background-image: url(../img/drugs_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    img {
+      margin: 30px auto;
+      width: 13%;
+    }
+    p:nth-of-type(1) {
+      width: 60%;
+      margin: 0 auto;
+      font-size: 3.5rem;
+      font-family: f.$anton;
+      color: c.$font-color2;
+    }
+    p:nth-of-type(2) {
+      text-align: left;
+    }
+    a {
+      margin: 20%;
+      padding: 10px 30px;
+      border: 2px solid c.$border-color2;
+      border-radius: 30px;
+      font-size: 1.5rem;
+      font-family: f.$archivo;
+      color: c.$font-color2;
+      &:hover {
+        background-color: c.$font-color2;
+        color: c.$font-color3;
+        border: 2px solid transparent;
+      }
+    }
+  }
+}

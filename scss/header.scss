@@ -2,15 +2,17 @@
 @use "fonts.scss" as f;
 
 header {
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
   padding: 15px 10px;
-  background-color: c.$color2;
-  font-family: f.$Archivo;
+  height: 13vh;
+  background-color: c.$header-bg;
+  font-family: f.$archivo;
   a {
     position: relative;
     color: c.$font-color;
-    text-decoration: none;
     &::after {
       content: "";
       position: absolute;
@@ -18,7 +20,7 @@ header {
       width: 0;
       bottom: 0;
       left: 0;
-      background-color: black;
+      background-color: c.$font-color;
       transition: width 0.3s;
     }
     &:hover::after {
@@ -37,15 +39,19 @@ header {
     margin: auto 0;
   }
   .search {
+    position: relative;
+    display: flex;
+    align-items: center;
     margin: auto 0;
     input {
-      padding: 0 10px;
-      border: 2px solid black;
+      padding: 0 10px 0 35px;
+      border: 2px solid c.$font-color;
       border-radius: 50px;
       font-size: 1.5rem;
     }
     span {
-      margin: auto 0;
+      position: absolute;
+      left: 10px;
     }
   }
   .login {

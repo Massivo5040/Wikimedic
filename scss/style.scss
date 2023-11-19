@@ -2,10 +2,18 @@
 @use "colors" as c;
 @use "symbol";
 @use "header";
+@use "main";
+@use "footer";
 
 html {
   background-color: c.$color1;
   body {
     font-size: medium;
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 }

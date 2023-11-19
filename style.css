@@ -10,16 +10,18 @@
 }
 
 header {
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
   padding: 15px 10px;
-  background-color: orchid;
+  height: 13vh;
+  background-color: white;
   font-family: "Archivo", sans-serif;
 }
 header a {
   position: relative;
   color: black;
-  text-decoration: none;
 }
 header a::after {
   content: "";
@@ -46,19 +48,63 @@ header nav {
   margin: auto 0;
 }
 header .search {
+  position: relative;
+  display: flex;
+  align-items: center;
   margin: auto 0;
 }
 header .search input {
-  padding: 0 10px;
+  padding: 0 10px 0 35px;
   border: 2px solid black;
   border-radius: 50px;
   font-size: 1.5rem;
 }
 header .search span {
-  margin: auto 0;
+  position: absolute;
+  left: 10px;
 }
 header .login {
   margin: auto 0;
+}
+
+main {
+  margin-top: 13vh;
+}
+main .inicial {
+  height: 87vh;
+  background-image: url(../img/drugs_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+main .inicial img {
+  margin: 30px auto;
+  width: 13%;
+}
+main .inicial p:nth-of-type(1) {
+  width: 60%;
+  margin: 0 auto;
+  font-size: 3.5rem;
+  font-family: "Anton", sans-serif;
+  color: white;
+}
+main .inicial p:nth-of-type(2) {
+  text-align: left;
+}
+main .inicial a {
+  margin: 20%;
+  padding: 10px 30px;
+  border: 2px solid white;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  font-family: "Archivo", sans-serif;
+  color: white;
+}
+main .inicial a:hover {
+  background-color: white;
+  color: #439dd7;
+  border: 2px solid transparent;
 }
 
 html {
@@ -66,6 +112,12 @@ html {
 }
 html body {
   font-size: medium;
+}
+html body a {
+  text-decoration: none;
+}
+html body a:hover {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
