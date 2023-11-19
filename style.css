@@ -71,14 +71,19 @@ main {
   margin-top: 13vh;
 }
 main .inicial {
+  position: relative;
   height: 87vh;
-  background-image: url(../img/drugs_background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   text-align: center;
+  overflow: hidden;
 }
-main .inicial img {
+main .inicial img:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+}
+main .inicial img:nth-of-type(1) {
   margin: 30px auto;
   width: 13%;
 }
