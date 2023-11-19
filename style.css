@@ -11,6 +11,7 @@
 
 header {
   position: fixed;
+  z-index: 999;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -26,10 +27,10 @@ header a {
 header a::after {
   content: "";
   position: absolute;
-  height: 2px;
-  width: 0;
   bottom: 0;
   left: 0;
+  height: 2px;
+  width: 0;
   background-color: black;
   transition: width 0.3s;
 }
@@ -112,9 +113,82 @@ main .inicial a:hover {
   border: 2px solid transparent;
 }
 
-html {
-  background-color: firebrick;
+footer {
+  background-color: rgba(67, 157, 215, 0.5333333333);
+  padding: 30px 0;
+  font-family: "Archivo", sans-serif;
 }
+footer div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  width: 50%;
+  margin: 0 auto;
+}
+footer .about_us {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+footer .about_us p:nth-of-type(1) a {
+  font-size: 1.3rem;
+  color: #003d72;
+}
+footer .about_us p:nth-of-type(2) a {
+  font-size: 1.1rem;
+  color: black;
+}
+footer .about_us p:nth-of-type(3) a {
+  font-size: 1.1rem;
+  color: black;
+}
+footer .about_us p:nth-of-type(4) a {
+  font-size: 1.1rem;
+  color: black;
+}
+footer .about_us a {
+  position: relative;
+}
+footer .about_us a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s;
+}
+footer .about_us a:hover::after {
+  width: 100%;
+}
+footer .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+footer .contact p:nth-of-type(1) {
+  font-size: 1.3rem;
+  color: #003d72;
+}
+footer .contact p:nth-of-type(2) {
+  font-size: 1.1rem;
+  color: black;
+}
+footer .contact p:nth-of-type(3) {
+  font-size: 1.1rem;
+  color: black;
+}
+footer .social_media {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+}
+footer .social_media img {
+  width: 50px;
+  margin: 0 7.5px;
+}
+
 html body {
   font-size: medium;
 }

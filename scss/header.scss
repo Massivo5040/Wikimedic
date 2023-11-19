@@ -3,12 +3,13 @@
 
 header {
   position: fixed;
+  z-index: 999;
   top: 0;
   display: flex;
   justify-content: space-between;
   padding: 15px 10px;
   height: 13vh;
-  background-color: c.$header-bg;
+  background-color: c.$header-bgc;
   font-family: f.$archivo;
   a {
     position: relative;
@@ -16,10 +17,10 @@ header {
     &::after {
       content: "";
       position: absolute;
-      height: 2px;
-      width: 0;
       bottom: 0;
       left: 0;
+      height: 2px;
+      width: 0;
       background-color: c.$font-color;
       transition: width 0.3s;
     }
