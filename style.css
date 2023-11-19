@@ -5,23 +5,16 @@
   box-sizing: border-box;
 }
 
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 10;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   padding: 15px 10px;
   background-color: orchid;
   font-family: "Archivo", sans-serif;
-}
-header .logo {
-  width: 15%;
-}
-header .logo img {
-  width: 100%;
-}
-header nav {
-  display: flex;
-  gap: 15px;
-  margin: auto 0;
 }
 header a {
   position: relative;
@@ -40,6 +33,23 @@ header a::after {
 }
 header a:hover::after {
   width: 100%;
+}
+header .logo {
+  width: 15%;
+}
+header .logo img {
+  width: 100%;
+}
+header nav {
+  display: flex;
+  gap: 15px;
+  margin: auto 0;
+}
+header .search {
+  margin: auto 0;
+}
+header .login {
+  margin: auto 0;
 }
 
 html {

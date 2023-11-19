@@ -7,17 +7,6 @@ header {
   padding: 15px 10px;
   background-color: c.$color2;
   font-family: f.$Archivo;
-  .logo {
-    width: 15%;
-  }
-  .logo img {
-    width: 100%;
-  }
-  nav {
-    display: flex;
-    gap: 15px;
-    margin: auto 0;
-  }
   a {
     position: relative;
     color: c.$font-color;
@@ -35,5 +24,22 @@ header {
     &:hover::after {
       width: 100%;
     }
+  }
+  .logo {
+    width: 15%;
+  }
+  .logo img {
+    width: 100%;
+  }
+  nav {
+    display: flex;
+    gap: 15px;
+    margin: auto 0;
+  }
+  .search {
+    margin: auto 0;
+  }
+  .login {
+    margin: auto 0;
   }
 }
