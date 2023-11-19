@@ -38,6 +38,15 @@ header {
   }
   .search {
     margin: auto 0;
+    input {
+      padding: 0 10px;
+      border: 2px solid black;
+      border-radius: 50px;
+      font-size: 1.5rem;
+    }
+    span {
+      margin: auto 0;
+    }
   }
   .login {
     margin: auto 0;

@@ -6,7 +6,7 @@
 }
 
 .material-symbols-rounded {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 10;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 30;
 }
 
 header {
@@ -48,12 +48,24 @@ header nav {
 header .search {
   margin: auto 0;
 }
+header .search input {
+  padding: 0 10px;
+  border: 2px solid black;
+  border-radius: 50px;
+  font-size: 1.5rem;
+}
+header .search span {
+  margin: auto 0;
+}
 header .login {
   margin: auto 0;
 }
 
 html {
   background-color: firebrick;
+}
+html body {
+  font-size: medium;
 }
 
 /*# sourceMappingURL=style.css.map */
