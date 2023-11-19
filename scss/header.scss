@@ -1,18 +1,39 @@
 @use "colors" as c;
+@use "fonts.scss" as f;
 
 header {
   display: flex;
   justify-content: space-between;
   padding: 15px 10px;
   background-color: c.$color2;
+  font-family: f.$Archivo;
   .logo {
     width: 15%;
   }
   .logo img {
     width: 100%;
   }
+  nav {
+    display: flex;
+    gap: 15px;
+    margin: auto 0;
+  }
   a {
+    position: relative;
     color: c.$font-color;
     text-decoration: none;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 0;
+      bottom: 0;
+      left: 0;
+      background-color: black;
+      transition: width 0.3s;
+    }
+    &:hover::after {
+      width: 100%;
+    }
   }
 }
