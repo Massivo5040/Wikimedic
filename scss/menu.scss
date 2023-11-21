@@ -16,14 +16,16 @@
     // transform: translate(-50%, -50%);
     &:checked ~ .menu-lines span:nth-child(1) {
       transform-origin: 0% 0%;
-      transform: rotate(45deg) scaleX(1.25);
+      transform: rotate(44deg) scaleX(1.25);
+      width: 30px;
     }
     &:checked ~ .menu-lines span:nth-child(2) {
       opacity: 0;
     }
     &:checked ~ .menu-lines span:nth-child(3) {
       transform-origin: 0% 100%;
-      transform: rotate(-45deg) scaleX(1.25);
+      transform: rotate(-44deg) scaleX(1.25);
+      width:30px;
     }
     &:checked ~ ul {
       // margin-right: 0;
@@ -32,7 +34,7 @@
   .menu-lines {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 7px;
     // position: absolute;
     // z-index: 999;
     // width: 35px;
