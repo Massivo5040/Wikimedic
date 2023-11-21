@@ -1,5 +1,6 @@
 @use "colors" as c;
-@use "fonts.scss" as f;
+@use "fonts" as f;
+@use "menu";
 
 header {
   position: fixed;
@@ -9,6 +10,7 @@ header {
   justify-content: space-between;
   padding: 15px 10px;
   height: 13vh;
+  width: 100%;
   background-color: c.$header-bgc;
   font-family: f.$archivo;
   a {
@@ -56,6 +58,12 @@ header {
     }
   }
   .login {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
     margin: auto 0;
+    a {
+      margin: auto 0;
+    }
   }
 }
