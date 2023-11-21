@@ -24,6 +24,7 @@
 .login .menu .menu-faketrigger:checked ~ .menu-lines span:nth-child(1) {
   transform-origin: 0% 0%;
   transform: rotate(45deg) scaleX(1.25);
+  margin-bottom: 4.5px;
 }
 .login .menu .menu-faketrigger:checked ~ .menu-lines span:nth-child(2) {
   opacity: 0;
@@ -31,11 +32,17 @@
 .login .menu .menu-faketrigger:checked ~ .menu-lines span:nth-child(3) {
   transform-origin: 0% 100%;
   transform: rotate(-45deg) scaleX(1.25);
+  margin-top: 4.5px;
+}
+.login .menu .menu-faketrigger:checked ~ ul {
+  margin-right: 0;
 }
 .login .menu .menu-lines {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  position: relative;
+  z-index: 999;
 }
 .login .menu .menu-lines span {
   display: block;
@@ -45,6 +52,28 @@
   border-radius: 20px;
   transition: all ease 200ms;
 }
+.login .menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  z-index: 998;
+  right: -2vh;
+  top: -2vw;
+  padding: 13vh 0 5vh 0;
+  width: 300px;
+  height: auto;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: white;
+  border-radius: 30px;
+  margin-right: -300px;
+  transition: all ease 200ms;
+}
+.login .menu ul li {
+  list-style: none;
+}
+
 header {
   position: fixed;
   z-index: 999;
