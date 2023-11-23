@@ -140,6 +140,35 @@ header .login a {
   margin: auto 0;
 }
 
+.information p {
+  width: 70%;
+  margin: 60px auto;
+  text-align: center;
+  font-family: "Archivo", sans-serif;
+  font-weight: lighter;
+  font-size: 1.3rem;
+}
+.information section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.information section figure {
+  background-color: rgba(67, 157, 215, 0.8666666667);
+  border-radius: 50%;
+  padding: 40px;
+  width: 50%;
+  margin: 0 auto;
+}
+.information section img {
+  width: 100%;
+}
+.information section p {
+  margin-top: 30px;
+  font-family: "Anton", sans-serif;
+  font-size: 1.9rem;
+  color: #003d72;
+}
+
 main {
   margin-top: 13vh;
 }
