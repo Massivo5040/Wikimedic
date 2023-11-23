@@ -1,18 +1,33 @@
-/* Error: Expected expression.
- *    ,
- * 13 | $aboutUs-bgc: ;
- *    |               ^
- *    '
- *   scss/colors.scss 13:15  @use
- *   scss/sobre.scss 1:1     root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected expression.\a    \2577 \a 13 \2502  $aboutUs-bgc: ;\a    \2502                ^\a    \2575 \a   scss/colors.scss 13:15  @use\a   scss/sobre.scss 1:1     root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700&display=swap");
+#initial {
+  background-color: #439DD7;
 }
+#initial img {
+  margin: 0 37.5vw;
+  width: 25vw;
+}
+
+#sobre {
+  padding: 3% 5%;
+}
+#sobre h2 {
+  font-family: "Archivo", sans-serif;
+  color: #003d72;
+  margin-bottom: 3%;
+}
+#sobre .text-sobre {
+  display: flex;
+  justify-content: space-between;
+}
+#sobre .text-sobre p:nth-child(1) {
+  width: 27ch;
+  font-size: 95%;
+  font-family: "Archivo", sans-serif;
+}
+#sobre .text-sobre p:nth-child(2) {
+  width: 27ch;
+  font-size: 95%;
+  font-family: "Archivo", sans-serif;
+}
+
+/*# sourceMappingURL=sobre.css.map */
