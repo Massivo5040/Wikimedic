@@ -14,6 +14,7 @@ header {
   background-color: c.$header-bgc;
   font-family: f.$archivo;
   a {
+    font-size: 1.2rem;
     position: relative;
     color: c.$font-color;
     &::after {
@@ -38,7 +39,7 @@ header {
   }
   nav {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     margin: auto 0;
   }
   .search {
