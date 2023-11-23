@@ -1,0 +1,36 @@
+@use "colors" as c;
+@use "fonts" as f;
+
+
+#initial{
+    background-color: c.$aboutUs-bgc;
+    img{
+        margin: 0 37.5vw;
+        width: 25vw;
+    }
+}
+
+#sobre{
+    padding: 3% 5%;
+    h2{
+        font-family: f.$archivo;
+        color: c.$font-color4;
+        margin-bottom: 3%;
+    }
+    .text-sobre{
+        display: flex;
+        justify-content: space-between;
+        p{
+            &:nth-child(1){
+                width: 27ch;
+                font-size: 95%;
+                font-family: f.$archivo;
+            }
+            &:nth-child(2){
+                width: 27ch;
+                font-size: 95%;
+                font-family: f.$archivo;
+            }
+        }
+    }
+}

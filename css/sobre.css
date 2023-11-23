@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700&display=swap");
+#initial {
+  background-color: #439DD7;
+}
+#initial img {
+  margin: 0 37.5vw;
+  width: 25vw;
+}
+
+#sobre {
+  padding: 3% 5%;
+}
+#sobre h2 {
+  font-family: "Archivo", sans-serif;
+  color: #003d72;
+  margin-bottom: 3%;
+}
+#sobre .text-sobre {
+  display: flex;
+  justify-content: space-between;
+}
+#sobre .text-sobre p:nth-child(1) {
+  width: 27ch;
+  font-size: 95%;
+  font-family: "Archivo", sans-serif;
+}
+#sobre .text-sobre p:nth-child(2) {
+  width: 27ch;
+  font-size: 95%;
+  font-family: "Archivo", sans-serif;
+}
+
+/*# sourceMappingURL=sobre.css.map */
