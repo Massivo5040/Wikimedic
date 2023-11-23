@@ -1,6 +1,8 @@
 @use "colors" as c;
 @use "fonts" as f;
 @use "information";
+@use "security";
+
 main {
   margin-top: 13vh;
   .inicial {

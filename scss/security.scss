@@ -1,0 +1,45 @@
+@use "colors" as c;
+@use "fonts" as f;
+
+.security {
+  .header {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    width: 100%;
+    padding: 50px;
+    background-image: url(../img/security_section_bg.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    font-family: f.$archivo;
+    color: c.$security-cont-color;
+    h2 {
+      width: 80%;
+      font-size: 3rem;
+    }
+    p {
+      font-size: 2rem;
+      font-weight: lighter;
+      text-align: right;
+    }
+  }
+  .main {
+    padding: 30px 50px;
+    font-family: f.$archivo;
+    color: c.$security-cont-color2;
+    h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 50px;
+      p {
+        width: 80%;
+        padding: 10px;
+        border: 4px solid c.$security-p-border-color;
+      }
+    }
+  }
+}
