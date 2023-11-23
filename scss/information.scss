@@ -1,0 +1,33 @@
+@use "colors" as c;
+@use "fonts" as f;
+
+.information {
+  p {
+    width: 70%;
+    margin: 60px auto;
+    text-align: center;
+    font-family: f.$archivo;
+    font-weight: lighter;
+    font-size: 1.3rem;
+  }
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    figure {
+      background-color: c.$icon-bgc;
+      border-radius: 50%;
+      padding: 40px;
+      width: 50%;
+      margin: 0 auto;
+    }
+    img {
+      width: 100%;
+    }
+    p {
+      margin-top: 30px;
+      font-family: f.$anton;
+      font-size: 1.9rem;
+      color: c.$information-font-color;
+    }
+  }
+}

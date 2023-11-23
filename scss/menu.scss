@@ -1,97 +1,83 @@
 @use "colors" as c;
 @use "fonts" as f;
 
-.login .menu {
-  position: relative;
-  .menu-faketrigger {
-    position: absolute;
-    right: 0;
-    z-index: 1000;
-    width: 35px;
-    height: 25px;
-    opacity: 0;
-    cursor: pointer;
-    // top: 5vh;
-    // right: 2.1%;
-    // transform: translate(-50%, -50%);
-    &:checked ~ .menu-lines span:nth-child(1) {
-      transform-origin: 0% 0%;
-      transform: rotate(44deg) scaleX(1.25);
-      width: 30px;
-    }
-    &:checked ~ .menu-lines span:nth-child(2) {
-      opacity: 0;
-    }
-    &:checked ~ .menu-lines span:nth-child(3) {
-      transform-origin: 0% 100%;
-      transform: rotate(-44deg) scaleX(1.25);
-      width:30px;
-    }
-    &:checked ~ ul {
-      // margin-right: 0;
-    }
-  }
-  .menu-lines {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    // position: absolute;
-    // z-index: 999;
-    // width: 35px;
-    // height: 35px;
-    // right: 2%;
-    // top: 5vh;
-    // transform: translate(-50%, -50%);
-    span {
-      display: block;
+.login {
+  .menu {
+    position: relative;
+    .menu-faketrigger {
+      position: absolute;
+      right: 0;
+      z-index: 1000;
       width: 35px;
-      height: 5px;
-      background-color: c.$menu-bar-color;
-      border-radius: 20px;
-      // display: block;
+      height: 25px;
+      opacity: 0;
+      cursor: pointer;
+      // top: 5vh;
+      // right: 2.1%;
+      // transform: translate(-50%, -50%);
+      &:checked ~ .menu-lines span:nth-child(1) {
+        transform-origin: 0% 0%;
+        transform: rotate(45deg) scaleX(1.25);
+        margin-bottom: 4.5px;
+      }
+      &:checked ~ .menu-lines span:nth-child(2) {
+        opacity: 0;
+      }
+      &:checked ~ .menu-lines span:nth-child(3) {
+        transform-origin: 0% 100%;
+        transform: rotate(-45deg) scaleX(1.25);
+        margin-top: 4.5px;
+      }
+      &:checked ~ ul {
+        margin-right: 0;
+      }
+    }
+    .menu-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      position: relative;
+      z-index: 999;
       // width: 35px;
-      // height: 5px;
-      // margin-bottom: 10px;
-      // background-color: c.$menu-bar-color;
-      // border-radius: 3px;
+      // height: 35px;
+      // right: 2%;
+      // top: 5vh;
+      // transform: translate(-50%, -50%);
+      span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        background-color: c.$menu-bar-color;
+        border-radius: 20px;
+        // display: block;
+        // width: 35px;
+        // height: 5px;
+        // margin-bottom: 10px;
+        // background-color: c.$menu-bar-color;
+        // border-radius: 3px;
+        transition: all ease 200ms;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: absolute;
+      z-index: 998;
+      right: -2vh;
+      top: -2vw;
+      padding: 13vh 0 5vh 0;
+      width: 300px;
+      height: auto;
+      text-align: center;
+      font-size: 1.5rem;
+      background-color: c.$menu-bgc;
+      border-radius: 30px;
+      margin-right: -300px;
       transition: all ease 200ms;
+      li {
+        list-style: none;
+      }
     }
   }
-  ul {
-    // position: absolute;
-    // z-index: 998;
-    // right: 0;
-    // top: 0;
-    // width: 300px;
-    // height: auto;
-    // border-radius: 10px;
-    // background-color: var(--header_bgc);
-    // margin-right: -300px;
-    // transition: all ease 200ms;
-    #menu-buttons {
-      // width: 200px;
-      // margin: 0 auto;
-      // margin-top: 80px;
-    }
-    a {
-      // font-weight: bold;
-      // text-decoration: none;
-    }
-    li {
-      // background-color: var(--header_bgc);
-      // color: c.$menu-bar-color;
-      // margin-bottom: 10px;
-      // text-align: center;
-      // border-radius: 5px;
-      // border: 3px solid c.$menu-bar-color;
-      // padding-top: 8px;
-      // padding-bottom: 8px;
-      // width: 200px;
-    }
-  }
-}
-
-#selected {
-  // background-color: c.$menu-bar-color;
-  // color: var(--header_bgc);
 }
