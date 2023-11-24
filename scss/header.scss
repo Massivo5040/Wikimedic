@@ -1,6 +1,7 @@
 @use "colors" as c;
 @use "fonts" as f;
 @use "menu";
+@use "search_result";
 
 header {
   position: fixed;
@@ -44,6 +45,7 @@ header {
   }
   .search {
     position: relative;
+    z-index: 999;
     display: flex;
     align-items: center;
     margin: auto 0;

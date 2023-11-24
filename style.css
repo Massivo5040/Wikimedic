@@ -74,6 +74,34 @@
   list-style: none;
 }
 
+header .search #result {
+  position: absolute;
+  top: -10px;
+  left: -15px;
+  z-index: -1;
+  padding-top: 45px;
+  padding-bottom: 10px;
+  border-radius: 30px;
+  background-color: #439dd7;
+}
+header .search #result div {
+  padding: 8px 5px 8px 35px;
+  margin: 0 5px;
+  border-radius: 10px;
+  color: white;
+}
+header .search #result div:hover {
+  background-color: rgba(0, 61, 114, 0.6666666667);
+}
+header .search #result a {
+  display: block;
+  color: white;
+}
+header .search #result a::after {
+  background-color: transparent;
+  transition: none;
+}
+
 header {
   position: fixed;
   z-index: 999;
@@ -117,6 +145,7 @@ header nav {
 }
 header .search {
   position: relative;
+  z-index: 999;
   display: flex;
   align-items: center;
   margin: auto 0;
