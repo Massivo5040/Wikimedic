@@ -36,7 +36,7 @@ const pesquisar = async (name) => {
       const anchorElement = document.createElement('a');
 
       //const pdf = await retornarPDF(medicamento.codigoBulaPaciente)
-      const url = `https://wikimedic.arthursantos243.repl.co/html/medic.html?numProcesso=${medicamento.numProcesso}&name=${medicamento.nomeProduto.replace(" ", "_")}`
+      const url = `../html/medic.html?numProcesso=${medicamento.numProcesso}&name=${medicamento.nomeProduto.replace(" ", "_")}`
       anchorElement.href = url
       console.log(url)
 
