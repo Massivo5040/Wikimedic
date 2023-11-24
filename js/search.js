@@ -34,6 +34,7 @@ const pesquisar = async (name) => {
     // Itera sobre os medicamentos e cria elementos para cada um
     medicamentos.forEach((medicamento) => {
       const nomeProdutoElement = document.createElement("div");
+      nomeProdutoElement.style.minWidth = "370px";
 
       const searchIcon = document.createElement("span");
       searchIcon.classList.add("material-symbols-rounded");
