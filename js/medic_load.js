@@ -1,17 +1,18 @@
 const getURLParameters = () => {
   let queryString = window.location.search.substring(1);
   let urlParameters = queryString.split('&')
-  let parametroObj = {};
+  let parametros = {};
 
   for (let i = 0; i < urlParameters.length; i++) {
     let keyValue = urlParameters[i].split('=');
-    console.log(keyValue)
+    /* console.log(keyValue) */
     let chave = decodeURIComponent(keyValue[0]);
     let valor = decodeURIComponent(keyValue[1]);
-    parametroObj[chave] = valor;
+    parametros[chave] = valor;
   }
 
-  return parametroObj;
+  console.log(parametros)
+  return parametros;
 }
 
 const returnMedic = async (numProcesso) => { // retorna um medicamento específico por meio do numProcesso
@@ -37,7 +38,7 @@ const returnMedic = async (numProcesso) => { // retorna um medicamento específi
 
 const retornarPDF = async (codigoBulaPaciente) => {
 
-  let response = await fetch(`https://bula.vercel.app/pdf?id=${codigoBulaPaciente}`, {
+  let response = await fetch(`https://bula.vercel.app/bula?id=${codigoBulaPaciente}`, {
     "method": "GET"
   })
 
