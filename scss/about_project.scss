@@ -1,0 +1,35 @@
+@use "colors" as c;
+@use "fonts" as f;
+
+main {
+  .header {
+    padding: 200px 50px 30px;
+    background-image: url(../img/security_section_bg.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    font-family: f.$archivo;
+    color: c.$about-project-header-font-color;
+    h1 {
+      width: 85%;
+      font-size: 4.5rem;
+    }
+    div {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 40%;
+      margin: 70px auto 0;
+    }
+    a {
+      display: inline-block;
+      width: auto;
+      text-align: center;
+      text-decoration: underline;
+      font-size: 1.5rem;
+      color: c.$about-project-header-font-color;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

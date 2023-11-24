@@ -220,6 +220,9 @@ footer .social_media img {
 html body {
   font-size: medium;
 }
+html body main {
+  margin-top: 13vh;
+}
 html body a {
   text-decoration: none;
 }

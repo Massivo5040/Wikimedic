@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700&display=swap");
+main .header {
+  padding: 200px 50px 30px;
+  background-image: url(../img/security_section_bg.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  font-family: "Archivo", sans-serif;
+  color: white;
+}
+main .header h1 {
+  width: 85%;
+  font-size: 4.5rem;
+}
+main .header div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 40%;
+  margin: 70px auto 0;
+}
+main .header a {
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 1.5rem;
+  color: white;
+}
+main .header a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=about_project.css.map */

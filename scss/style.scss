@@ -7,6 +7,9 @@
 html {
   body {
     font-size: medium;
+    main {
+      margin-top: 13vh;
+    }
     a {
       text-decoration: none;
       &:hover {
