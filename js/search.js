@@ -69,13 +69,6 @@ const createElement = (name, innerHTML = "", value = "", hrefValue = "") => {
   return element
 }
 
-const returnResult = async (name) => {
-  let resultados = []
-  toArrayMedicSearch(name, resultados)
-  console.log(resultados)
-  return resultados
-}
-
 const displayResult = (resultados) => {
   //searchResultsDiv.innerHTML = ""
   for (let i = 0; i < resultados.length; i++) {
