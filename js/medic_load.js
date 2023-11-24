@@ -37,7 +37,7 @@ const returnMedic = async (numProcesso) => { // retorna um medicamento específi
 
 const retornarPDF = async (codigoBulaPaciente) => {
 
-  let response = await fetch(`https://bula.vercel.app/bula?id=${codigoBulaPaciente}`, {
+  let response = await fetch(`https://bula.vercel.app/pdf?id=${codigoBulaPaciente}`, {
     "method": "GET"
   })
 
@@ -53,10 +53,6 @@ const retornarPDF = async (codigoBulaPaciente) => {
 const render_medic = async () => { // função main, tudo ocorre dentro dela
   const params = getURLParameters()
   const medic = await returnMedic(params.numProcesso) // objeto que representa o medicamento, nele podemos acessar todas as propriedades
-  const response = await retornarPDF(medic.codigoBulaPaciente) // pesquisa do pdf
-  const linkPDF = response.pdf // link do pdf
-  //console.log(linkPDF)
-
 
   const title = document.getElementById("medic-name")
   title.textContent = medic.nomeComercial;
@@ -65,9 +61,12 @@ const render_medic = async () => { // função main, tudo ocorre dentro dela
   tipoMed.textContent = medic.categoriaRegulatoria; */
 
 
+  const response = await retornarPDF(medic.codigoBulaPaciente) // pesquisa do pdf
+  const linkPDF = response.pdf // link do pdf
   const a_link = document.querySelector("#medic-pdf")
   a_link.href = linkPDF // colocando pdf do medicamento
   a_link.textContent = "Download Bula PDF"
+  console.log(linkPDF)
 
   /* const obj = document.querySelector('#obj')
   obj.textContent = medic.principioAtivo */
