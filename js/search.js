@@ -26,7 +26,7 @@ const pesquisar = async (name) => {
     const medicamentos = await PesquisarMedicamentos(name);
     console.log(medicamentos);
     // Seleciona o elemento pai onde você deseja adicionar os resultados
-    const parentElement = document.getElementById("result"); // Substitua 'resultadoContainer' pelo ID correto
+    const parentElement = document.getElementById("result"); 
 
     // Limpa quaisquer elementos filhos existentes
     parentElement.innerHTML = "";
@@ -43,9 +43,7 @@ const pesquisar = async (name) => {
       const anchorElement = document.createElement("a");
 
       //const pdf = await retornarPDF(medicamento.codigoBulaPaciente)
-      const url = `../html/medic.html?numProcesso=${
-        medicamento.numProcesso
-      }&name=${medicamento.nomeProduto.replace(" ", "_")}`;
+      const url = `../html/medic.html?numProcesso=${medicamento.numProcesso}&name=${medicamento.nomeProduto.replace(" ", "_")}&idBulaPacienteProtegido=${medicamento.idBulaPacienteProtegido}`;
       anchorElement.href = url;
       console.log(url);
 
@@ -71,40 +69,10 @@ const pesquisar = async (name) => {
 const searchResultsDiv = document.getElementById("result");
 const searchBar = document.getElementById("search");
 
-const createElement = (name, innerHTML = "", value = "", hrefValue = "") => {
-  const element = document.createElement(name);
-  element.innerHTML = innerHTML;
-  element.value = value;
-  element.href = hrefValue;
-  return element;
-};
 
-const returnResult = async (name) => {
-  let resultados = [];
-  toArrayMedicSearch(name, resultados);
-  console.log(resultados);
-  return resultados;
-};
-
-const displayResult = (resultados) => {
-  //searchResultsDiv.innerHTML = ""
-  for (let i = 0; i < resultados.length; i++) {
-    const medicamento = resultados[i];
-    const div = createElement("div", medicamento.name);
-    const li = createElement("li");
-    li.appendChild(div);
-    li.classList.add("iconResult");
-    searchResultsDiv.appendChild(div);
-    console.log("icon added");
-  }
-};
 
 searchBar.addEventListener("change", async () => {
   console.log("Pesquisando");
   await pesquisar(searchBar.value);
 });
 
-const main = async () => {
-  const po = prompt("Digite o nome de um Medicamento", "Buscopan");
-  await pesquisar(po);
-};
