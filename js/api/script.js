@@ -10,7 +10,7 @@ if (search != null) {
   }
 } */
 
-const Resultados = document.querySelector('#searchResultsDiv')
+const Resultados = document.querySelector('#result')
 
 search.addEventListener('focus', ()=>{
   Resultados.style.display = 'block';

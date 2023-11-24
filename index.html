@@ -9,6 +9,8 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./css/main.css" />
+
+    <link rel="stylesheet" href="./css/search-result.css"/> <!-- CSS da barra de pesquisa e resultados, convertam para css depos se quiserem -->
     <title>Wikimedic</title>
   </head>
   <body>
@@ -23,9 +25,10 @@
         <a href="./html/about_project.html">Sobre o projeto</a>
       </nav>
       <div class="search">
-        <input type="text" />
+        <input type="text" id="search"/>
         <span class="material-symbols-rounded">search</span>
       </div>
+      <ul id="result"></ul>
       <div class="login">
         <a href="./html/login.html">Login</a>
         <nav class="menu">
@@ -149,6 +152,7 @@
           <p>2023- © wikimedic.Todos os Direitos Reservados</p>
         </article>
       </div>
+      <script src="./js/api/script.js"></script>
     </footer>
   </body>
 </html>
