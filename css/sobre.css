@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
 #initial {
   background-color: #439dd7;
 }
@@ -7,27 +7,112 @@
   width: 25vw;
 }
 
-#sobre {
+.standard_style {
   padding: 3% 5%;
 }
-#sobre h2 {
+.standard_style h2 {
   font-family: "Archivo", sans-serif;
+  font-weight: 700;
   color: #003d72;
   margin-bottom: 3%;
 }
-#sobre .text-sobre {
+.standard_style .text-sobre {
+  display: grid;
+  grid-template-columns: 4fr 7fr;
+}
+.standard_style .text-sobre p {
+  width: 27ch;
+  font-size: 95%;
+  font-family: "Archivo", sans-serif;
+}
+.standard_style .icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.standard_style .icons figure {
+  text-align: center;
+}
+.standard_style .icons img {
+  width: 70%;
+}
+.standard_style .icons figcaption {
+  font-family: "Archivo", sans-serif;
+  font-weight: bold;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: 5fr 5fr;
+  padding: 40px 0 40px 40px;
+  background-color: rgba(67, 157, 215, 0.4705882353);
+}
+.team .information h2 {
+  font-size: 3rem;
+  font-family: "Archivo", sans-serif;
+  font-weight: bold;
+  color: #003d72;
+}
+.team .information p {
+  width: 50%;
+  margin-top: 50px;
+  font-size: 1.1rem;
+  font-family: "Archivo", sans-serif;
+}
+.team .persons {
   display: flex;
-  justify-content: space-between;
-}
-#sobre .text-sobre p:nth-child(1) {
-  width: 27ch;
-  font-size: 95%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
   font-family: "Archivo", sans-serif;
 }
-#sobre .text-sobre p:nth-child(2) {
-  width: 27ch;
-  font-size: 95%;
+.team .persons::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+.team .persons .person {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 400px;
+  height: 100%;
+  margin: 0 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.4666666667);
+  text-align: center;
+}
+.team .persons .person img {
+  width: 50%;
+  border-radius: 50%;
+}
+.team .persons .person .role {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.quote {
+  padding: 40px 20px;
+  background-color: rgba(67, 157, 215, 0.4705882353);
   font-family: "Archivo", sans-serif;
+  color: #003d72;
+}
+.quote p:nth-of-type(1) {
+  font-weight: 300;
+  font-size: 1.9rem;
+}
+.quote p:nth-of-type(1)::before {
+  content: '"';
+  font-family: "Passion One", sans-serif;
+  font-size: 3rem;
+}
+.quote p:nth-of-type(1)::after {
+  content: '"';
+  font-family: "Passion One", sans-serif;
+  font-size: 3rem;
+}
+.quote p:nth-of-type(2) {
+  font-size: 2rem;
+  font-style: italic;
+  text-align: right;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=sobre.css.map */

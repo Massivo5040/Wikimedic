@@ -49,6 +49,23 @@
   font-weight: lighter;
   text-align: right;
 }
+.security .header div p {
+  margin-top: 150px;
+  text-align: left;
+}
+.security .header div a {
+  padding: 10px 30px;
+  border: 2px solid white;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  font-family: "Archivo", sans-serif;
+  color: white;
+}
+.security .header div a:hover {
+  background-color: white;
+  color: #439dd7;
+  border: 2px solid transparent;
+}
 .security .main {
   padding: 30px 50px;
   font-family: "Archivo", sans-serif;

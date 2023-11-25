@@ -9,27 +9,115 @@
   }
 }
 
-#sobre {
+.standard_style {
   padding: 3% 5%;
   h2 {
     font-family: f.$archivo;
+    font-weight: 700;
     color: c.$font-color4;
     margin-bottom: 3%;
   }
   .text-sobre {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 4fr 7fr;
     p {
-      &:nth-child(1) {
-        width: 27ch;
-        font-size: 95%;
-        font-family: f.$archivo;
+      width: 27ch;
+      font-size: 95%;
+      font-family: f.$archivo;
+    }
+  }
+  .icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    figure {
+      text-align: center;
+    }
+    img {
+      width: 70%;
+    }
+    figcaption {
+      font-family: f.$archivo;
+      font-weight: bold;
+    }
+  }
+}
+
+.team {
+  display: grid;
+  grid-template-columns: 5fr 5fr;
+  padding: 40px 0 40px 40px;
+  background-color: c.$about-section-bgc;
+  .information {
+    h2 {
+      font-size: 3rem;
+      font-family: f.$archivo;
+      font-weight: bold;
+      color: c.$font-color4;
+    }
+    p {
+      width: 50%;
+      margin-top: 50px;
+      font-size: 1.1rem;
+      font-family: f.$archivo;
+    }
+  }
+  .persons {
+    display: flex;
+    // flex-direction: row;
+    // overflow: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      width: 0;
+      background: transparent;
+    }
+    font-family: f.$archivo;
+    .person {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      // display: inline-block;
+      width: 400px;
+      height: 100%;
+      margin: 0 15px;
+      padding: 20px;
+      background-color: c.$card-person-bgc;
+      text-align: center;
+      img {
+        width: 50%;
+        border-radius: 50%;
       }
-      &:nth-child(2) {
-        width: 27ch;
-        font-size: 95%;
-        font-family: f.$archivo;
+      .role {
+        margin: 10px 0;
+        font-weight: bold;
       }
     }
+  }
+}
+
+.quote {
+  padding: 40px 20px;
+  background-color: c.$about-section-bgc;
+  font-family: f.$archivo;
+  color: c.$font-color4;
+  p:nth-of-type(1) {
+    font-weight: 300;
+    font-size: 1.9rem;
+    &::before {
+      content: '"';
+      font-family: f.$passion;
+      font-size: 3rem;
+    }
+    &::after {
+      content: '"';
+      font-family: f.$passion;
+      font-size: 3rem;
+    }
+  }
+  p:nth-of-type(2) {
+    font-size: 2rem;
+    font-style: italic;
+    text-align: right;
+    text-decoration: underline;
   }
 }

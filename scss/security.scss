@@ -17,26 +17,28 @@
       width: 80%;
       font-size: 3rem;
     }
-    p:nth-of-type(2) {
+    p {
       font-size: 2rem;
       font-weight: lighter;
       text-align: right;
     }
-    p:nth-of-type(1) {
-      text-align: left;
-    }
-    a {
-      margin: 20%;
-      padding: 10px 30px;
-      border: 2px solid c.$border-color2;
-      border-radius: 30px;
-      font-size: 1.5rem;
-      font-family: f.$archivo;
-      color: c.$font-color2;
-      &:hover {
-        background-color: c.$font-color2;
-        color: c.$font-color3;
-        border: 2px solid transparent;
+    div {
+      p {
+        margin-top: 150px;
+        text-align: left;
+      }
+      a {
+        padding: 10px 30px;
+        border: 2px solid c.$border-color2;
+        border-radius: 30px;
+        font-size: 1.5rem;
+        font-family: f.$archivo;
+        color: c.$font-color2;
+        &:hover {
+          background-color: c.$font-color2;
+          color: c.$font-color3;
+          border: 2px solid transparent;
+        }
       }
     }
   }
