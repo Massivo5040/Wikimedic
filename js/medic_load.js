@@ -1,4 +1,5 @@
-const serverURL = "http://localhost:8080" //essa é a url padrão do servidor, no meu ambiente de desenvolvimento
+import { serverURL } from "./env.js";
+import { saveUser } from "./metodoServer.js";
 
 const getURLParameters = () => {
   let queryString = window.location.search.substring(1);
@@ -83,6 +84,13 @@ const render_medic = async () => { // função main, tudo ocorre dentro dela
     console.log(commentJSON) // veja os objetos no console
   }
 
-  
+  const userReponse = await saveUser({
+    name : "Teste",
+    email : "diaso.andre@outlook.com",
+    email_reserva : "null",
+    password : "12345"
+  })
+
+  console.log(userReponse)
 }
 render_medic()// execução da função que renderiza as informações na tela
