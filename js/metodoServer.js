@@ -18,7 +18,7 @@ export async function saveUser(user) {
             'Content-type': 'application/json; charset=UTF-8',
           },
         });
-        console.log(response);
+        
         return await response.json();
       } catch (error) {
         console.error('Erro na solicitação:', error);
