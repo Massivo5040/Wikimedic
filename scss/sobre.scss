@@ -3,8 +3,8 @@
 
 #initial {
   background-color: c.$aboutUs-bgc;
+  text-align: center;
   img {
-    margin: 0 37.5vw;
     width: 25vw;
   }
 }
@@ -30,10 +30,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     figure {
+      height: 200px;
       text-align: center;
     }
     img {
-      width: 70%;
+      height: 200px;
+      padding: 20px;
+      background-color: bisque;
+      border-radius: 50%;
     }
     figcaption {
       font-family: f.$archivo;
@@ -63,11 +67,10 @@
   }
   .persons {
     display: flex;
-    // flex-direction: row;
-    // overflow: hidden;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
+    scroll-behavior: smooth;
     &::-webkit-scrollbar {
       width: 0;
       background: transparent;
@@ -76,7 +79,6 @@
     .person {
       flex: 0 0 auto;
       scroll-snap-align: start;
-      // display: inline-block;
       width: 400px;
       height: 100%;
       margin: 0 15px;

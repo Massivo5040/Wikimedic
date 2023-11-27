@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
 #initial {
   background-color: #439dd7;
+  text-align: center;
 }
 #initial img {
-  margin: 0 37.5vw;
   width: 25vw;
 }
 
@@ -30,10 +30,14 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 .standard_style .icons figure {
+  height: 200px;
   text-align: center;
 }
 .standard_style .icons img {
-  width: 70%;
+  height: 200px;
+  padding: 20px;
+  background-color: bisque;
+  border-radius: 50%;
 }
 .standard_style .icons figcaption {
   font-family: "Archivo", sans-serif;
@@ -63,6 +67,7 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
+  scroll-behavior: smooth;
   font-family: "Archivo", sans-serif;
 }
 .team .persons::-webkit-scrollbar {
