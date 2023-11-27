@@ -80,8 +80,9 @@ const render_medic = async () => { // função main, tudo ocorre dentro dela
   if(commentResponse.status == 200)
   {
     const commentJSON = await commentResponse.json() // array de comentários
+    console.log(commentJSON) // veja os objetos no console
   }
 
-  console.log(commentJSON)
+  
 }
 render_medic()// execução da função que renderiza as informações na tela
