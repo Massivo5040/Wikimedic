@@ -1,3 +1,5 @@
+const serverURL = "http://localhost:8080" //essa é a url padrão do servidor, no meu ambiente de desenvolvimento
+
 const getURLParameters = () => {
   let queryString = window.location.search.substring(1);
   let urlParameters = queryString.split('&')
@@ -71,5 +73,15 @@ const render_medic = async () => { // função main, tudo ocorre dentro dela
 
   /* const obj = document.querySelector('#obj')
   obj.textContent = medic.principioAtivo */
+
+  //carregando comentários
+
+  const commentResponse = await fetch(serverURL + "/comentarios/numProcesso/" + params.numProcesso)
+  if(commentResponse.status == 200)
+  {
+    const commentJSON = await commentResponse.json() // array de comentários
+  }
+
+  console.log(commentJSON)
 }
 render_medic()// execução da função que renderiza as informações na tela
