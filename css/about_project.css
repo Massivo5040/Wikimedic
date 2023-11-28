@@ -122,6 +122,24 @@ main .interview p {
   font-size: 1.3rem;
   margin: 40px 0;
 }
+main .interview .btn {
+  position: relative;
+}
+main .interview a {
+  position: absolute;
+  bottom: 0;
+  padding: 20px 40px;
+  background-color: rgba(255, 255, 255, 0.4666666667);
+  color: #003d72;
+  border: 2px solid #003d72;
+  border-radius: 40px;
+}
+main .interview a:hover {
+  background-color: rgba(0, 61, 114, 0.4666666667);
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
 .standard_artic {
   padding: 40px 20px 30px;
   border: 2px solid #003d72;
