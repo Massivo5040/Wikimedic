@@ -1,5 +1,5 @@
 import { serverURL } from "./env.js";
-import { saveUser } from "./metodoServer.js";
+import { saveUser, login } from "./metodoServer.js";
 
 const getURLParameters = () => {
   let queryString = window.location.search.substring(1);
@@ -56,41 +56,60 @@ const retornarPDF = async (codigoBulaPaciente) => {
 
 const render_medic = async () => { // função main, tudo ocorre dentro dela
   const params = getURLParameters()
-  const medic = await returnMedic(params.numProcesso) // objeto que representa o medicamento, nele podemos acessar todas as propriedades
-
-  const title = document.getElementById("medic-name")
-  title.textContent = medic.nomeComercial;
-
-  /* const tipoMed = document.getElementById("ClassMed")
-  tipoMed.textContent = medic.categoriaRegulatoria; */
-
-
-  const response = await retornarPDF(medic.codigoBulaPaciente) // pesquisa do pdf
-  const linkPDF = response.pdf // link do pdf
-  const a_link = document.querySelector("#medic-pdf")
-  a_link.href = linkPDF // colocando pdf do medicamento
-  a_link.textContent = "Download Bula PDF"
-  console.log(linkPDF)
-
-  /* const obj = document.querySelector('#obj')
-  obj.textContent = medic.principioAtivo */
-
-  //carregando comentários
-
-  const commentResponse = await fetch(serverURL + "/comentarios/numProcesso/" + params.numProcesso)
-  if(commentResponse.status == 200)
+  if(params.numProcesso != null)
   {
-    const commentJSON = await commentResponse.json() // array de comentários
-    console.log(commentJSON) // veja os objetos no console
+    const medic = await returnMedic(params.numProcesso) // objeto que representa o medicamento, nele podemos acessar todas as propriedades
+
+    const title = document.getElementById("medic-name")
+    title.textContent = medic.nomeComercial;
+
+    /* const tipoMed = document.getElementById("ClassMed")
+    tipoMed.textContent = medic.categoriaRegulatoria; */
+
+
+    const response = await retornarPDF(medic.codigoBulaPaciente) // pesquisa do pdf
+    const linkPDF = response.pdf // link do pdf
+    const a_link = document.querySelector("#medic-pdf")
+    a_link.href = linkPDF // colocando pdf do medicamento
+    a_link.textContent = "Download Bula PDF"
+    console.log(linkPDF)
+
+    /* const obj = document.querySelector('#obj')
+    obj.textContent = medic.principioAtivo */
+
+    //carregando comentários
+
+    const commentResponse = await fetch(serverURL + "/comentarios/numProcesso/" + params.numProcesso)
+    console.log(await commentResponse.json())
+
+    /* const userReponse = await saveUser({
+      name : "Teste",
+      email : "diaso.andre@outlook.com",
+      email_reserva : "null",
+      password : "12345"
+    })
+
+    console.log(userReponse) */
+
+    /* await login({ // login de exemplo
+      email : 'email@gmail.com',
+      password : '1234'
+    }) */
+
+    console.log(localStorage.getItem('email') + " : "+ localStorage.getItem('password'))
+    
   }
-
-  const userReponse = await saveUser({
-    name : "Teste",
-    email : "diaso.andre@outlook.com",
-    email_reserva : "null",
-    password : "12345"
-  })
-
-  console.log(userReponse)
+  else
+  {
+    console.warn('Erro!! Sem parâmetros de consulta')
+  }
 }
-render_medic()// execução da função que renderiza as informações na tela
+
+try
+{
+  render_medic()
+}
+catch (err)
+{
+  console.log(err)
+}// execução da função que renderiza as informações na tela
