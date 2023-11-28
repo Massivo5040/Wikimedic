@@ -46,19 +46,81 @@ main .articles {
   position: relative;
   display: grid;
   grid-template-columns: 5fr 5fr;
-  padding: 20px 0px 40px 20px;
+  padding: 20px 0px 10px 70px;
   font-family: "Archivo", sans-serif;
+  background-color: rgba(67, 157, 215, 0.4705882353);
 }
 main .articles img[alt="Ícone de lupa"] {
   position: absolute;
   z-index: -1;
-  left: -20px;
-  top: 40px;
-  height: 50%;
+  left: -80px;
+  bottom: 0;
+  height: 70%;
 }
 main .articles section h2 {
+  margin: 50px 0;
   font-size: 3rem;
   color: #003d72;
+}
+main .articles section p {
+  width: 70%;
+  font-size: 1.3rem;
+}
+main .agenda2030 {
+  padding: 30px;
+  font-family: "Archivo", sans-serif;
+  text-align: center;
+}
+main .agenda2030 h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+main .agenda2030 .description {
+  width: 60%;
+  margin: 40px auto;
+}
+main .agenda2030 .aspects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 100px;
+  width: 90%;
+  margin: 0 auto;
+}
+main .agenda2030 .aspects div {
+  height: 100%;
+}
+main .agenda2030 .aspects figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  padding: 30px;
+  background-color: #f4f4ec;
+  border-radius: 50%;
+}
+main .agenda2030 .aspects img {
+  width: 80%;
+}
+main .agenda2030 .aspects p {
+  margin-top: 30px;
+}
+main .interview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 30px;
+  font-family: "Archivo", sans-serif;
+  background-image: url(../img/interview_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .interview h2 {
+  font-size: 3rem;
+  color: #003d72;
+}
+main .interview p {
+  width: 60%;
+  font-size: 1.3rem;
+  margin: 40px 0;
 }
 .standard_artic {
   padding: 40px 20px 30px;
