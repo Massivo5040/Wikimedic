@@ -104,7 +104,9 @@ export async function saveComentario(comentario)
       // se não estiver
     }
     const data = {
-      comentario,
+      email : comentario.email,
+      numProcesso : comentario.numProcesso,
+      content : comentario.content,
       auth
     }
     /* 
