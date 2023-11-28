@@ -1,4 +1,4 @@
-import { serverURL } from "./env.js"
+import { serverURL, userInfo } from "./env.js"
 
 export async function saveUser(user) {
   const url = serverURL + '/users/register';
@@ -62,6 +62,26 @@ export async function login(auth)
     // caso o login dê errado
   }
   return response
+}
+
+const loginResponse = await login({ 
+  email : 'deoliveiradiasandre@gmail.com',
+  password : '1234'
+})
+
+if(loginResponse.ok)
+{
+  const json = await loginResponse.json()
+  console.log(json)
+  
+  localStorage.setItem('idUser', json.user.id)
+
+   userInfo = {
+    id : localStorage.getItem('idUser'),
+    email : localStorage.getItem('email'),
+    password : localStorage.getItem('password')
+  }
+  console.log(userInfo)
 }
 
 

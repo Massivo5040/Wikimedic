@@ -1,4 +1,4 @@
-import { serverURL } from "./env.js";
+import { serverURL, userInfo} from "./env.js";
 import { saveUser, login, saveComentario } from "./metodoServer.js";
 
 const getURLParameters = () => {
@@ -98,14 +98,7 @@ const render_medic = async () => { // função main, tudo ocorre dentro dela
       password : '1234'
     }) */
 
-    const loginResponse = await login({ 
-      email : 'deoliveiradiasandre@gmail.com',
-      password : '1234'
-    })
-    if(loginResponse.ok)
-    {
-      console.log(await loginResponse.json())
-    }
+    
 
     const newComentario = {
       email : localStorage.getItem('email'),
