@@ -17,7 +17,7 @@ main {
     div {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      width: 40%;
+      width: 50vw;
       margin: 70px auto 0;
     }
     a {
@@ -46,24 +46,77 @@ main {
         margin: 40px 0 30px;
       }
     }
-    figure {
-      padding: 20px;
-      border: 2px solid c.$article-border;
-      border-radius: 20px;
-      a {
-        margin: 20%;
-        padding: 10px 30px;
-        border: 2px solid c.$border-color3;
-        border-radius: 30px;
-        font-size: 1.5rem;
-        font-family: f.$archivo;
-        color: c.$font-color3;
-        &:hover {
-          background-color: c.$font-color3;
-          color: c.$font-color2;
-          border: 2px solid transparent;
-        }
+  }
+
+  .articles {
+    position: relative;
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    padding: 20px 0px 40px 20px;
+    font-family: f.$archivo;
+    img[alt="Ícone de lupa"] {
+      position: absolute;
+      z-index: -1;
+      left: -20px;
+      top: 40px;
+      height: 50%;
+    }
+    section {
+      h2 {
+        font-size: 3rem;
+        color: c.$font-color4;
       }
+      p {
+      }
+    }
+  }
+}
+
+.standard_artic {
+  padding: 40px 20px 30px;
+  border: 2px solid c.$article-border;
+  border-radius: 40px;
+  text-align: center;
+  img {
+    border-radius: 0 60px 0 0;
+  }
+  figcaption {
+    margin: 20px 0 10px;
+  }
+  a {
+    padding: 10px 30px;
+    border: 2px solid c.$border-color3;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-family: f.$archivo;
+    color: c.$font-color3;
+    &:hover {
+      background-color: c.$font-color3;
+      color: c.$font-color2;
+      border: 2px solid transparent;
+    }
+  }
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+  font-family: f.$archivo;
+  .standard_artic {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 400px;
+    height: 100%;
+    margin: 0 15px;
+    img {
+      width: 80%;
     }
   }
 }

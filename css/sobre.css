@@ -62,7 +62,7 @@
   font-size: 1.1rem;
   font-family: "Archivo", sans-serif;
 }
-.team .persons {
+.team .slider {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -70,11 +70,11 @@
   scroll-behavior: smooth;
   font-family: "Archivo", sans-serif;
 }
-.team .persons::-webkit-scrollbar {
+.team .slider::-webkit-scrollbar {
   width: 0;
   background: transparent;
 }
-.team .persons .person {
+.team .slider .person {
   flex: 0 0 auto;
   scroll-snap-align: start;
   width: 400px;
@@ -84,11 +84,11 @@
   background-color: rgba(255, 255, 255, 0.4666666667);
   text-align: center;
 }
-.team .persons .person img {
+.team .slider .person img {
   width: 50%;
   border-radius: 50%;
 }
-.team .persons .person .role {
+.team .slider .person .role {
   margin: 10px 0;
   font-weight: bold;
 }

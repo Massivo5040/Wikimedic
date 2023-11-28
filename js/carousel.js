@@ -2,7 +2,7 @@ let isDown = false;
 let startX;
 let scrollLeft;
 
-const slider = document.querySelector(".team .persons");
+const slider = document.querySelector(".slider");
 
 slider.addEventListener("mousedown", (e) => {
   isDown = true;
