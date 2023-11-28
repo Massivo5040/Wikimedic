@@ -64,7 +64,7 @@ export async function login(auth)
   return response
 }
 
-const loginResponse = await login({ 
+/* const loginResponse = await login({ 
   email : 'deoliveiradiasandre@gmail.com',
   password : '1234'
 })
@@ -82,7 +82,7 @@ if(loginResponse.ok)
     password : localStorage.getItem('password')
   }
   console.log(userInfo)
-}
+} */
 
 
 export async function saveComentario(comentario)
