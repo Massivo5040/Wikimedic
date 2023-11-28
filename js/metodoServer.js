@@ -50,9 +50,9 @@ export async function autenticar(auth)
 
 export async function login(auth)
 {
-  const jsonResponse = await autenticar(auth)
+  const response = await autenticar(auth)
 
-  if(jsonResponse.ok) // sucesso no login
+  if(response.ok) // sucesso no login
   {
     localStorage.setItem('email', auth.email)
     localStorage.setItem('password', auth.password)
@@ -60,8 +60,51 @@ export async function login(auth)
   else
   {
     // caso o login dê errado
-    
   }
+  return response
+}
 
-  console.log(await jsonResponse.json())
+
+export async function saveComentario(comentario)
+{
+  try {
+    const url = serverURL + "/comentarios/register"
+
+    let auth = {}
+
+    if(localStorage.getItem('email') != null) // se o email estiver no local storage
+    {
+      auth = {
+        email : localStorage.getItem('email'),
+        password : localStorage.getItem('password')
+      }
+    }
+    else
+    {
+      // se não estiver
+    }
+    const data = {
+      comentario,
+      auth
+    }
+    /* 
+      comentario = {
+        email : (email usuário),
+        numProcesso : (numProcesso do medicamento)
+        content : ( conteúdo do medicamento )
+      }
+    */
+
+    const response = await fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8'
+      }
+    })
+
+    return response
+  } catch (error) {
+    console.log(error)
+  }
 }
