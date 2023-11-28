@@ -115,12 +115,21 @@ main {
   }
 
   .interview {
+    position: relative;
+    z-index: -2;
     @include m.elements_grid(2);
     padding: 30px;
     font-family: f.$archivo;
     background-image: url(../img/interview_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    .bgc {
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background-color: c.$card-person-bgc;
+    }
     h2 {
       font-size: 3rem;
       color: c.$font-color4;
@@ -146,6 +155,54 @@ main {
         color: map-get(c.$inverted_colors, primary);
         border: 2px solid map-get(c.$inverted_colors, primary);
       }
+    }
+  }
+
+  .curiosity {
+    padding: 70px 50px;
+    font-family: f.$archivo;
+
+    h2 {
+      margin-bottom: 80px;
+      color: c.$font-color4;
+      font-size: 3rem;
+    }
+    div {
+      @include m.elements_grid(2);
+    }
+    p {
+      width: 60%;
+      font-size: 1.3rem;
+    }
+  }
+
+  .cannabis {
+    position: relative;
+    z-index: -2;
+    @include m.elements_grid(2);
+    align-items: center;
+    height: 87vh;
+    padding: 150px 40px;
+    background-image: url(../img/curiosity_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: f.$archivo;
+    color: c.$font-color2;
+    div {
+      position: absolute;
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+      background-color: c.$cannabis-bgc;
+    }
+    h2 {
+      font-size: 3rem;
+      font-weight: 300;
+      letter-spacing: 10px;
+    }
+    p {
+      font-size: 1.3rem;
     }
   }
 }

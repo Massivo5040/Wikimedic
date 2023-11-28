@@ -105,6 +105,8 @@ main .agenda2030 .aspects p {
   margin-top: 30px;
 }
 main .interview {
+  position: relative;
+  z-index: -2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 30px;
@@ -112,6 +114,13 @@ main .interview {
   background-image: url(../img/interview_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+main .interview .bgc {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4666666667);
 }
 main .interview h2 {
   font-size: 3rem;
@@ -138,6 +147,53 @@ main .interview a:hover {
   background-color: rgba(0, 61, 114, 0.4666666667);
   color: #ffffff;
   border: 2px solid #ffffff;
+}
+main .curiosity {
+  padding: 70px 50px;
+  font-family: "Archivo", sans-serif;
+}
+main .curiosity h2 {
+  margin-bottom: 80px;
+  color: #003d72;
+  font-size: 3rem;
+}
+main .curiosity div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+main .curiosity p {
+  width: 60%;
+  font-size: 1.3rem;
+}
+main .cannabis {
+  position: relative;
+  z-index: -2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  height: 87vh;
+  padding: 150px 40px;
+  background-image: url(../img/curiosity_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Archivo", sans-serif;
+  color: white;
+}
+main .cannabis div {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 61, 114, 0.3333333333);
+}
+main .cannabis h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 10px;
+}
+main .cannabis p {
+  font-size: 1.3rem;
 }
 
 .standard_artic {
