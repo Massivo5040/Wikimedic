@@ -100,7 +100,7 @@ const render_medic = async () => { // função main, tudo ocorre dentro dela
 
     
 
-    const newComentario = {
+    /* const newComentario = {
       email : localStorage.getItem('email'),
       numProcesso : params.numProcesso,
       content : "Comentário de Teste"
@@ -108,9 +108,9 @@ const render_medic = async () => { // função main, tudo ocorre dentro dela
     
     const cReponse = await saveComentario(newComentario)
 
-    console.log(await cReponse.json())
+    console.log(await cReponse.json()) */
 
-    //console.log(localStorage.getItem('email') + " : "+ localStorage.getItem('password'))
+    console.log(localStorage.getItem('email') + " : "+ localStorage.getItem('password'))
     
   }
   else
