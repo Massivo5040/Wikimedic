@@ -1,5 +1,5 @@
 import { serverURL } from "./env.js";
-import { saveUser, login } from "./metodoServer.js";
+import { saveUser, login, saveComentario } from "./metodoServer.js";
 
 const getURLParameters = () => {
   let queryString = window.location.search.substring(1);
@@ -91,12 +91,33 @@ const render_medic = async () => { // função main, tudo ocorre dentro dela
 
     console.log(userReponse) */
 
+    // TESTES
+
     /* await login({ // login de exemplo
       email : 'email@gmail.com',
       password : '1234'
     }) */
 
-    console.log(localStorage.getItem('email') + " : "+ localStorage.getItem('password'))
+    const loginResponse = await login({ 
+      email : 'deoliveiradiasandre@gmail.com',
+      password : '1234'
+    })
+    if(loginResponse.ok)
+    {
+      console.log(await loginResponse.json())
+    }
+
+    const newComentario = {
+      email : localStorage.getItem('email'),
+      numProcesso : params.numProcesso,
+      content : "Comentário de Teste"
+    }
+    
+    const cReponse = await saveComentario(newComentario)
+
+    console.log(await cReponse.json())
+
+    //console.log(localStorage.getItem('email') + " : "+ localStorage.getItem('password'))
     
   }
   else
