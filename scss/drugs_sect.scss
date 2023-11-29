@@ -1,0 +1,84 @@
+@use "colors" as c;
+@use "fonts" as f;
+@use "mixins" as m;
+
+main {
+  .header {
+    padding: 100px 0;
+    font-size: 4rem;
+    font-family: f.$archivo;
+    color: c.$font_color2;
+    letter-spacing: 5px;
+    text-align: center;
+    background-image: url(../img/pediatria_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1 {
+      font-weight: 300;
+    }
+  }
+
+  .row1 {
+    @include m.elements_grid(2);
+    padding: 40px;
+    font-family: f.$archivo;
+    h2 {
+      width: 70%;
+      font-size: 3rem;
+      font-weight: 300;
+      color: c.$font-color4;
+    }
+    p {
+      width: 50%;
+      margin-top: 30px;
+      font-size: 1.2rem;
+    }
+    div:nth-of-type(2) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .row2 {
+    @include m.elements_grid(2);
+    padding: 40px;
+    font-family: f.$archivo;
+    text-align: right;
+    div:nth-of-type(1) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    div:nth-of-type(2) {
+      position: relative;
+      img {
+        position: absolute;
+        z-index: -1;
+        height: 100% + 50%;
+        right: -200px;
+        bottom: -150px;
+      }
+    }
+    h2 {
+      // width: 70%;
+      font-size: 3rem;
+      font-weight: 300;
+      color: c.$font-color4;
+    }
+    p {
+      // width: 50%;
+      margin-top: 30px;
+      font-size: 1.2rem;
+    }
+  }
+
+  .carousel {
+    font-family: f.$archivo;
+    background-color: c.$carousel_drugs;
+    h3 {
+      font-size: 2rem;
+      font-weight: 300;
+    }
+  }
+}

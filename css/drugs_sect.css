@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
+main .header {
+  padding: 100px 0;
+  font-size: 4rem;
+  font-family: "Archivo", sans-serif;
+  color: white;
+  letter-spacing: 5px;
+  text-align: center;
+  background-image: url(../img/pediatria_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .header h1 {
+  font-weight: 300;
+}
+main .row1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 40px;
+  font-family: "Archivo", sans-serif;
+}
+main .row1 h2 {
+  width: 70%;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #003d72;
+}
+main .row1 p {
+  width: 50%;
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
+main .row1 div:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .row2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 40px;
+  font-family: "Archivo", sans-serif;
+  text-align: right;
+}
+main .row2 div:nth-of-type(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .row2 div:nth-of-type(2) {
+  position: relative;
+}
+main .row2 div:nth-of-type(2) img {
+  position: absolute;
+  z-index: -1;
+  height: 150%;
+  right: -200px;
+  bottom: -150px;
+}
+main .row2 h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #003d72;
+}
+main .row2 p {
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
+main .carousel {
+  font-family: "Archivo", sans-serif;
+  background-color: #f4f4ec;
+}
+main .carousel h3 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+/*# sourceMappingURL=drugs_sect.css.map */
