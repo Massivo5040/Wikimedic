@@ -28,18 +28,22 @@
 .standard_style .icons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-}
-.standard_style .icons figure {
-  height: 200px;
+  column-gap: 40px;
+  margin-top: 30px;
   text-align: center;
 }
-.standard_style .icons img {
+.standard_style .icons figure {
+  width: 70%;
   height: 200px;
+  margin: 0 auto 20px;
   padding: 20px;
   background-color: bisque;
   border-radius: 50%;
 }
-.standard_style .icons figcaption {
+.standard_style .icons img {
+  height: 90%;
+}
+.standard_style .icons p {
   font-family: "Archivo", sans-serif;
   font-weight: bold;
 }

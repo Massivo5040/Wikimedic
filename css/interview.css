@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
+main article {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  font-family: "Archivo", sans-serif;
+  margin: 40px;
+}
+main h2 {
+  color: #003d72;
+}
+main p {
+  margin: 50px 0;
+}
+
+/*# sourceMappingURL=interview.css.map */

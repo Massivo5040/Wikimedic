@@ -116,20 +116,12 @@ main {
 
   .interview {
     position: relative;
-    z-index: -2;
     @include m.elements_grid(2);
     padding: 30px;
     font-family: f.$archivo;
     background-image: url(../img/interview_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    .bgc {
-      position: absolute;
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-      background-color: c.$card-person-bgc;
-    }
     h2 {
       font-size: 3rem;
       color: c.$font-color4;
