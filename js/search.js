@@ -42,8 +42,10 @@ const pesquisar = async (name) => {
 
       const anchorElement = document.createElement("a");
 
-      //const pdf = await retornarPDF(medicamento.codigoBulaPaciente)
-      const url = `../html/medic.html?numProcesso=${medicamento.numProcesso}&name=${medicamento.nomeProduto.replace(" ", "_")}&idBulaPacienteProtegido=${medicamento.idBulaPacienteProtegido}`;
+      //const pdf = await retornarPDF(medicamento.codigoBulaPaciente)&idB
+      //?numProcesso=${medicamento.numProcesso}&name=${medicamento.nomeProduto.replace(" ", "_")}
+      const url = `../html/medic.html`;
+      localStorage.setItem('numProcesso', medicamento.numProcesso)
       anchorElement.href = url;
       console.log(url);
 
