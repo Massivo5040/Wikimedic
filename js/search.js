@@ -26,7 +26,7 @@ const pesquisar = async (name) => {
     const medicamentos = await PesquisarMedicamentos(name);
     console.log(medicamentos);
     // Seleciona o elemento pai onde você deseja adicionar os resultados
-    const parentElement = document.getElementById("result"); 
+    const parentElement = document.getElementById("result");
 
     // Limpa quaisquer elementos filhos existentes
     parentElement.innerHTML = "";
@@ -44,8 +44,8 @@ const pesquisar = async (name) => {
 
       //const pdf = await retornarPDF(medicamento.codigoBulaPaciente)&idB
       //?numProcesso=${medicamento.numProcesso}&name=${medicamento.nomeProduto.replace(" ", "_")}
-      const url = `../html/medic.html`;
-      localStorage.setItem('numProcesso', medicamento.numProcesso)
+      const url = `./html/medic.html`;
+      localStorage.setItem("numProcesso", medicamento.numProcesso);
       anchorElement.href = url;
       console.log(url);
 
@@ -71,10 +71,7 @@ const pesquisar = async (name) => {
 const searchResultsDiv = document.getElementById("result");
 const searchBar = document.getElementById("search");
 
-
-
 searchBar.addEventListener("change", async () => {
   console.log("Pesquisando");
   await pesquisar(searchBar.value);
 });
-
