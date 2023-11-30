@@ -1,4 +1,4 @@
-import { serverURL, userInfo} from "./env.js";
+import { serverURL, userInfo } from "./env.js";
 import { saveUser, login, saveComentario } from "./metodoServer.js";
 
 const getURLParameters = () => {
@@ -54,76 +54,81 @@ const retornarPDF = async (codigoBulaPaciente) => {
   }
 }
 
-const render_medic = async () => { // função main, tudo ocorre dentro dela
-  const params = getURLParameters()
-  if(params.numProcesso != null)
-  {
-    const medic = await returnMedic(params.numProcesso) // objeto que representa o medicamento, nele podemos acessar todas as propriedades
+const render_medic = async (params) => { // função main, tudo ocorre dentro dela
 
-    const title = document.getElementById("medic-name")
-    title.textContent = medic.nomeComercial;
+  const medic = await returnMedic(params.numProcesso) // objeto que representa o medicamento, nele podemos acessar todas as propriedades
 
-    /* const tipoMed = document.getElementById("ClassMed")
-    tipoMed.textContent = medic.categoriaRegulatoria; */
+  const title = document.getElementById("medic-name")
+  title.textContent = medic.nomeComercial;
+
+  /* const tipoMed = document.getElementById("ClassMed")
+  tipoMed.textContent = medic.categoriaRegulatoria; */
 
 
-    const response = await retornarPDF(medic.codigoBulaPaciente) // pesquisa do pdf
-    const linkPDF = response.pdf // link do pdf
-    const a_link = document.querySelector("#medic-pdf")
-    a_link.href = linkPDF // colocando pdf do medicamento
-    a_link.textContent = "Download Bula PDF"
-    console.log(linkPDF)
+  const response = await retornarPDF(medic.codigoBulaPaciente) // pesquisa do pdf
+  const linkPDF = response.pdf // link do pdf
+  const a_link = document.querySelector("#medic-pdf")
+  a_link.href = linkPDF // colocando pdf do medicamento
+  a_link.textContent = "Download Bula PDF"
+  console.log(linkPDF)
 
-    /* const obj = document.querySelector('#obj')
-    obj.textContent = medic.principioAtivo */
+  /* const obj = document.querySelector('#obj')
+  obj.textContent = medic.principioAtivo */
 
-    //carregando comentários
+  //carregando comentários
 
-    const commentResponse = await fetch(serverURL + "/comentarios/numProcesso/" + params.numProcesso)
-    console.log(await commentResponse.json())
+  console.log(params.numProcesso)
+  const commentResponse = await fetch(serverURL + "/comentarios/numProcesso/" + params.numProcesso)
+  console.log(await commentResponse.json())
 
-    /* const userReponse = await saveUser({
-      name : "Teste",
-      email : "diaso.andre@outlook.com",
-      email_reserva : "null",
-      password : "12345"
-    })
+  /* const userReponse = await saveUser({
+    name : "Teste",
+    email : "diaso.andre@outlook.com",
+    email_reserva : "null",
+    password : "12345"
+  })
 
-    console.log(userReponse) */
+  console.log(userReponse) */
 
-    // TESTES
+  // TESTES
 
-    /* await login({ // login de exemplo
-      email : 'email@gmail.com',
-      password : '1234'
-    }) */
+  /* await login({ // login de exemplo
+    email : 'email@gmail.com',
+    password : '1234'
+  }) */
 
-    
 
-    /* const newComentario = {
-      email : localStorage.getItem('email'),
-      numProcesso : params.numProcesso,
-      content : "Comentário de Teste"
-    }
-    
-    const cReponse = await saveComentario(newComentario)
 
-    console.log(await cReponse.json()) */
-
-    console.log(localStorage.getItem('email') + " : "+ localStorage.getItem('password'))
-    
+  /* const newComentario = {
+    email : localStorage.getItem('email'),
+    numProcesso : params.numProcesso,
+    content : "Comentário de Teste"
   }
-  else
-  {
-    console.warn('Erro!! Sem parâmetros de consulta')
-  }
+  
+  const cReponse = await saveComentario(newComentario)
+
+  console.log(await cReponse.json()) */
+
+  console.log('Credenciais de acesso: ')
+  console.info(userInfo)
+
+
 }
 
-try
-{
-  render_medic()
+
+
+
+const params = getURLParameters()
+if (params.numProcesso != null) {
+  try {
+    render_medic()
+  }
+  catch (err) {
+    console.log(err)
+  }// execução da função que renderiza as informações na tela
 }
-catch (err)
-{
-  console.log(err)
-}// execução da função que renderiza as informações na tela
+else {
+  console.warn('Erro!! Sem parâmetros de consulta')
+  const numProcesso = localStorage.getItem('numProcesso')
+  render_medic({ numProcesso })
+}
