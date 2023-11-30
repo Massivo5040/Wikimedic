@@ -57,46 +57,29 @@ main {
       font-size: 1.3rem;
     }
     .container {
-      position: relative;
-      padding: 40px 40px 0;
-      span {
-        position: absolute;
-        z-index: 999;
-        padding: 5px;
-        font-size: 1.8rem;
-        color: c.$font-color2;
-        background-color: c.$carousel-btn-bgc;
-        border-radius: 50%;
-        translate: 0 -50%;
-        cursor: pointer;
-        &:nth-of-type(1) {
-          top: 50%;
-          left: -10px;
-        }
-        &:nth-of-type(2) {
-          top: 50%;
-          right: -10px;
-        }
-      }
+      @include m.carousel();
     }
-    .carousel {
-      display: flex;
-      gap: 5%;
+  }
+  .benefits {
+    padding: 70px 0 70px 70px;
+    font-family: f.$archivo;
+    h2 {
+      width: 70%;
+      margin: 0 auto 150px;
+      color: c.$font-color4;
+      font-size: 3rem;
+      font-weight: 300;
+      text-align: center;
+    }
+    div {
+      @include m.elements_grid(3);
+      column-gap: 80px;
       width: 100%;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-      figure {
-        flex: 0 0 auto;
-        background-color: c.$carousel-item-bgc;
-        width: 30%;
-        min-height: 60%;
-        padding: 15px;
-        img {
-          width: 90%;
-          height: 80%;
-          margin-bottom: 10px;
-        }
-      }
+      // margin: 0 auto;
+    }
+    p {
+      width: 90%;
+      font-size: 1.2rem;
     }
   }
 }
