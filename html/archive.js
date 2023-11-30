@@ -68,6 +68,14 @@
 //   },
 // ];
 
+// const scssContent = "// apenas teste";
+
+// for (let i = 0; i < 6; i++) {
+//   fs.writeFile(`${sect[i].fileName}.scss`, scssContent, (err) => {
+//     if (err) throw err;
+//     console.log(`Arquivo ${sect[i].fileName}.scss criado com sucesso`);
+//   });
+// }
 // sect.forEach((drug) => {
 //   let htmlContent = `
 //   <!DOCTYPE html>
@@ -81,6 +89,7 @@
 //       />
 //       <link rel="stylesheet" href="../style.css" />
 //       <link rel="stylesheet" href="../css/drugs_sect.css" />
+//       <link rel="stylesheet" href="../css/${drug.fileName}.css" />
 //       <title>Wikimedic</title>
 //     </head>
 //     <body>
@@ -125,9 +134,14 @@
 //         </article>
 
 //         <article class="importance">
+//           <div>
 //             <h2>${drug.title1}</h2>
 //             <p>${drug.text}</p>
 //             <p>${drug.text}</p>
+//           </div>
+//           <div>
+//             <img src="${drug.img1}">
+//           </div>
 //         </article>
 
 //         <article class="carousel">
