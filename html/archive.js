@@ -124,30 +124,15 @@
 //           <h1>${drug.name}</h1>
 //         </article>
 
-//         <article class="row1">
-//           <div>
+//         <article class="importance">
 //             <h2>${drug.title1}</h2>
 //             <p>${drug.text}</p>
 //             <p>${drug.text}</p>
-//           </div>
-//           <div>
-//             <img src="${drug.img1}">
-//           </div>
-//         </article>
-//         <article class="row2">
-//           <div>
-//             <img src="${drug.img2}">
-//           </div>
-//           <div>
-//             <h2>${drug.title2}</h2>
-//             <p>${drug.text}</p>
-//             <p>${drug.text}</p>
-//             <img src="${drug.img3}">
-//           </div>
 //         </article>
 
 //         <article class="carousel">
-//           <h3>MAIS POPULARES</h3>
+//           <h3>EXPLORE</h3>
+//           <p>${drug.text}</p>
 //           <div class="carousel-container">
 //             <span class="material-symbols-rounded">
 //               chevron_left
@@ -176,6 +161,16 @@
 //               chevron_right
 //             </span>
 //           </div>
+//         </article>
+
+//         <article class="benefits">
+//           <h2>3 BENEFÍCIOS DOS MEDICAMENTOS ${drug.name}</h2>
+//           <div>
+//             <p>${drug.text}</p>
+//             <p>${drug.text}</p>
+//             <p>${drug.text}</p>
+//           </div>
+//           <img src="${drug.img3}>
 //         </article>
 //       </main>
 //       <footer>
