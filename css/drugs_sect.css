@@ -58,7 +58,7 @@ main .carousel-container .container {
 }
 main .carousel-container .container span {
   position: absolute;
-  z-index: 999;
+  z-index: 99;
   padding: 5px;
   font-size: 1.8rem;
   color: white;
