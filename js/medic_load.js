@@ -77,10 +77,6 @@ const render_medic = async (params) => { // função main, tudo ocorre dentro de
 
   //carregando comentários
 
-  console.log(params.numProcesso)
-  const commentResponse = await fetch(serverURL + "/comentarios/numProcesso/" + params.numProcesso)
-  console.log(await commentResponse.json())
-
   /* const userReponse = await saveUser({
     name : "Teste",
     email : "diaso.andre@outlook.com",
@@ -112,7 +108,8 @@ const render_medic = async (params) => { // função main, tudo ocorre dentro de
   console.log('Credenciais de acesso: ')
   console.info(userInfo)
 
-
+  const commentResponse = await fetch(serverURL + "/comentarios/numProcesso/" + params.numProcesso)
+  console.log(await commentResponse.json())
 }
 
 
