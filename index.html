@@ -161,6 +161,7 @@ code
           <p>2023- © wikimedic.Todos os Direitos Reservados</p>
         </article>
       </div>
+      <script src="./src/env.js"></script>
       <script>
         async function home() {
           const response = await fetch(
@@ -176,6 +177,16 @@ code
 
           document.cookie = "meuCookie=valor; path=/";
           console.log(document.cookie);
+
+          const serverResponse = await fetch(serverURL)
+          if(!serverResponse.ok)
+          {
+            alert("Servidor Wikimedic está offline. Serviços como Login, Comentário e Favoritos estarão indisponíveis")
+          }
+          else
+          {
+            console.log('Servidor Wikimedic Funcionando!')
+          }
         }
         home();
       </script>
