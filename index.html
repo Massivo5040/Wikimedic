@@ -1,4 +1,3 @@
-code
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -20,7 +19,7 @@ code
       </div>
       <nav>
         <a href="./index.html">Home</a>
-        <a href="">Em alta</a>
+        <a href="./html/hot_drugs.html">Em alta</a>
         <a href="./html/sobre.html">Sobre nós</a>
       </nav>
       <div class="search">
@@ -38,7 +37,6 @@ code
             <span></span>
           </div>
           <ul>
-            <li><a href="./html/hot_drugs.html">Remédios Populares</a></li>
             <li><a href="./html/pediatria.html">Pediatria</a></li>
             <li><a href="./html/fitoterapicos.html">Fitoterápicos</a></li>
             <li><a href="./html/genericos.html">Genéricos</a></li>
@@ -178,14 +176,13 @@ code
           document.cookie = "meuCookie=valor; path=/";
           console.log(document.cookie);
 
-          const serverResponse = await fetch(serverURL)
-          if(!serverResponse.ok)
-          {
-            alert("Servidor Wikimedic está offline. Serviços como Login, Comentário e Favoritos estarão indisponíveis")
-          }
-          else
-          {
-            console.log('Servidor Wikimedic Funcionando!')
+          const serverResponse = await fetch(serverURL);
+          if (!serverResponse.ok) {
+            alert(
+              "Servidor Wikimedic está offline. Serviços como Login, Comentário e Favoritos estarão indisponíveis"
+            );
+          } else {
+            console.log("Servidor Wikimedic Funcionando!");
           }
         }
         home();

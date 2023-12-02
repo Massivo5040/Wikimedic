@@ -2,6 +2,16 @@
 @use "fonts" as f;
 @use "mixins" as m;
 
+header {
+  .selected {
+    a {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
 main {
   .header {
     padding: 100px 0;

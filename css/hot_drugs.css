@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
+main .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  background-color: #1c3249;
+}
+main .header img {
+  margin-right: 30px;
+}
+main .header h1 {
+  color: white;
+  font-family: "Archivo", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 20px;
+}
+main .drugs {
+  margin-top: 100px;
+}
+main .drugs h2 {
+  margin-left: 30px;
+  margin-bottom: 30px;
+  color: #1c3249;
+  font-family: "Archivo", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 10px;
+}
+main .drugs hr {
+  width: 100%;
+  background-color: #1c3249;
+  height: 3px;
+}
+main .drugs .carousel-container {
+  padding: 0 80px 30px;
+  text-align: center;
+}
+main .drugs .container {
+  position: relative;
+  padding: 40px 40px 0;
+}
+main .drugs .container span {
+  position: absolute;
+  z-index: 99;
+  padding: 5px;
+  font-size: 1.8rem;
+  color: white;
+  background-color: #003d72;
+  border-radius: 50%;
+  translate: 0 -50%;
+  cursor: pointer;
+}
+main .drugs .container span:nth-of-type(1) {
+  top: 50%;
+  left: -10px;
+}
+main .drugs .container span:nth-of-type(2) {
+  top: 50%;
+  right: -10px;
+}
+main .drugs .container .carousel {
+  display: flex;
+  gap: 5%;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+main .drugs .container .carousel a {
+  flex: 0 0 auto;
+  background-color: rgba(67, 157, 215, 0.4705882353);
+  width: 30%;
+  min-height: 60%;
+  padding: 15px;
+}
+main .drugs .container .carousel a img {
+  width: 90%;
+  height: 80%;
+  margin-bottom: 10px;
+}
+main .drugs .container .carousel a figcaption {
+  color: black;
+}
+main .drugs .container a {
+  position: relative;
+}
+main .drugs .container a:hover > figure figcaption {
+  bottom: 0;
+  opacity: 1;
+}
+main .drugs .container figcaption {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 25%;
+  padding: 10px;
+  color: rgba(28, 50, 73, 0.4196078431);
+  font-family: "Archivo", sans-serif;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+}
+
+/*# sourceMappingURL=hot_drugs.css.map */
