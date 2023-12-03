@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
+body {
+  background-color: white;
+}
+
+header {
+  display: block;
+  position: static;
+  height: auto;
+  background-color: white;
+  text-align: center;
+}
+header a::after {
+  content: none;
+}
+header a img {
+  width: 15%;
+}
+header h1 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+#main {
+  margin-top: 0;
+}
+#main form {
+  width: 35%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(67, 157, 215, 0.5960784314);
+  border-radius: 10px;
+  color: white !important;
+  font-family: "Archivo", sans-serif;
+  font-weight: 400 !important;
+}
+#main form small {
+  color: white !important;
+}
+#main form a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #1c3249;
+}
+#main form a:hover {
+  color: rgba(28, 50, 73, 0.4196078431);
+}
+#main form button {
+  width: 100%;
+  background-color: #003d72;
+  color: #439dd7;
+}
+#main form button:hover {
+  background-color: #439dd7;
+  color: white;
+}
+#main .sign-up {
+  width: 35%;
+  margin: 15px auto;
+  padding: 10px;
+  background-color: rgba(67, 157, 215, 0.5960784314);
+  border-radius: 10px;
+  color: white !important;
+  text-align: center;
+}
+#main .sign-up p {
+  margin-bottom: 0;
+}
+#main .sign-up a {
+  color: #1c3249;
+}
+#main .sign-up a:hover {
+  color: rgba(28, 50, 73, 0.4196078431);
+}
+
+footer {
+  background-color: white;
+}
+
+/*# sourceMappingURL=login.css.map */

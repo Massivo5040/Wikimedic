@@ -169,6 +169,9 @@ header .login {
 header .login a {
   margin: auto 0;
 }
+header .selected::after {
+  width: 100%;
+}
 
 footer {
   background-color: rgba(67, 157, 215, 0.5333333333);

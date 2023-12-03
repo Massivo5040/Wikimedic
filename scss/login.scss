@@ -1,0 +1,81 @@
+@use "colors" as c;
+@use "fonts" as f;
+@use "mixins" as m;
+
+body {
+  background-color: c.$login-bgc;
+}
+header {
+  display: block;
+  position: static;
+  height: auto;
+  background-color: c.$login-bgc;
+  text-align: center;
+  a {
+    &::after {
+      content: none;
+    }
+    img {
+      width: 15%;
+    }
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+}
+#main {
+  margin-top: 0;
+  form {
+    width: 35%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: c.$form-bgc;
+    border-radius: 10px;
+    color: c.$font-color2 !important;
+    font-family: f.$archivo;
+    font-weight: 400 !important;
+    small {
+      color: c.$font-color2 !important;
+    }
+    a {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: c.$font-color5;
+      &:hover {
+        color: c.$font-color5-1;
+      }
+    }
+    button {
+      width: 100%;
+      background-color: c.$submit-btn-bgc2;
+      color: c.$font-color3;
+      &:hover {
+        background-color: c.$submit-btn-bgc;
+        color: c.$font-color2;
+      }
+    }
+  }
+  .sign-up {
+    width: 35%;
+    margin: 15px auto;
+    padding: 10px;
+    background-color: c.$form-bgc;
+    border-radius: 10px;
+    color: c.$font-color2 !important;
+    text-align: center;
+    p {
+      margin-bottom: 0;
+    }
+    a {
+      color: c.$font-color5;
+      &:hover {
+        color: c.$font-color5-1;
+      }
+    }
+  }
+}
+footer {
+  background-color: c.$login-bgc;
+}

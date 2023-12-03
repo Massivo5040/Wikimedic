@@ -69,4 +69,9 @@ header {
       margin: auto 0;
     }
   }
+  .selected {
+    &::after {
+      width: 100%;
+    }
+  }
 }

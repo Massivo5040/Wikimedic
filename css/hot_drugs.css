@@ -41,7 +41,7 @@ main .drugs .container {
   position: relative;
   padding: 40px 40px 0;
 }
-main .drugs .container span {
+main .drugs .container .material-symbols-rounded {
   position: absolute;
   z-index: 99;
   padding: 5px;
@@ -52,11 +52,11 @@ main .drugs .container span {
   translate: 0 -50%;
   cursor: pointer;
 }
-main .drugs .container span:nth-of-type(1) {
+main .drugs .container .material-symbols-rounded:nth-of-type(1) {
   top: 50%;
   left: -10px;
 }
-main .drugs .container span:nth-of-type(2) {
+main .drugs .container .material-symbols-rounded:nth-of-type(2) {
   top: 50%;
   right: -10px;
 }
@@ -64,33 +64,35 @@ main .drugs .container .carousel {
   display: flex;
   gap: 5%;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   scroll-behavior: smooth;
 }
-main .drugs .container .carousel a {
+main .drugs .container .carousel span {
   flex: 0 0 auto;
   background-color: rgba(67, 157, 215, 0.4705882353);
   width: 30%;
   min-height: 60%;
   padding: 15px;
 }
-main .drugs .container .carousel a img {
+main .drugs .container .carousel span img {
   width: 90%;
   height: 80%;
   margin-bottom: 10px;
 }
-main .drugs .container .carousel a figcaption {
+main .drugs .container .carousel span p {
   color: black;
 }
-main .drugs .container a {
+main .drugs .container span {
   position: relative;
+  z-index: 1;
 }
-main .drugs .container a:hover > figure figcaption {
+main .drugs .container span:hover > p {
   bottom: 0;
   opacity: 1;
 }
-main .drugs .container figcaption {
+main .drugs .container p {
   position: absolute;
+  z-index: 999;
   bottom: -20px;
   left: 0;
   opacity: 0;
@@ -101,6 +103,17 @@ main .drugs .container figcaption {
   font-family: "Archivo", sans-serif;
   background-color: rgba(255, 255, 255, 0.6);
   transition: all 0.5s;
+}
+main .drugs .container p .fa-star {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: #003d72;
+  font-size: 2rem;
+}
+main .drugs .container p .fa-star:hover {
+  color: #1c3249;
+  transform: scale(1.2);
 }
 
 /*# sourceMappingURL=hot_drugs.css.map */

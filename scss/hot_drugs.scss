@@ -42,17 +42,19 @@ main {
       text-align: center;
     }
     .container {
-      @include m.carousel();
+      @include m.carousel2();
 
-      a {
+      span {
         position: relative;
-        &:hover > figure figcaption {
+        z-index: 1;
+        &:hover > p {
           bottom: 0;
           opacity: 1;
         }
       }
-      figcaption {
+      p {
         position: absolute;
+        z-index: 999;
         bottom: -20px;
         left: 0;
         opacity: 0;
@@ -63,6 +65,17 @@ main {
         font-family: f.$archivo;
         background-color: c.$hover-drugs;
         transition: all 0.5s;
+        .fa-star {
+          position: absolute;
+          right: 5px;
+          top: 5px;
+          color: c.$font-color4;
+          font-size: 2rem;
+          &:hover {
+            color: c.$font-color5;
+            transform: scale(1.2);
+          }
+        }
       }
     }
   }
