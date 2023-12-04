@@ -17,7 +17,7 @@
       <div class="logo">
         <img src="./img/wikimedic.png" alt="Logo da Wikimedic" />
       </div>
-      <nav>
+      <nav class="main-nav">
         <a class="selected" href="./index.html">Home</a>
         <a href="./html/hot_drugs.html">Em alta</a>
         <a href="./html/sobre.html">Sobre nós</a>
@@ -37,15 +37,22 @@
             <span></span>
           </div>
           <ul>
+            <li class="responsive-extra">
+              <a class="selected" href="./index.html">Home</a>
+            </li>
+            <li class="responsive-extra">
+              <a href="./html/hot_drugs.html">Em alta</a>
+            </li>
+            <li class="responsive-extra">
+              <a href="./html/sobre.html">Sobre nós</a>
+            </li>
             <li><a href="./html/pediatria.html">Pediatria</a></li>
             <li><a href="./html/fitoterapicos.html">Fitoterápicos</a></li>
             <li><a href="./html/genericos.html">Genéricos</a></li>
             <li><a href="./html/homeopaticos.html">Homeopáticos</a></li>
             <li><a href="./html/similares.html">Similares</a></li>
             <li><a href="./html/alopaticos.html">Alopáticos</a></li>
-            <li>
-              <a href="./about_project.html">Sobre o projeto</a>
-            </li>
+            <li><a href="./about_project.html">Sobre o projeto</a></li>
           </ul>
         </nav>
       </div>
@@ -131,23 +138,23 @@
     <footer>
       <div>
         <article class="about_us">
-          <p>
+          <p class="title">
             <a href="./html/sobre.html">Sobre nós</a>
           </p>
-          <p>
+          <p class="topic">
             <a href="./html/sobre.html#mission">Missão</a>
           </p>
-          <p>
+          <p class="topic">
             <a href="./html/sobre.html#vision">Visão</a>
           </p>
-          <p>
+          <p class="topic">
             <a href="./html/sobre.html#values">Valores</a>
           </p>
         </article>
         <article class="contact">
-          <p>Contato</p>
-          <p>wikimedic@yourcompany.com</p>
-          <p>(11)-00000-0000</p>
+          <p class="title">Contato</p>
+          <p class="topic">wikimedic@yourcompany.com</p>
+          <p class="topic">(11)-00000-0000</p>
         </article>
         <article class="social_media">
           <a href="#"
@@ -162,7 +169,6 @@
           <p>2023- © wikimedic.Todos os Direitos Reservados</p>
         </article>
       </div>
-      <script src="./src/env.js"></script>
       <script>
         async function home() {
           const response = await fetch(
