@@ -1,3 +1,4 @@
+$arf: 16px;
 @use "colors" as c;
 @use "fonts" as f;
 @use "information";
@@ -24,7 +25,7 @@ main {
     p:nth-of-type(1) {
       width: 60%;
       margin: 0 auto 30px;
-      font-size: 3.5rem;
+      font-size: 3.5 * $arf;
       font-family: f.$anton;
       color: c.$font-color2;
     }
@@ -36,7 +37,7 @@ main {
       padding: 10px 30px;
       border: 2px solid c.$border-color2;
       border-radius: 30px;
-      font-size: 1.5rem;
+      font-size: 1.5 * $arf;
       font-family: f.$archivo;
       color: c.$font-color2;
       &:hover {
@@ -47,3 +48,4 @@ main {
     }
   }
 }
+@import "./responsive/responsive_main.scss";

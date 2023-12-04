@@ -1,0 +1,242 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
+main .header {
+  height: 87vh;
+  padding: 150px 50px 30px;
+  background-image: url(../img/security_section_bg.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  font-family: "Archivo", sans-serif;
+  color: white;
+}
+main .header h1 {
+  width: 85%;
+  font-size: 4.5rem;
+}
+main .header div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 50vw;
+  margin: 70px auto 0;
+}
+main .header a {
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 1.5rem;
+  color: white;
+}
+main .header a:hover {
+  text-decoration: underline;
+}
+main .article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px;
+  font-family: "Archivo", sans-serif;
+}
+main .article div * {
+  width: 50%;
+}
+main .article div p:nth-of-type(1) {
+  margin: 40px 0 30px;
+}
+main .articles {
+  position: relative;
+  display: grid;
+  grid-template-columns: 5fr 5fr;
+  padding: 20px 0px 10px 70px;
+  font-family: "Archivo", sans-serif;
+  background-color: rgba(67, 157, 215, 0.4705882353);
+}
+main .articles img[alt="Ícone de lupa"] {
+  position: absolute;
+  z-index: -1;
+  left: -80px;
+  bottom: 0;
+  height: 70%;
+}
+main .articles section h2 {
+  margin: 50px 0;
+  font-size: 3rem;
+  color: #003d72;
+}
+main .articles section p {
+  width: 70%;
+  font-size: 1.3rem;
+}
+main .agenda2030 {
+  padding: 30px;
+  font-family: "Archivo", sans-serif;
+  text-align: center;
+}
+main .agenda2030 h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+main .agenda2030 .description {
+  width: 60%;
+  margin: 40px auto;
+}
+main .agenda2030 .aspects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 100px;
+  width: 90%;
+  margin: 0 auto;
+}
+main .agenda2030 .aspects div {
+  height: 100%;
+}
+main .agenda2030 .aspects figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  padding: 30px;
+  background-color: #f4f4ec;
+  border-radius: 50%;
+}
+main .agenda2030 .aspects img {
+  width: 80%;
+}
+main .agenda2030 .aspects p {
+  margin-top: 30px;
+}
+main .interview {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 87vh;
+  padding: 30px;
+  font-family: "Archivo", sans-serif;
+  background-image: url(../img/interview_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .interview h2 {
+  font-size: 3rem;
+  color: #003d72;
+}
+main .interview p {
+  width: 60%;
+  font-size: 1.1rem;
+  margin: 40px 0;
+}
+main .interview .btn {
+  position: relative;
+}
+main .interview a {
+  position: absolute;
+  bottom: 0;
+  padding: 20px 40px;
+  background-color: rgba(255, 255, 255, 0.4666666667);
+  color: #003d72;
+  border: 2px solid #003d72;
+  border-radius: 40px;
+}
+main .interview a:hover {
+  background-color: rgba(0, 61, 114, 0.4666666667);
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+main .curiosity {
+  padding: 70px 50px;
+  font-family: "Archivo", sans-serif;
+}
+main .curiosity h2 {
+  margin-bottom: 80px;
+  color: #003d72;
+  font-size: 3rem;
+}
+main .curiosity div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+main .curiosity p {
+  width: 60%;
+  font-size: 1.3rem;
+}
+main .cannabis {
+  position: relative;
+  z-index: -2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  height: 87vh;
+  padding: 150px 40px;
+  background-image: url(../img/curiosity_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Archivo", sans-serif;
+  color: white;
+}
+main .cannabis div {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 61, 114, 0.3333333333);
+}
+main .cannabis h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 10px;
+}
+main .cannabis p {
+  font-size: 1.3rem;
+}
+
+.standard_artic {
+  padding: 40px 20px 30px;
+  border: 2px solid #003d72;
+  border-radius: 40px;
+  text-align: center;
+}
+.standard_artic img {
+  border-radius: 0 60px 0 0;
+}
+.standard_artic figcaption {
+  margin: 20px 0 10px;
+}
+.standard_artic a {
+  padding: 10px 30px;
+  border: 2px solid #439dd7;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  font-family: "Archivo", sans-serif;
+  color: #439dd7;
+}
+.standard_artic a:hover {
+  background-color: #439dd7;
+  color: white;
+  border: 2px solid transparent;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  font-family: "Archivo", sans-serif;
+}
+.slider::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+.slider .standard_artic {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 400px;
+  height: 100%;
+  margin: 0 15px;
+}
+.slider .standard_artic img {
+  width: 80%;
+}
+
+/*# sourceMappingURL=about_project.css.map */

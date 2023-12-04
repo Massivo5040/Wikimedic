@@ -1,0 +1,18 @@
+@use "colors" as c;
+@use "fonts" as f;
+@use "mixins" as m;
+
+main {
+  article {
+    @include m.elements_grid(2);
+    text-align: center;
+    font-family: f.$archivo;
+    margin: 40px;
+  }
+  h2 {
+    color: c.$font-color4;
+  }
+  p {
+    margin: 50px 0;
+  }
+}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700&display=swap");
 #initial {
   background-color: #439dd7;
@@ -5,19 +6,83 @@
 #initial img {
   margin: 0 35vw;
   width: 30vw;
+=======
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
+#initial {
+  background-color: #439dd7;
+  text-align: center;
+}
+#initial img {
+  width: 25vw;
+>>>>>>> f750fc97f5121d4cb8eb369b64671049d92dcd13
 }
 
-#sobre {
+.standard_style {
   padding: 3% 5%;
 }
-#sobre h2 {
+.standard_style h2 {
   font-family: "Archivo", sans-serif;
+<<<<<<< HEAD
   font-size: 250%;
+=======
+  font-weight: 700;
+>>>>>>> f750fc97f5121d4cb8eb369b64671049d92dcd13
   color: #003d72;
   margin-bottom: 3%;
 }
-#sobre .text-sobre {
+.standard_style .text-sobre {
+  display: grid;
+  grid-template-columns: 4fr 7fr;
+}
+.standard_style .text-sobre p {
+  width: 27ch;
+  font-size: 95%;
+  font-family: "Archivo", sans-serif;
+}
+.standard_style .icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  margin-top: 30px;
+  text-align: center;
+}
+.standard_style .icons figure {
+  width: 70%;
+  height: 200px;
+  margin: 0 auto 20px;
+  padding: 20px;
+  background-color: bisque;
+  border-radius: 50%;
+}
+.standard_style .icons img {
+  height: 90%;
+}
+.standard_style .icons p {
+  font-family: "Archivo", sans-serif;
+  font-weight: bold;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: 5fr 5fr;
+  padding: 40px 0 40px 40px;
+  background-color: rgba(67, 157, 215, 0.4705882353);
+}
+.team .information h2 {
+  font-size: 3rem;
+  font-family: "Archivo", sans-serif;
+  font-weight: bold;
+  color: #003d72;
+}
+.team .information p {
+  width: 50%;
+  margin-top: 50px;
+  font-size: 1.1rem;
+  font-family: "Archivo", sans-serif;
+}
+.team .slider {
   display: flex;
+<<<<<<< HEAD
   justify-content: space-between;
   width: 60vw;
 }
@@ -29,7 +94,62 @@
 #sobre .text-sobre p:nth-child(2) {
   width: 27ch;
   font-size: 130%;
+=======
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
   font-family: "Archivo", sans-serif;
+}
+.team .slider::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+.team .slider .person {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 400px;
+  height: 100%;
+  margin: 0 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.4666666667);
+  text-align: center;
+}
+.team .slider .person img {
+  width: 50%;
+  border-radius: 50%;
+}
+.team .slider .person .role {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.quote {
+  padding: 40px 20px;
+  background-color: rgba(67, 157, 215, 0.4705882353);
+>>>>>>> f750fc97f5121d4cb8eb369b64671049d92dcd13
+  font-family: "Archivo", sans-serif;
+  color: #003d72;
+}
+.quote p:nth-of-type(1) {
+  font-weight: 300;
+  font-size: 1.9rem;
+}
+.quote p:nth-of-type(1)::before {
+  content: '"';
+  font-family: "Passion One", sans-serif;
+  font-size: 3rem;
+}
+.quote p:nth-of-type(1)::after {
+  content: '"';
+  font-family: "Passion One", sans-serif;
+  font-size: 3rem;
+}
+.quote p:nth-of-type(2) {
+  font-size: 2rem;
+  font-style: italic;
+  text-align: right;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=sobre.css.map */

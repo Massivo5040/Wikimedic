@@ -1,0 +1,32 @@
+@use "colors" as c;
+@use "fonts" as f;
+
+header .search {
+  #result {
+    position: absolute;
+    top: -10px;
+    left: -17px;
+    z-index: -1;
+    padding-top: 45px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    background-color: c.$search-result-bgc;
+    div {
+      padding: 8px 5px 8px 35px;
+      margin: 0 5px;
+      border-radius: 10px;
+      color: c.$font-color2;
+      &:hover {
+        background-color: c.$search-result-hover-color;
+      }
+    }
+    a {
+      display: block;
+      color: c.$font-color2;
+      &::after {
+        background-color: transparent;
+        transition: none;
+      }
+    }
+  }
+}

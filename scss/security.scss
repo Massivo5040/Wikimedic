@@ -2,6 +2,7 @@
 @use "fonts" as f;
 
 .security {
+  $arf: 16px;
   .header {
     display: grid;
     grid-template-columns: 8fr 4fr;
@@ -12,23 +13,42 @@
     background-position: left;
     background-size: cover;
     font-family: f.$archivo;
-    color: c.$security-cont-color;
+    color: c.$font-color2;
     h2 {
       width: 80%;
-      font-size: 3rem;
+      font-size: 3 * $arf;
     }
     p {
-      font-size: 2rem;
+      font-size: 2 * $arf;
       font-weight: lighter;
       text-align: right;
+    }
+    div {
+      p {
+        margin-top: 150px;
+        text-align: left;
+      }
+      a {
+        padding: 10px 30px;
+        border: 2px solid c.$border-color2;
+        border-radius: 30px;
+        font-size: 1.5 * $arf;
+        font-family: f.$archivo;
+        color: c.$font-color2;
+        &:hover {
+          background-color: c.$font-color2;
+          color: c.$font-color3;
+          border: 2px solid transparent;
+        }
+      }
     }
   }
   .main {
     padding: 30px 50px;
     font-family: f.$archivo;
-    color: c.$security-cont-color2;
+    color: c.$font-color4;
     h2 {
-      font-size: 2.5rem;
+      font-size: 2.5 * $arf;
       font-weight: bold;
     }
     div {
@@ -43,3 +63,5 @@
     }
   }
 }
+
+@import "./responsive/responsive_security.scss";

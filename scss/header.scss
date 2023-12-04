@@ -1,6 +1,8 @@
 @use "colors" as c;
 @use "fonts" as f;
 @use "menu";
+@use "search_result";
+@use "./responsive/responsive_header.scss";
 
 header {
   position: fixed;
@@ -10,7 +12,7 @@ header {
   justify-content: space-between;
   padding: 15px 10px;
   height: 13vh;
-  width: 100%;
+  width: 100vw;
   background-color: c.$header-bgc;
   font-family: f.$archivo;
   a {
@@ -33,9 +35,10 @@ header {
   }
   .logo {
     width: 15%;
-  }
-  .logo img {
-    width: 100%;
+    margin: auto 0;
+    img {
+      width: 100%;
+    }
   }
   nav {
     display: flex;
@@ -44,6 +47,7 @@ header {
   }
   .search {
     position: relative;
+    z-index: 999;
     display: flex;
     align-items: center;
     margin: auto 0;
@@ -67,4 +71,13 @@ header {
       margin: auto 0;
     }
   }
+  .selected {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.responsive-extra {
+  display: none;
 }

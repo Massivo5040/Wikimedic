@@ -7,7 +7,7 @@
     .menu-faketrigger {
       position: absolute;
       right: 0;
-      z-index: 1000;
+      z-index: 970;
       width: 35px;
       height: 25px;
       opacity: 0;
@@ -37,25 +37,14 @@
       flex-direction: column;
       gap: 5px;
       position: relative;
-      z-index: 999;
-      // width: 35px;
-      // height: 35px;
-      // right: 2%;
-      // top: 5vh;
-      // transform: translate(-50%, -50%);
+      z-index: 950;
       span {
         display: block;
         width: 35px;
         height: 5px;
         background-color: c.$menu-bar-color;
         border-radius: 20px;
-        // display: block;
-        // width: 35px;
-        // height: 5px;
-        // margin-bottom: 10px;
-        // background-color: c.$menu-bar-color;
-        // border-radius: 3px;
-        transition: all ease 200ms;
+        transition: all ease 500ms;
       }
     }
     ul {
@@ -63,7 +52,7 @@
       flex-direction: column;
       gap: 20px;
       position: absolute;
-      z-index: 998;
+      z-index: 900;
       right: -2vh;
       top: -2vw;
       padding: 13vh 0 5vh 0;

@@ -1,0 +1,251 @@
+@use "colors" as c;
+@use "fonts" as f;
+@use "mixins" as m;
+
+main {
+  .header {
+    height: 87vh;
+    padding: 150px 50px 30px;
+    background-image: url(../img/security_section_bg.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    font-family: f.$archivo;
+    color: c.$about-project-header-font-color;
+    h1 {
+      width: 85%;
+      font-size: 4.5rem;
+    }
+    div {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 50vw;
+      margin: 70px auto 0;
+    }
+    a {
+      display: inline-block;
+      width: auto;
+      text-align: center;
+      text-decoration: underline;
+      font-size: 1.5rem;
+      color: c.$about-project-header-font-color;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px;
+    font-family: f.$archivo;
+    div {
+      * {
+        width: 50%;
+      }
+      p:nth-of-type(1) {
+        margin: 40px 0 30px;
+      }
+    }
+  }
+
+  .articles {
+    position: relative;
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    padding: 20px 0px 10px 70px;
+    font-family: f.$archivo;
+    background-color: c.$about-section-bgc;
+    img[alt="Ícone de lupa"] {
+      position: absolute;
+      z-index: -1;
+      left: -80px;
+      bottom: 0;
+      height: 70%;
+    }
+    section {
+      h2 {
+        margin: 50px 0;
+        font-size: 3rem;
+        color: c.$font-color4;
+      }
+      p {
+        width: 70%;
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .agenda2030 {
+    padding: 30px;
+    font-family: f.$archivo;
+    text-align: center;
+    h2 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .description {
+      width: 60%;
+      margin: 40px auto;
+    }
+    .aspects {
+      @include m.elements_grid(3);
+      column-gap: 100px;
+      width: 90%;
+      margin: 0 auto;
+      div {
+        height: 100%;
+      }
+      figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60%;
+        padding: 30px;
+        background-color: c.$icon-bgc2;
+        border-radius: 50%;
+      }
+      img {
+        width: 80%;
+      }
+      p {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .interview {
+    position: relative;
+    @include m.elements_grid(2);
+    height: 87vh;
+    padding: 30px;
+    font-family: f.$archivo;
+    background-image: url(../img/interview_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    h2 {
+      font-size: 3rem;
+      color: c.$font-color4;
+    }
+    p {
+      width: 60%;
+      font-size: 1.1rem;
+      margin: 40px 0;
+    }
+    .btn {
+      position: relative;
+    }
+    a {
+      position: absolute;
+      bottom: 0;
+      padding: 20px 40px;
+      background-color: c.$card-person-bgc;
+      color: c.$font-color4;
+      border: 2px solid c.$font-color4;
+      border-radius: 40px;
+      &:hover {
+        background-color: map-get(c.$inverted_colors, secondary);
+        color: map-get(c.$inverted_colors, primary);
+        border: 2px solid map-get(c.$inverted_colors, primary);
+      }
+    }
+  }
+
+  .curiosity {
+    padding: 70px 50px;
+    font-family: f.$archivo;
+
+    h2 {
+      margin-bottom: 80px;
+      color: c.$font-color4;
+      font-size: 3rem;
+    }
+    div {
+      @include m.elements_grid(2);
+    }
+    p {
+      width: 60%;
+      font-size: 1.3rem;
+    }
+  }
+
+  .cannabis {
+    position: relative;
+    z-index: -2;
+    @include m.elements_grid(2);
+    align-items: center;
+    height: 87vh;
+    padding: 150px 40px;
+    background-image: url(../img/curiosity_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: f.$archivo;
+    color: c.$font-color2;
+    div {
+      position: absolute;
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+      background-color: c.$cannabis-bgc;
+    }
+    h2 {
+      font-size: 3rem;
+      font-weight: 300;
+      letter-spacing: 10px;
+    }
+    p {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.standard_artic {
+  padding: 40px 20px 30px;
+  border: 2px solid c.$article-border;
+  border-radius: 40px;
+  text-align: center;
+  img {
+    border-radius: 0 60px 0 0;
+  }
+  figcaption {
+    margin: 20px 0 10px;
+  }
+  a {
+    padding: 10px 30px;
+    border: 2px solid c.$border-color3;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-family: f.$archivo;
+    color: c.$font-color3;
+    &:hover {
+      background-color: c.$font-color3;
+      color: c.$font-color2;
+      border: 2px solid transparent;
+    }
+  }
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+  font-family: f.$archivo;
+  .standard_artic {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 400px;
+    height: 100%;
+    margin: 0 15px;
+    img {
+      width: 80%;
+    }
+  }
+}
