@@ -1,7 +1,8 @@
-import { serverURL, userInfo } from "./env.js"
+import { serverURL, userInfo } from "./env.js";
 
 export async function saveUser(user) {
-  const url = serverURL + '/users/register';
+  const url = serverURL + "/users/register";
+  console.log("Salvando Usuário");
 
   const data = {
     name: user.name,
@@ -12,56 +13,52 @@ export async function saveUser(user) {
 
   try {
     const response = await fetch(url, {
-      method: 'POST',
+      method: "POST",
       body: JSON.stringify(data),
       headers: {
-        'Content-type': 'application/json; charset=UTF-8',
+        "Content-type": "application/json; charset=UTF-8",
       },
     });
 
-    return await response.json();
+    return await response;
   } catch (error) {
-    console.error('Erro na solicitação:', error);
+    console.error("Erro na solicitação:", error);
   }
 }
 
-export async function autenticar(auth)
-{
+export async function autenticar(auth) {
   try {
-    const url = serverURL + "/users/login"
+    const url = serverURL + "/users/login";
 
     const data = {
-      auth
-    }
+      auth,
+    };
 
     const response = await fetch(url, {
-      method: 'POST',
+      method: "POST",
       body: JSON.stringify(data),
       headers: {
-        'Content-type': 'application/json; charset=UTF-8'
-      }
-    })
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    });
 
-    return response
+    return response;
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 }
 
-export async function login(auth)
-{
-  const response = await autenticar(auth)
+export async function login(auth) {
+  const response = await autenticar(auth);
 
-  if(response.ok) // sucesso no login
-  {
-    localStorage.setItem('email', auth.email)
-    localStorage.setItem('password', auth.password)
+  if (response.ok) {
+    // sucesso no login
+    localStorage.setItem("email", auth.email);
+    localStorage.setItem("password", auth.password);
+  } else {
+    alert("erro no login");
   }
-  else
-  {
-    // caso o login dê errado
-  }
-  return response
+  return response;
 }
 
 /* const loginResponse = await login({ 
@@ -84,31 +81,27 @@ if(loginResponse.ok)
   console.log(userInfo)
 } */
 
-
-export async function saveComentario(comentario)
-{
+export async function saveComentario(comentario) {
   try {
-    const url = serverURL + "/comentarios/register"
+    const url = serverURL + "/comentarios/register";
 
-    let auth = {}
+    let auth = {};
 
-    if(localStorage.getItem('email') != null) // se o email estiver no local storage
-    {
+    if (localStorage.getItem("login") != "true") {
+      // se o login estiver no local storage
       auth = {
-        email : localStorage.getItem('email'),
-        password : localStorage.getItem('password')
-      }
-    }
-    else
-    {
+        email: localStorage.getItem("email"),
+        password: localStorage.getItem("password"),
+      };
+    } else {
       // se não estiver
     }
     const data = {
-      email : comentario.email,
-      numProcesso : comentario.numProcesso,
-      content : comentario.content,
-      auth
-    }
+      email: comentario.email,
+      numProcesso: comentario.numProcesso,
+      content: comentario.content,
+      auth,
+    };
     /* 
       comentario = {
         email : (email usuário),
@@ -118,15 +111,17 @@ export async function saveComentario(comentario)
     */
 
     const response = await fetch(url, {
-      method: 'POST',
+      method: "POST",
       body: JSON.stringify(data),
       headers: {
-        'Content-type': 'application/json; charset=UTF-8'
-      }
-    })
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    });
 
-    return response
+    return response;
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 }
+
+export async function saveFavorito() {}

@@ -3,83 +3,82 @@ import { saveUser, login, saveComentario } from "./metodoServer.js";
 
 const getURLParameters = () => {
   let queryString = window.location.search.substring(1);
-  let urlParameters = queryString.split('&')
+  let urlParameters = queryString.split("&");
   let parametros = {};
 
   for (let i = 0; i < urlParameters.length; i++) {
-    let keyValue = urlParameters[i].split('=');
+    let keyValue = urlParameters[i].split("=");
     /* console.log(keyValue) */
     let chave = decodeURIComponent(keyValue[0]);
     let valor = decodeURIComponent(keyValue[1]);
     parametros[chave] = valor;
   }
 
-  console.log(parametros)
+  console.log(parametros);
   return parametros;
-}
+};
 
-const returnMedic = async (numProcesso) => { // retorna um medicamento específico por meio do numProcesso
+const returnMedic = async (numProcesso) => {
+  // retorna um medicamento específico por meio do numProcesso
 
   try {
-    const response = await fetch(`https://bula.vercel.app/medicamento/${numProcesso}`, {
-      "method": "GET"
-    })
+    const response = await fetch(
+      `https://bula.vercel.app/medicamento/${numProcesso}`,
+      {
+        method: "GET",
+      }
+    );
 
     if (!response.ok) {
-      throw new Error("Erro na requisição dos dados")
-    }
-    else {
+      throw new Error("Erro na requisição dos dados");
+    } else {
       const json = await response.json();
-      console.log(json)
-      return json
+      console.log(json);
+      return json;
     }
-  }
-  catch (err) {
+  } catch (err) {
     throw err;
   }
-}
+};
 
 const retornarPDF = async (codigoBulaPaciente) => {
-
-  let response = await fetch(`https://bula.vercel.app/bula?id=${codigoBulaPaciente}`, {
-    "method": "GET"
-  })
+  let response = await fetch(
+    `https://bula.vercel.app/bula?id=${codigoBulaPaciente}`,
+    {
+      method: "GET",
+    }
+  );
 
   if (!response.ok) {
-    throw new Error("Erro na requisição dos dados")
+    throw new Error("Erro na requisição dos dados");
+  } else {
+    let json = await response.json();
+    return json;
   }
-  else {
-    let json = await response.json()
-    return json
-  }
-}
+};
 
-const render_medic = async (params) => { // função main, tudo ocorre dentro dela
+const render_medic = async (params) => {
+  // função main, tudo ocorre dentro dela
 
-  const medic = await returnMedic(params.numProcesso) // objeto que representa o medicamento, nele podemos acessar todas as propriedades
+  const medic = await returnMedic(params.numProcesso); // objeto que representa o medicamento, nele podemos acessar todas as propriedades
 
-  const title = document.getElementById("medic-name")
+  const title = document.getElementById("medic-name");
   title.textContent = medic.nomeComercial;
 
   /* const tipoMed = document.getElementById("ClassMed")
   tipoMed.textContent = medic.categoriaRegulatoria; */
 
-
-  const response = await retornarPDF(medic.codigoBulaPaciente) // pesquisa do pdf
-  const linkPDF = response.pdf // link do pdf
-  const a_link = document.querySelector("#medic-pdf")
-  a_link.href = linkPDF // colocando pdf do medicamento
-  a_link.textContent = "Download Bula PDF"
-  console.log(linkPDF)
+  const response = await retornarPDF(medic.codigoBulaPaciente); // pesquisa do pdf
+  const linkPDF = response.pdf; // link do pdf
+  const a_link = document.querySelector("#medic-pdf");
+  a_link.href = linkPDF; // colocando pdf do medicamento
+  a_link.textContent = "Download Bula PDF";
+  console.log(linkPDF);
 
   /* const obj = document.querySelector('#obj')
   obj.textContent = medic.principioAtivo */
 
   //carregando comentários
-
-  console.log(params.numProcesso)
-  const commentResponse = await fetch(serverURL + "/comentarios/numProcesso/" + params.numProcesso)
-  console.log(await commentResponse.json())
 
   /* const userReponse = await saveUser({
     name : "Teste",
@@ -97,8 +96,6 @@ const render_medic = async (params) => { // função main, tudo ocorre dentro de
     password : '1234'
   }) */
 
-
-
   /* const newComentario = {
     email : localStorage.getItem('email'),
     numProcesso : params.numProcesso,
@@ -109,26 +106,25 @@ const render_medic = async (params) => { // função main, tudo ocorre dentro de
 
   console.log(await cReponse.json()) */
 
-  console.log('Credenciais de acesso: ')
-  console.info(userInfo)
+  console.log("Credenciais de acesso: ");
+  console.info(userInfo);
 
+  const commentResponse = await fetch(
+    serverURL + "/comentarios/numProcesso/" + params.numProcesso
+  );
+  console.log(await commentResponse.json());
+};
 
-}
+const params = getURLParameters();
 
-
-
-
-const params = getURLParameters()
 if (params.numProcesso != null) {
   try {
-    render_medic()
-  }
-  catch (err) {
-    console.log(err)
-  }// execução da função que renderiza as informações na tela
-}
-else {
-  console.warn('Erro!! Sem parâmetros de consulta')
-  const numProcesso = localStorage.getItem('numProcesso')
-  render_medic({ numProcesso })
+    render_medic();
+  } catch (err) {
+    console.log(err);
+  } // execução da função que renderiza as informações na tela
+} else {
+  console.warn("Erro!! Sem parâmetros de consulta");
+  const numProcesso = localStorage.getItem("numProcesso");
+  render_medic({ numProcesso });
 }
