@@ -3,31 +3,34 @@
 
 
 #initial{
+    background-color: c.$about-us-bgc;
+    // ve agora
     img{
-        margin: 0 37.5vw;
-        width: 25vw;
+        margin: 0 35vw;
+        width: 30vw;
     }
 }
-
 #sobre{
     padding: 3% 5%;
     h2{
         font-family: f.$archivo;
+        font-size: 250%;
         color: c.$font-color4;
         margin-bottom: 3%;
     }
     .text-sobre{
         display: flex;
         justify-content: space-between;
+        width: 60vw;
         p{
             &:nth-child(1){
                 width: 27ch;
-                font-size: 95%;
+                font-size: 145%;
                 font-family: f.$archivo;
             }
             &:nth-child(2){
                 width: 27ch;
-                font-size: 95%;
+                font-size: 130%;
                 font-family: f.$archivo;
             }
         }
