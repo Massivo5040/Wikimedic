@@ -2,7 +2,6 @@
 @use "fonts" as f;
 @use "mixins" as m;
 
-<<<<<<< HEAD
 
 #initial{
     background-color: c.$about-us-bgc;
@@ -36,7 +35,6 @@
                 font-family: f.$archivo;
             }
         }
-=======
 #initial {
   background-color: c.$aboutUs-bgc;
   text-align: center;
@@ -74,7 +72,6 @@
       padding: 20px;
       background-color: bisque;
       border-radius: 50%;
->>>>>>> f750fc97f5121d4cb8eb369b64671049d92dcd13
     }
     img {
       height: 90%;
