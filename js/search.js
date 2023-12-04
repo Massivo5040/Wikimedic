@@ -75,3 +75,12 @@ searchBar.addEventListener("change", async () => {
   console.log("Pesquisando");
   await pesquisar(searchBar.value);
 });
+
+document.addEventListener("click", (e) => {
+  const search_result = document.querySelector("#result");
+  let click_inside =
+    search_result.contains(e.target) || searchBar.contains(e.target);
+  click_inside
+    ? (search_result.style.display = "block")
+    : (search_result.style.display = "none");
+});

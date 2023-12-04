@@ -1,11 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
 .information p {
   width: 70%;
   margin: 60px auto;
   text-align: center;
   font-family: "Archivo", sans-serif;
   font-weight: lighter;
-  font-size: 1.3rem;
+  font-size: 20.8px;
 }
 .information section {
   display: grid;
@@ -24,10 +27,40 @@
 .information section p {
   margin-top: 30px;
   font-family: "Anton", sans-serif;
-  font-size: 1.9rem;
+  font-size: 30.4px;
   color: #003d72;
 }
 
+@media (max-width: 870px) {
+  .information p {
+    width: 70%;
+    margin: 60px auto;
+    text-align: center;
+    font-family: "Archivo", sans-serif;
+    font-weight: lighter;
+    font-size: 10.4px;
+  }
+  .information section {
+    display: flex;
+    flex-direction: column;
+  }
+  .information section figure {
+    background-color: rgba(67, 157, 215, 0.8666666667);
+    border-radius: 50%;
+    padding: 40px;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .information section img {
+    width: 100%;
+  }
+  .information section p {
+    margin-top: 30px;
+    font-family: "Anton", sans-serif;
+    font-size: 15.2px;
+    color: #003d72;
+  }
+}
 .security .header {
   display: grid;
   grid-template-columns: 8fr 4fr;
@@ -42,10 +75,10 @@
 }
 .security .header h2 {
   width: 80%;
-  font-size: 3rem;
+  font-size: 48px;
 }
 .security .header p {
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: lighter;
   text-align: right;
 }
@@ -57,7 +90,7 @@
   padding: 10px 30px;
   border: 2px solid white;
   border-radius: 30px;
-  font-size: 1.5rem;
+  font-size: 24px;
   font-family: "Archivo", sans-serif;
   color: white;
 }
@@ -72,7 +105,7 @@
   color: #003d72;
 }
 .security .main h2 {
-  font-size: 2.5rem;
+  font-size: 40px;
   font-weight: bold;
 }
 .security .main div {
@@ -86,6 +119,66 @@
   border: 4px solid #003d72;
 }
 
+@media (max-width: 870px) {
+  .security .header {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    width: 100%;
+    padding: 50px;
+    background-image: url(../img/security_section_bg.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    font-family: "Archivo", sans-serif;
+    color: white;
+  }
+  .security .header h2 {
+    width: 80%;
+    font-size: 24px;
+  }
+  .security .header p {
+    font-size: 16px;
+    font-weight: lighter;
+    text-align: right;
+  }
+  .security .header div p {
+    margin-top: 150px;
+    text-align: left;
+  }
+  .security .header div a {
+    padding: 10px 30px;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 12px;
+    font-family: "Archivo", sans-serif;
+    color: white;
+  }
+  .security .header div a:hover {
+    background-color: white;
+    color: #439dd7;
+    border: 2px solid transparent;
+  }
+  .security .main {
+    padding: 30px 50px;
+    font-family: "Archivo", sans-serif;
+    color: #003d72;
+  }
+  .security .main h2 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .security .main div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .security .main div p {
+    width: 80%;
+    padding: 10px;
+    margin-top: 20px;
+    border: 4px solid #003d72;
+  }
+}
 main {
   margin-top: 13vh;
 }
@@ -109,7 +202,7 @@ main .inicial img:nth-of-type(1) {
 main .inicial p:nth-of-type(1) {
   width: 60%;
   margin: 0 auto 30px;
-  font-size: 3.5rem;
+  font-size: 56px;
   font-family: "Anton", sans-serif;
   color: white;
 }
@@ -121,7 +214,7 @@ main .inicial a {
   padding: 10px 30px;
   border: 2px solid white;
   border-radius: 30px;
-  font-size: 1.5rem;
+  font-size: 24px;
   font-family: "Archivo", sans-serif;
   color: white;
 }
@@ -129,6 +222,43 @@ main .inicial a:hover {
   background-color: white;
   color: #439dd7;
   border: 2px solid transparent;
+}
+
+@media (max-width: 870px) {
+  main .inicial {
+    height: auto;
+    padding-bottom: 30px;
+  }
+  main .inicial img:nth-of-type(2) {
+    height: 100%;
+  }
+  main .inicial img:nth-of-type(1) {
+    width: 18%;
+  }
+  main .inicial p:nth-of-type(1) {
+    width: 60%;
+    margin: 0 auto 30px;
+    font-size: 28px;
+    font-family: "Anton", sans-serif;
+    color: white;
+  }
+  main .inicial p:nth-of-type(2) {
+    text-align: left;
+  }
+  main .inicial a {
+    margin: 20%;
+    padding: 10px 30px;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 12px;
+    font-family: "Archivo", sans-serif;
+    color: white;
+  }
+  main .inicial a:hover {
+    background-color: white;
+    color: #439dd7;
+    border: 2px solid transparent;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

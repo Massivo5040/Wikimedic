@@ -1,0 +1,37 @@
+@use "../colors" as c;
+@use "../fonts" as f;
+
+@media (max-width: 870px) {
+  $arf: 8px;
+
+  .information {
+    p {
+      width: 70%;
+      margin: 60px auto;
+      text-align: center;
+      font-family: f.$archivo;
+      font-weight: lighter;
+      font-size: 1.3 * $arf;
+    }
+    section {
+      display: flex;
+      flex-direction: column;
+      figure {
+        background-color: c.$icon-bgc;
+        border-radius: 50%;
+        padding: 40px;
+        width: 50%;
+        margin: 0 auto;
+      }
+      img {
+        width: 100%;
+      }
+      p {
+        margin-top: 30px;
+        font-family: f.$anton;
+        font-size: 1.9 * $arf;
+        color: c.$information-font-color;
+      }
+    }
+  }
+}

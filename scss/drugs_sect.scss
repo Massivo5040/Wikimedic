@@ -18,19 +18,19 @@ main {
     }
   }
 
-  .row1 {
+  .importance {
     @include m.elements_grid(2);
     padding: 40px;
     font-family: f.$archivo;
     h2 {
-      width: 70%;
+      width: 90%;
+      margin-bottom: 30px;
       font-size: 3rem;
       font-weight: 300;
       color: c.$font-color4;
     }
     p {
-      width: 50%;
-      margin-top: 30px;
+      width: 60%;
       font-size: 1.2rem;
     }
     div:nth-of-type(2) {
@@ -40,45 +40,46 @@ main {
     }
   }
 
-  .row2 {
-    @include m.elements_grid(2);
-    padding: 40px;
+  .carousel-container {
+    padding: 30px 80px;
     font-family: f.$archivo;
-    text-align: right;
-    div:nth-of-type(1) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    div:nth-of-type(2) {
-      position: relative;
-      img {
-        position: absolute;
-        z-index: -1;
-        height: 100% + 50%;
-        right: -200px;
-        bottom: -150px;
-      }
-    }
-    h2 {
-      // width: 70%;
-      font-size: 3rem;
-      font-weight: 300;
-      color: c.$font-color4;
-    }
-    p {
-      // width: 50%;
-      margin-top: 30px;
-      font-size: 1.2rem;
-    }
-  }
-
-  .carousel {
-    font-family: f.$archivo;
+    color: c.$font-color4;
+    text-align: center;
     background-color: c.$carousel_drugs;
     h3 {
       font-size: 2rem;
       font-weight: 300;
+      letter-spacing: 10px;
+    }
+    p {
+      width: 80%;
+      margin: 0 auto;
+      font-size: 1.3rem;
+    }
+    .container {
+      @include m.carousel();
+    }
+  }
+  .benefits {
+    padding: 70px 0 70px 70px;
+    font-family: f.$archivo;
+    h2 {
+      width: 70%;
+      margin: 0 auto 150px;
+      color: c.$font-color4;
+      font-size: 3rem;
+      font-weight: 300;
+      text-align: center;
+    }
+    div {
+      @include m.elements_grid(3);
+      column-gap: 80px;
+      width: 100%;
+      // margin: 0 auto;
+    }
+    p {
+      width: 90%;
+      font-size: 1.2rem;
     }
   }
 }

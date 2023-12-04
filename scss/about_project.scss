@@ -4,7 +4,8 @@
 
 main {
   .header {
-    padding: 200px 50px 30px;
+    height: 87vh;
+    padding: 150px 50px 30px;
     background-image: url(../img/security_section_bg.png);
     background-repeat: no-repeat;
     background-position: left;
@@ -117,6 +118,7 @@ main {
   .interview {
     position: relative;
     @include m.elements_grid(2);
+    height: 87vh;
     padding: 30px;
     font-family: f.$archivo;
     background-image: url(../img/interview_bg.jpg);
@@ -128,7 +130,7 @@ main {
     }
     p {
       width: 60%;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       margin: 40px 0;
     }
     .btn {

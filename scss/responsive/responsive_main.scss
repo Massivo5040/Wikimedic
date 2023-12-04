@@ -1,0 +1,42 @@
+@use "../colors" as c;
+@use "../fonts" as f;
+
+@media (max-width: 870px) {
+  $arf: 8px;
+  main {
+    .inicial {
+      height: auto;
+      padding-bottom: 30px;
+      img:nth-of-type(2) {
+        height: 100%;
+      }
+      img:nth-of-type(1) {
+        width: 18%;
+      }
+      p:nth-of-type(1) {
+        width: 60%;
+        margin: 0 auto 30px;
+        font-size: 3.5 * $arf;
+        font-family: f.$anton;
+        color: c.$font-color2;
+      }
+      p:nth-of-type(2) {
+        text-align: left;
+      }
+      a {
+        margin: 20%;
+        padding: 10px 30px;
+        border: 2px solid c.$border-color2;
+        border-radius: 30px;
+        font-size: 1.5 * $arf;
+        font-family: f.$archivo;
+        color: c.$font-color2;
+        &:hover {
+          background-color: c.$font-color2;
+          color: c.$font-color3;
+          border: 2px solid transparent;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use "../colors" as c;
+@use "../fonts" as f;
+
+@media (max-width: 870px) {
+  .search {
+    input {
+      width: 70%;
+    }
+  }
+  .logo {
+    display: none;
+  }
+  .main-nav {
+    display: none;
+  }
+  .responsive-extra {
+    display: block !important;
+  }
+}

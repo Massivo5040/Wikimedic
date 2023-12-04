@@ -1,0 +1,82 @@
+@use "colors" as c;
+@use "fonts" as f;
+@use "mixins" as m;
+
+main {
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-color: c.$hot-drugs-header-bgc;
+    img {
+      margin-right: 30px;
+    }
+    h1 {
+      color: c.$font-color2;
+      font-family: f.$archivo;
+      font-size: 3rem;
+      font-weight: 300;
+      letter-spacing: 20px;
+    }
+  }
+
+  .drugs {
+    margin-top: 100px;
+    h2 {
+      margin-left: 30px;
+      margin-bottom: 30px;
+      color: c.$font-color5;
+      font-family: f.$archivo;
+      font-size: 2rem;
+      font-weight: 300;
+      letter-spacing: 10px;
+    }
+    hr {
+      width: 100%;
+      background-color: c.$font-color5;
+      height: 3px;
+    }
+    .carousel-container {
+      padding: 0 80px 30px;
+      text-align: center;
+    }
+    .container {
+      @include m.carousel2();
+
+      span {
+        position: relative;
+        z-index: 1;
+        &:hover > p {
+          bottom: 0;
+          opacity: 1;
+        }
+      }
+      p {
+        position: absolute;
+        z-index: 999;
+        bottom: -20px;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 25%;
+        padding: 10px;
+        color: c.$font-color5-1;
+        font-family: f.$archivo;
+        background-color: c.$hover-drugs;
+        transition: all 0.5s;
+        .fa-star {
+          position: absolute;
+          right: 5px;
+          top: 5px;
+          color: c.$font-color4;
+          font-size: 2rem;
+          &:hover {
+            color: c.$font-color5;
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+}
