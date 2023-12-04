@@ -1,5 +1,5 @@
 // variáveis de ambiente
-export const serverURL = "https://server-wikimedic.onrender.com" //essa é a url do servidor
+export const serverURL = "http://localhost:8080" //essa é a url do servidor
 export let userInfo = { // informações do usuário
     id : localStorage.getItem('idUser'),
     name : localStorage.getItem('username'),
