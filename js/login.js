@@ -23,6 +23,13 @@ login.addEventListener('click', async e =>{
         }
 
         json = await response.json()
+        if(response.status == 201)
+        {
+            localStorage.setItem('idUser', json.user.id)
+            localStorage.setItem('name', json.user.name)
+            localStorage.setItem('email', json.user.email)
+            localStorage.setItem('password', password)
+        }
         console.log(json)
     }
 })
