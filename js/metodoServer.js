@@ -92,7 +92,7 @@ export async function saveComentario(comentario)
 
     let auth = {}
 
-    if(localStorage.getItem('email') != null) // se o email estiver no local storage
+    if(localStorage.getItem('login') != "true") // se o login estiver no local storage
     {
       auth = {
         email : localStorage.getItem('email'),
@@ -129,4 +129,9 @@ export async function saveComentario(comentario)
   } catch (error) {
     console.log(error)
   }
+}
+
+export async function saveFavorito()
+{
+  
 }
