@@ -2,6 +2,7 @@ import { serverURL, userInfo } from "./env.js"
 
 export async function saveUser(user) {
   const url = serverURL + '/users/register';
+  console.log("Salvando Usuário")
 
   const data = {
     name: user.name,
@@ -19,7 +20,7 @@ export async function saveUser(user) {
       },
     });
 
-    return await response.json();
+    return await response
   } catch (error) {
     console.error('Erro na solicitação:', error);
   }
