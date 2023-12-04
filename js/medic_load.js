@@ -112,10 +112,8 @@ const render_medic = async (params) => { // função main, tudo ocorre dentro de
   console.log(await commentResponse.json())
 }
 
-
-
-
 const params = getURLParameters()
+
 if (params.numProcesso != null) {
   try {
     render_medic()
