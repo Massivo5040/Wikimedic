@@ -44,14 +44,15 @@ const pesquisar = async (name) => {
 
       //const pdf = await retornarPDF(medicamento.codigoBulaPaciente)&idB
       //?numProcesso=${medicamento.numProcesso}&name=${medicamento.nomeProduto.replace(" ", "_")}
-      
-      let url = "./html/medic.html"
-      if(window.location.pathname == "/Wikimedic/html/medic.html")
-      {
-        url = "./medic.html"
+
+      let url = "./html/medic.html";
+      if (window.location.pathname == "/Wikimedic/html/medic.html") {
+        url = "./medic.html";
       }
       localStorage.setItem("numProcesso", medicamento.numProcesso);
-      anchorElement.href = url + `?numProcesso=${medicamento.numProcesso}&name=${medicamento.nomeProduto}`;
+      anchorElement.href =
+        url +
+        `?numProcesso=${medicamento.numProcesso}&name=${medicamento.nomeProduto}`;
       console.log(url);
 
       nomeProdutoElement.appendChild(searchIcon);

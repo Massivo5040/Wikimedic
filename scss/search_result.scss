@@ -2,6 +2,7 @@
 @use "fonts" as f;
 
 header .search {
+  position: relative;
   #result {
     position: absolute;
     top: -10px;

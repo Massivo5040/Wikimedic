@@ -2,7 +2,6 @@
 @use "fonts" as f;
 @use "menu";
 @use "search_result";
-@use "./responsive/responsive_header.scss";
 
 header {
   position: fixed;
@@ -81,3 +80,5 @@ header {
 .responsive-extra {
   display: none;
 }
+
+@import "./responsive/responsive_header.scss";

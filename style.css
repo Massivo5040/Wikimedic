@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -75,6 +76,9 @@
   list-style: none;
 }
 
+header .search {
+  position: relative;
+}
 header .search #result {
   position: absolute;
   top: -10px;
@@ -103,20 +107,6 @@ header .search #result a::after {
   transition: none;
 }
 
-@media (max-width: 870px) {
-  .search input {
-    width: 70%;
-  }
-  .logo {
-    display: none;
-  }
-  .main-nav {
-    display: none;
-  }
-  .responsive-extra {
-    display: block !important;
-  }
-}
 header {
   position: fixed;
   z-index: 999;
@@ -193,6 +183,20 @@ header .selected::after {
   display: none;
 }
 
+@media (max-width: 870px) {
+  .search input {
+    width: 70%;
+  }
+  .logo {
+    display: none;
+  }
+  .main-nav {
+    display: none;
+  }
+  .responsive-extra {
+    display: block !important;
+  }
+}
 footer {
   background-color: rgba(67, 157, 215, 0.5333333333);
   padding: 20px 0;
