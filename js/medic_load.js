@@ -112,19 +112,23 @@ const render_medic = async (params) => {
   const commentResponse = await fetch(
     serverURL + "/comentarios/numRegistro/" + medic.numRegistro
   );
-  console.log(await commentResponse.json());
+  console.log(await commentResponse.body());
 };
 
-const params = getURLParameters();
+const medicLoad = async () => {
+  const params = getURLParameters();
 
-if (params.numProcesso != null) {
-  try {
-    render_medic();
-  } catch (err) {
-    console.log(err);
-  } // execução da função que renderiza as informações na tela
-} else {
-  console.warn("Erro!! Sem parâmetros de consulta");
-  const numProcesso = localStorage.getItem("numProcesso");
-  render_medic({ numProcesso });
+  if (params.numProcesso != null) {
+    try {
+      render_medic(params);
+    } catch (err) {
+      console.log(err);
+    } // execução da função que renderiza as informações na tela
+  } else {
+    console.warn("Erro!! Sem parâmetros de consulta");
+    const numProcesso = localStorage.getItem("numProcesso");
+    render_medic({ numProcesso });
+  }
 }
+
+medicLoad()
