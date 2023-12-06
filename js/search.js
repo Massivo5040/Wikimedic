@@ -46,7 +46,7 @@ const pesquisar = async (name) => {
       //?numProcesso=${medicamento.numProcesso}&name=${medicamento.nomeProduto.replace(" ", "_")}
       
       let url = "./html/medic.html"
-      if(window.location == "https://massivo5040.github.io/Wikimedic/html/medic.html")
+      if(window.location.href == "https://massivo5040.github.io/Wikimedic/html/medic.html")
       {
         url = "./medic.html"
       }
