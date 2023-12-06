@@ -17,14 +17,15 @@
       <div class="logo">
         <img src="../img/wikimedic.png" alt="Logo da Wikimedic" />
       </div>
-      <nav>
-        <a href="../index.html">Home</a>
+      <nav class="main-nav">
+        <a class="selected" href="../index.html">Home</a>
         <a href="./hot_drugs.html">Em alta</a>
         <a href="./sobre.html">Sobre nós</a>
       </nav>
       <div class="search">
-        <input type="text" />
+        <input type="text" id="search" />
         <span class="material-symbols-rounded">search</span>
+        <ul id="result"></ul>
       </div>
       <div class="login">
         <a href="./login.html">Login</a>
@@ -36,13 +37,20 @@
             <span></span>
           </div>
           <ul>
+            <li class="responsive-extra">
+              <a class="selected" href="../index.html">Home</a>
+            </li>
+            <li class="responsive-extra">
+              <a href="./hot_drugs.html">Em alta</a>
+            </li>
+            <li class="responsive-extra">
+              <a href="./sobre.html">Sobre nós</a>
+            </li>
             <li><a href="./pediatria.html">Pediatria</a></li>
             <li><a href="./fitoterapicos.html">Fitoterápicos</a></li>
             <li><a href="./genericos.html">Genéricos</a></li>
             <li><a href="./homeopaticos.html">Homeopáticos</a></li>
-            <li>
-              <a class="selected" href="./similares.html">Similares</a>
-            </li>
+            <li><a href="./similares.html">Similares</a></li>
             <li><a href="./alopaticos.html">Alopáticos</a></li>
             <li><a href="./about_project.html">Sobre o projeto</a></li>
           </ul>
@@ -58,7 +66,14 @@
         <div>
           <h2>O QUE SÃO OS MEDICAMENTOS SIMILARES</h2>
           <p>
-            Os medicamentos similares são aqueles que contêm o mesmo ou os mesmos princípios ativos, apresentam a mesma concentração, forma farmacêutica, via de administração, posologia e indicação terapêutica que os medicamentos de referência registrados na Anvisa. Eles são equivalentes aos medicamentos registrados no órgão federal responsável pela vigilância sanitária, mas podem diferir em características como tamanho e forma do produto, prazo de validade, embalagem, rotulagem, excipientes e veículo.
+            Os medicamentos similares são aqueles que contêm o mesmo ou os
+            mesmos princípios ativos, apresentam a mesma concentração, forma
+            farmacêutica, via de administração, posologia e indicação
+            terapêutica que os medicamentos de referência registrados na Anvisa.
+            Eles são equivalentes aos medicamentos registrados no órgão federal
+            responsável pela vigilância sanitária, mas podem diferir em
+            características como tamanho e forma do produto, prazo de validade,
+            embalagem, rotulagem, excipientes e veículo.
           </p>
         </div>
       </article>
@@ -66,7 +81,8 @@
       <article class="carousel-container">
         <h3>EXPLORE</h3>
         <p>
-          Acesse o maior catálogo de bulas  digitais que você já viu! Tenha acesso a toda e qualquer bula a distância de um clique!
+          Acesse o maior catálogo de bulas digitais que você já viu! Tenha
+          acesso a toda e qualquer bula a distância de um clique!
         </p>
         <div class="container">
           <span class="material-symbols-rounded" id="left">chevron_left </span>
@@ -122,13 +138,23 @@
         <h2>3 BENEFÍCIOS DOS MEDICAMENTOS SIMILARES</h2>
         <div>
           <p>
-            Os remédios similares geralmente são mais acessíveis em comparação com os medicamentos de marca. Isso pode ser especialmente vantajoso para pacientes que precisam de tratamentos de longo prazo.
+            Os remédios similares geralmente são mais acessíveis em comparação
+            com os medicamentos de marca. Isso pode ser especialmente vantajoso
+            para pacientes que precisam de tratamentos de longo prazo.
           </p>
           <p>
-            Os medicamentos similares devem passar por testes rigorosos para garantir que sejam bioequivalentes aos medicamentos de marca. Isso significa que eles contêm os mesmos ingredientes ativos em concentrações semelhantes, o que resulta em efeitos terapêuticos equivalentes.
+            Os medicamentos similares devem passar por testes rigorosos para
+            garantir que sejam bioequivalentes aos medicamentos de marca. Isso
+            significa que eles contêm os mesmos ingredientes ativos em
+            concentrações semelhantes, o que resulta em efeitos terapêuticos
+            equivalentes.
           </p>
           <p>
-            A disponibilidade de medicamentos similares pode aumentar o acesso a tratamentos essenciais para uma variedade de condições médicas. Isso é particularmente significativo em áreas onde os custos dos medicamentos de marca podem representar um obstáculo para muitos pacientes.
+            A disponibilidade de medicamentos similares pode aumentar o acesso a
+            tratamentos essenciais para uma variedade de condições médicas. Isso
+            é particularmente significativo em áreas onde os custos dos
+            medicamentos de marca podem representar um obstáculo para muitos
+            pacientes.
           </p>
         </div>
       </article>
