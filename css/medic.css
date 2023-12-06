@@ -1,3 +1,89 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
+main .drug {
+  font-family: "Archivo", sans-serif;
+  padding: 40px 30px;
+}
+main .drug .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  gap: 100px;
+  width: 70%;
+  margin: 0 auto;
+}
+main .drug .header img {
+  width: 30%;
+}
+main .drug .header h1 {
+  color: #003d72;
+  font-size: 48px;
+}
+main .drug .header p {
+  font-size: 24px;
+}
+main .drug .informations {
+  margin-top: 40px;
+}
+main .drug .informations div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  font-size: 24px;
+  color: #003d72;
+}
+main .drug .informations span {
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+main .drug .informations .rotate {
+  transform: rotate(180deg);
+}
+main .drug .informations hr {
+  height: 3px;
+  border: none;
+  background-color: #898989;
+}
+main .drug .informations p {
+  visibility: hidden;
+  margin-top: -20px;
+  font-size: 21.6px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+main .drug .informations .active {
+  animation: showIn 0.5s ease forwards;
+}
+main .drug .informations .deactive {
+  animation: showOut 0.5s ease forwards;
+}
+@keyframes showIn {
+  from {
+    visibility: hidden;
+    margin-top: -20px;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  to {
+    visibility: visible;
+    margin-top: 10px;
+    opacity: 1;
+    transition: all 0.5s;
+  }
+}
+@keyframes showOut {
+  from {
+    visibility: visible;
+    margin-top: 10px;
+    opacity: 1;
+    transition: all 0.5s;
+  }
+  to {
+    visibility: hidden;
+    margin-top: -20px;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+}
 
 /*# sourceMappingURL=medic.css.map */

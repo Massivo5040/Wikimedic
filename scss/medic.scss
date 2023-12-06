@@ -1,0 +1,92 @@
+@use "colors" as c;
+@use "fonts" as f;
+@use "mixins" as m;
+
+main .drug {
+  $arf: 16px;
+  font-family: f.$archivo;
+  padding: 40px 30px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    gap: 100px;
+    width: 70%;
+    margin: 0 auto;
+    img {
+      width: 30%;
+    }
+    h1 {
+      color: c.$font-color4;
+      font-size: 3 * $arf;
+    }
+    p {
+      font-size: 1.5 * $arf;
+    }
+  }
+
+  .informations {
+    margin-top: 40px;
+    div {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      font-size: 1.5 * $arf;
+      color: c.$font-color4;
+    }
+    span {
+      cursor: pointer;
+      transition: all 0.5s ease;
+    }
+    .rotate {
+      transform: rotate(180deg);
+    }
+    hr {
+      height: 3px;
+      border: none;
+      background-color: c.$drug-hr;
+    }
+    p {
+      visibility: hidden;
+      margin-top: -20px;
+      font-size: 1.35 * $arf;
+      opacity: 0;
+      transition: all 0.5s;
+    }
+    .active {
+      animation: showIn 0.5s ease forwards;
+    }
+    .deactive {
+      animation: showOut 0.5s ease forwards;
+    }
+    @keyframes showIn {
+      from {
+        visibility: hidden;
+        margin-top: -20px;
+        opacity: 0;
+        transition: all 0.5s;
+      }
+      to {
+        visibility: visible;
+        margin-top: 10px;
+        opacity: 1;
+        transition: all 0.5s;
+      }
+    }
+    @keyframes showOut {
+      from {
+        visibility: visible;
+        margin-top: 10px;
+        opacity: 1;
+        transition: all 0.5s;
+      }
+      to {
+        visibility: hidden;
+        margin-top: -20px;
+        opacity: 0;
+        transition: all 0.5s;
+      }
+    }
+  }
+}
