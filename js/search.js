@@ -51,7 +51,7 @@ const pesquisar = async (name) => {
         url = "./medic.html"
       }
       localStorage.setItem("numProcesso", medicamento.numProcesso);
-      anchorElement.href = url + `?numProcesso=${medicamento.numProcesso}&name=${medicamento.name}`;
+      anchorElement.href = url + `?numProcesso=${medicamento.numProcesso}&name=${medicamento.nomeProduto}`;
       console.log(url);
 
       nomeProdutoElement.appendChild(searchIcon);
