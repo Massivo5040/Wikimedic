@@ -44,7 +44,12 @@ const pesquisar = async (name) => {
 
       //const pdf = await retornarPDF(medicamento.codigoBulaPaciente)&idB
       //?numProcesso=${medicamento.numProcesso}&name=${medicamento.nomeProduto.replace(" ", "_")}
-      const url = `./html/medic.html`;
+      
+      let url = "./html/medic.html"
+      if(window.location == "https://massivo5040.github.io/Wikimedic/html/medic.html")
+      {
+        url = "./medic.html"
+      }
       localStorage.setItem("numProcesso", medicamento.numProcesso);
       anchorElement.href = url;
       console.log(url);
