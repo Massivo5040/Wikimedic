@@ -110,7 +110,7 @@ const render_medic = async (params) => {
   console.info(userInfo);
 
   const commentResponse = await fetch(
-    serverURL + "/comentarios/numProcesso/" + params.numProcesso
+    serverURL + "/comentarios/numRegistro/" + medic.numRegistro
   );
   console.log(await commentResponse.json());
 };
