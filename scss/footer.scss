@@ -15,10 +15,16 @@ footer {
     .title {
       font-size: 1.3 * $arf;
       color: c.$font-color4;
+      & a:visited {
+        color: c.$font-color4;
+      }
     }
     .topic {
       font-size: 1.1 * $arf;
       color: c.$font-color;
+      & a:visited {
+        color: c.$font-color;
+      }
     }
   }
   .about_us {

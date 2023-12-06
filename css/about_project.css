@@ -12,7 +12,7 @@ main .header {
 }
 main .header h1 {
   width: 85%;
-  font-size: 4.5rem;
+  font-size: 72px;
 }
 main .header div {
   display: grid;
@@ -25,7 +25,7 @@ main .header a {
   width: auto;
   text-align: center;
   text-decoration: underline;
-  font-size: 1.5rem;
+  font-size: 24px;
   color: white;
 }
 main .header a:hover {
@@ -37,8 +37,13 @@ main .article {
   padding: 50px;
   font-family: "Archivo", sans-serif;
 }
-main .article div * {
+main .article div h2 {
+  width: 80%;
+  font-size: 32px;
+}
+main .article div p {
   width: 50%;
+  font-size: 22.4px;
 }
 main .article div p:nth-of-type(1) {
   margin: 40px 0 30px;
@@ -60,12 +65,12 @@ main .articles img[alt="Ícone de lupa"] {
 }
 main .articles section h2 {
   margin: 50px 0;
-  font-size: 3rem;
+  font-size: 48px;
   color: #003d72;
 }
 main .articles section p {
   width: 70%;
-  font-size: 1.3rem;
+  font-size: 20.8px;
 }
 main .agenda2030 {
   padding: 30px;
@@ -73,12 +78,13 @@ main .agenda2030 {
   text-align: center;
 }
 main .agenda2030 h2 {
-  font-size: 3rem;
+  font-size: 48px;
   font-weight: bold;
 }
 main .agenda2030 .description {
   width: 60%;
   margin: 40px auto;
+  font-size: 20.8px;
 }
 main .agenda2030 .aspects {
   display: grid;
@@ -104,6 +110,7 @@ main .agenda2030 .aspects img {
 }
 main .agenda2030 .aspects p {
   margin-top: 30px;
+  font-size: 20.8px;
 }
 main .interview {
   position: relative;
@@ -117,12 +124,12 @@ main .interview {
   background-size: cover;
 }
 main .interview h2 {
-  font-size: 3rem;
+  font-size: 48px;
   color: #003d72;
 }
 main .interview p {
   width: 60%;
-  font-size: 1.1rem;
+  font-size: 22.4px;
   margin: 40px 0;
 }
 main .interview .btn {
@@ -136,6 +143,7 @@ main .interview a {
   color: #003d72;
   border: 2px solid #003d72;
   border-radius: 40px;
+  font-size: 20.8px;
 }
 main .interview a:hover {
   background-color: rgba(0, 61, 114, 0.4666666667);
@@ -149,7 +157,7 @@ main .curiosity {
 main .curiosity h2 {
   margin-bottom: 80px;
   color: #003d72;
-  font-size: 3rem;
+  font-size: 48px;
 }
 main .curiosity div {
   display: grid;
@@ -157,11 +165,11 @@ main .curiosity div {
 }
 main .curiosity p {
   width: 60%;
-  font-size: 1.3rem;
+  font-size: 20.8px;
 }
 main .cannabis {
   position: relative;
-  z-index: -2;
+  z-index: 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -182,12 +190,29 @@ main .cannabis div {
   background-color: rgba(0, 61, 114, 0.3333333333);
 }
 main .cannabis h2 {
-  font-size: 3rem;
+  font-size: 48px;
   font-weight: 300;
   letter-spacing: 10px;
 }
 main .cannabis p {
-  font-size: 1.3rem;
+  font-size: 20.8px;
+}
+main .cannabis a {
+  position: absolute;
+  z-index: 3;
+  bottom: 30px;
+  left: 50%;
+  padding: 20px 40px;
+  background-color: rgba(255, 255, 255, 0.4666666667);
+  color: #003d72;
+  border: 2px solid #003d72;
+  border-radius: 40px;
+  font-size: 20.8px;
+}
+main .cannabis a:hover {
+  background-color: rgba(0, 61, 114, 0.4666666667);
+  color: #ffffff;
+  border: 2px solid #ffffff;
 }
 
 .standard_artic {
@@ -206,7 +231,7 @@ main .cannabis p {
   padding: 10px 30px;
   border: 2px solid #439dd7;
   border-radius: 30px;
-  font-size: 1.5rem;
+  font-size: 24px;
   font-family: "Archivo", sans-serif;
   color: #439dd7;
 }

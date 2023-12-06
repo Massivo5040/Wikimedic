@@ -123,7 +123,7 @@ header {
   top: 0;
   display: flex;
   justify-content: space-between;
-  padding: 15px 10px;
+  padding: 15px 20px 15px 10px;
   height: 13vh;
   width: 100vw;
   background-color: white;
@@ -209,8 +209,14 @@ footer div .title {
   font-size: 20.8px;
   color: #003d72;
 }
+footer div .title a:visited {
+  color: #003d72;
+}
 footer div .topic {
   font-size: 17.6px;
+  color: black;
+}
+footer div .topic a:visited {
   color: black;
 }
 footer .about_us {
