@@ -109,12 +109,8 @@
   font-weight: bold;
 }
 .security .main div {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   margin-top: 50px;
-}
-.security .main div p {
-  width: 80%;
+  width: 40%;
   padding: 10px;
   border: 4px solid #003d72;
   font-size: 22.4px;
