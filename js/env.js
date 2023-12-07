@@ -9,3 +9,5 @@ export let userInfo = {
   password: localStorage.getItem("password"),
   login: localStorage.getItem("login"),
 };
+
+export const indesHTML_path = '/index.html' // esse path é relativo, no github pages ele fica '/Wikimedic/index.html'

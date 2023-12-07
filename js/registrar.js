@@ -28,6 +28,7 @@ btnRegistrar.addEventListener("click", async (e) => {
         json = await response.json();
         if (response.ok) {
           alert("Usuário Registrado");
+          window.location.pathname = env.indesHTML_path
         } else {
           alert(json.message);
         }

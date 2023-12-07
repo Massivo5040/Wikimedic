@@ -16,7 +16,9 @@ login.addEventListener("click", async (e) => {
     });
 
     if (response.ok) {
-      alert("Usuário Autenticado");
+      setTimeout(()=>{
+        window.location.pathname = '/index.html'
+      }, 100)
     }
 
     json = await response.json();
@@ -24,6 +26,7 @@ login.addEventListener("click", async (e) => {
       localStorage.setItem("idUser", json.user.id);
       localStorage.setItem("name", json.user.name);
       localStorage.setItem("email", json.user.email);
+      localStorage.setItem('email_reserva', json.user.email_reserva)
       localStorage.setItem("password", password);
     }
     console.log(json);
