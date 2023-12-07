@@ -1,15 +1,15 @@
-@use "../colors" as c;
-@use "../fonts" as f;
+@use "../../colors" as c;
+@use "../../fonts" as f;
 
 @media (max-width: 870px) {
   $arf: 8px;
   .security {
     .header {
-      display: grid;
-      grid-template-columns: 8fr 4fr;
+      display: flex;
+      flex-direction: column;
       width: 100%;
       padding: 50px;
-      background-image: url(../img/security_section_bg.png);
+      background-image: url(../../../img/security_section_bg.png);
       background-repeat: no-repeat;
       background-position: left;
       background-size: cover;
@@ -22,25 +22,24 @@
       p {
         font-size: 2 * $arf;
         font-weight: lighter;
-        text-align: right;
-      }
-      div {
-        p {
-          margin-top: 150px;
+        text-align: left;
+        &:nth-of-type(1) {
+          margin-top: 50px;
+          margin-bottom: 20px;
           text-align: left;
         }
-        a {
-          padding: 10px 30px;
-          border: 2px solid c.$border-color2;
-          border-radius: 30px;
-          font-size: 1.5 * $arf;
-          font-family: f.$archivo;
-          color: c.$font-color2;
-          &:hover {
-            background-color: c.$font-color2;
-            color: c.$font-color3;
-            border: 2px solid transparent;
-          }
+      }
+      a {
+        padding: 10px 30px;
+        border: 2px solid c.$border-color2;
+        border-radius: 30px;
+        font-size: 2 * $arf;
+        font-family: f.$archivo;
+        color: c.$font-color2;
+        &:hover {
+          background-color: c.$font-color2;
+          color: c.$font-color3;
+          border: 2px solid transparent;
         }
       }
     }

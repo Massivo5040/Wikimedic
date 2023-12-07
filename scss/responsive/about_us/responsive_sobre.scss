@@ -1,0 +1,136 @@
+@use "../../colors" as c;
+@use "../../fonts" as f;
+@use "../../mixins" as m;
+
+@media (max-width: 870px) {
+  $arf: 8px;
+  #initial {
+    background-color: c.$aboutUs-bgc;
+    text-align: center;
+    img {
+      width: 70vw;
+    }
+  }
+
+  .standard_style {
+    padding: 3% 5%;
+    h2 {
+      font-family: f.$archivo;
+      font-weight: 700;
+      color: c.$font-color4;
+      margin-bottom: 3%;
+    }
+    .text-sobre {
+      display: flex;
+      flex-direction: column;
+      p {
+        width: 27ch;
+        margin-top: 30px;
+        font-size: 2.5 * $arf;
+        font-family: f.$archivo;
+      }
+    }
+
+    .icons {
+      @include m.elements_grid(3);
+      column-gap: 40px;
+      margin-top: 30px;
+      text-align: center;
+      figure {
+        width: 70%;
+        height: 200px;
+        margin: 0 auto 20px;
+        padding: 20px;
+        background-color: bisque;
+        border-radius: 50%;
+      }
+      img {
+        height: 90%;
+      }
+      p {
+        font-family: f.$archivo;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .team {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0 40px 40px;
+    background-color: c.$about-section-bgc;
+    .information {
+      h2 {
+        font-size: 6 * $arf;
+        font-family: f.$archivo;
+        font-weight: bold;
+        color: c.$font-color4;
+      }
+      p {
+        width: 90%;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        font-size: 2.7 * $arf;
+        font-family: f.$archivo;
+      }
+    }
+    .slider {
+      display: flex;
+      margin-left: -25px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      scroll-behavior: smooth;
+      &::-webkit-scrollbar {
+        width: 0;
+        background: transparent;
+      }
+      font-family: f.$archivo;
+      .person {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        width: 350px;
+        height: 100%;
+        margin: 0 15px;
+        padding: 20px;
+        background-color: c.$card-person-bgc;
+        text-align: center;
+        img {
+          width: 50%;
+          border-radius: 50%;
+        }
+        .role {
+          margin: 10px 0;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .quote {
+    padding: 40px 20px;
+    background-color: c.$about-section-bgc;
+    font-family: f.$archivo;
+    color: c.$font-color4;
+    p:nth-of-type(1) {
+      font-weight: 300;
+      font-size: 1.9 * $arf;
+      &::before {
+        content: '"';
+        font-family: f.$passion;
+        font-size: 3 * $arf;
+      }
+      &::after {
+        content: '"';
+        font-family: f.$passion;
+        font-size: 3 * $arf;
+      }
+    }
+    p:nth-of-type(2) {
+      font-size: 2 * $arf;
+      font-style: italic;
+      text-align: right;
+      text-decoration: underline;
+    }
+  }
+}

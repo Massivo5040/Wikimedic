@@ -1,5 +1,5 @@
-@use "../colors" as c;
-@use "../fonts" as f;
+@use "../../colors" as c;
+@use "../../fonts" as f;
 
 @media (max-width: 870px) {
   $arf: 8px;
@@ -11,7 +11,7 @@
       text-align: center;
       font-family: f.$archivo;
       font-weight: lighter;
-      font-size: 1.3 * $arf;
+      font-size: 2.4 * $arf;
     }
     section {
       display: flex;
@@ -29,7 +29,7 @@
       p {
         margin-top: 30px;
         font-family: f.$anton;
-        font-size: 1.9 * $arf;
+        font-size: 2.3 * $arf;
         color: c.$information-font-color;
       }
     }
