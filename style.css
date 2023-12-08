@@ -380,8 +380,8 @@ footer .social_media img {
     text-align: center;
   }
   footer .social_media img {
-    width: 35px;
-    margin: 10px 7.5px;
+    width: 45px;
+    margin: 10px auto;
   }
   footer .social_media p {
     grid-column-start: 1;
