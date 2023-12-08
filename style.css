@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -197,6 +198,72 @@ header .selected::after {
     display: block !important;
   }
 }
+@media (max-width: 870px) {
+  .login .menu {
+    position: relative;
+  }
+  .login .menu .menu-faketrigger {
+    position: absolute;
+    right: 0;
+    z-index: 970;
+    width: 35px;
+    height: 25px;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .login .menu .menu-faketrigger:checked ~ .menu-lines span:nth-child(1) {
+    transform-origin: 0% 0%;
+    transform: rotate(45deg) scaleX(1.25);
+    margin-bottom: 4.5px;
+  }
+  .login .menu .menu-faketrigger:checked ~ .menu-lines span:nth-child(2) {
+    opacity: 0;
+  }
+  .login .menu .menu-faketrigger:checked ~ .menu-lines span:nth-child(3) {
+    transform-origin: 0% 100%;
+    transform: rotate(-45deg) scaleX(1.25);
+    margin-top: 4.5px;
+  }
+  .login .menu .menu-faketrigger:checked ~ ul {
+    margin-right: 0;
+  }
+  .login .menu .menu-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    z-index: 950;
+  }
+  .login .menu .menu-lines span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    border-radius: 20px;
+    transition: all ease 500ms;
+  }
+  .login .menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    z-index: 900;
+    right: -3vh;
+    top: -2vw;
+    padding: 13vh 0 5vh 0;
+    width: 300px;
+    height: auto;
+    text-align: center;
+    font-size: 12px;
+    background-color: white;
+    border-radius: 30px;
+    margin-right: -300px;
+    transition: all ease 200ms;
+  }
+  .login .menu ul li {
+    list-style: none;
+  }
+}
 footer {
   background-color: rgba(67, 157, 215, 0.5333333333);
   padding: 20px 0;
@@ -261,7 +328,7 @@ footer .social_media img {
 
 @media (max-width: 870px) {
   footer {
-    height: 350px;
+    height: 400px;
     padding: 20px 0;
     background-color: rgba(67, 157, 215, 0.5333333333);
     font-family: "Archivo", sans-serif;
