@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/main.css" />
     <title>Wikimedic</title>
   </head>
+
   <body>
     <header>
       <div class="logo">
@@ -27,7 +28,7 @@
         <ul id="result"></ul>
       </div>
       <div class="login">
-        <a href="./html/login.html">Login</a>
+        <a id="login-a" href="./html/login.html">Login</a>
         <nav class="menu">
           <input type="checkbox" class="menu-faketrigger" />
           <div class="menu-lines">
@@ -116,18 +117,19 @@
         <section class="main">
           <h2>ÉTICA, SEGURANÇA E TECNOLOGIA</h2>
           <div>
-            <p>
-              Conforme a visão da empresa, a Wikimedic se propõe como um bulário
-              digital, sendo uma ponte para a informação com segurança e a ética
-              presente em cada bula de medicamento apresentada ao nosso público
-              .
-            </p>
-            <p>
-              Utilizando da tecnologia como uma aliada nesse mundo atual, a
+            <span
+              >Conforme a visão da empresa, a Wikimedic se propõe como um
+              bulário digital, sendo uma ponte para a informação com segurança e
+              a ética presente em cada bula de medicamento apresentada ao nosso
+              público.</span
+            >
+            <br /><br />
+            <span
+              >Utilizando da tecnologia como uma aliada nesse mundo atual, a
               crianção de uma bula digital facilitadora para o público leigo
               utiliza sua vantagem para espalhar informação de forma segura e
-              objetiva.
-            </p>
+              objetiva.</span
+            >
           </div>
         </section>
       </article>
@@ -156,17 +158,18 @@
         </article>
         <article class="social_media">
           <a href="#"
-            ><img src="../img/facebook_logo.png" alt="Logo do facebook"
+            ><img src="./img/facebook_logo.png" alt="Logo do facebook"
           /></a>
           <a href="#"
-            ><img src="../img/instagram_logo.png" alt="Logo do instagram"
+            ><img src="./img/instagram_logo.png" alt="Logo do instagram"
           /></a>
           <a href="#"
-            ><img src="../img/twitter_logo.png" alt="Logo do twitter"
+            ><img src="./img/twitter_logo.png" alt="Logo do twitter"
           /></a>
           <p>2023- © wikimedic.Todos os Direitos Reservados</p>
         </article>
       </div>
+
       <script type="module">
         import { serverURL } from "./js/env.js";
         async function home() {
