@@ -40,7 +40,7 @@ main .article {
 }
 main .article div h2 {
   width: 80%;
-  font-size: 32px;
+  font-size: 48px;
 }
 main .article div p {
   width: 50%;
@@ -48,6 +48,12 @@ main .article div p {
 }
 main .article div p:nth-of-type(1) {
   margin: 40px 0 30px;
+}
+main .article .standard_artic {
+  width: 80%;
+}
+main .article .standard_artic img {
+  width: 100%;
 }
 main .articles {
   position: relative;
@@ -223,6 +229,7 @@ main .cannabis a:hover {
   text-align: center;
 }
 .standard_artic img {
+  border: 1px solid #003d72;
   border-radius: 0 60px 0 0;
 }
 .standard_artic figcaption {

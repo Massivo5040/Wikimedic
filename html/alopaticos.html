@@ -185,6 +185,35 @@
           <p>2023 - © Wikimedic. Todos os Direitos Reservados</p>
         </article>
       </div>
+      <script type="module">
+        import { serverURL } from "../js/env.js";
+        async function home() {
+          const response = await fetch(
+            "https://bula.vercel.app/pesquisar?nome=AMOXICILINA&pagina=1"
+          );
+          if (!response.ok) {
+            alert(
+              "Servidor Bulario API está offline. \nBase de Dados desligada ou desconectada, alguns medicamentos não estarão disponíveis "
+            );
+          } else {
+            console.log("API Bulario Funcionando");
+          }
+
+          document.cookie = "meuCookie=valor; path=/";
+          console.log(document.cookie);
+
+          const serverResponse = await fetch(serverURL);
+          if (!serverResponse.ok) {
+            alert(
+              "Servidor Wikimedic está offline. Serviços como Login, Comentário e Favoritos estarão indisponíveis"
+            );
+          } else {
+            console.log("Servidor Wikimedic Funcionando!");
+          }
+        }
+        home();
+      </script>
+      <script src="../js/search.js"></script>
     </footer>
     <script src="../js/carousel_drugs.js"></script>
   </body>
