@@ -110,10 +110,13 @@
 }
 .security .main div {
   margin-top: 50px;
-  width: 40%;
+  width: 90%;
   padding: 10px;
   border: 4px solid #003d72;
   font-size: 22.4px;
+}
+.security .main div p {
+  margin-bottom: 20px;
 }
 
 @media (max-width: 870px) {

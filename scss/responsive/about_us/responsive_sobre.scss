@@ -32,16 +32,16 @@
     }
 
     .icons {
-      @include m.elements_grid(3);
-      column-gap: 40px;
+      display: flex;
+      flex-direction: column;
       margin-top: 30px;
       text-align: center;
       figure {
         width: 70%;
         height: 200px;
-        margin: 0 auto 20px;
+        margin: 30px auto 20px;
         padding: 20px;
-        background-color: bisque;
+        background-color: c.$icon-bgc3;
         border-radius: 50%;
       }
       img {
@@ -114,20 +114,20 @@
     color: c.$font-color4;
     p:nth-of-type(1) {
       font-weight: 300;
-      font-size: 1.9 * $arf;
+      font-size: 3 * $arf;
       &::before {
         content: '"';
         font-family: f.$passion;
-        font-size: 3 * $arf;
+        font-size: 4 * $arf;
       }
       &::after {
         content: '"';
         font-family: f.$passion;
-        font-size: 3 * $arf;
+        font-size: 4 * $arf;
       }
     }
     p:nth-of-type(2) {
-      font-size: 2 * $arf;
+      font-size: 3 * $arf;
       font-style: italic;
       text-align: right;
       text-decoration: underline;

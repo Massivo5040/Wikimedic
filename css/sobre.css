@@ -38,7 +38,7 @@
   height: 200px;
   margin: 0 auto 20px;
   padding: 20px;
-  background-color: bisque;
+  background-color: #80c5f3;
   border-radius: 50%;
 }
 .standard_style .icons img {
@@ -153,18 +153,17 @@
     font-family: "Archivo", sans-serif;
   }
   .standard_style .icons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 40px;
+    display: flex;
+    flex-direction: column;
     margin-top: 30px;
     text-align: center;
   }
   .standard_style .icons figure {
     width: 70%;
     height: 200px;
-    margin: 0 auto 20px;
+    margin: 30px auto 20px;
     padding: 20px;
-    background-color: bisque;
+    background-color: #80c5f3;
     border-radius: 50%;
   }
   .standard_style .icons img {
@@ -232,20 +231,20 @@
   }
   .quote p:nth-of-type(1) {
     font-weight: 300;
-    font-size: 15.2px;
+    font-size: 24px;
   }
   .quote p:nth-of-type(1)::before {
     content: '"';
     font-family: "Passion One", sans-serif;
-    font-size: 24px;
+    font-size: 32px;
   }
   .quote p:nth-of-type(1)::after {
     content: '"';
     font-family: "Passion One", sans-serif;
-    font-size: 24px;
+    font-size: 32px;
   }
   .quote p:nth-of-type(2) {
-    font-size: 16px;
+    font-size: 24px;
     font-style: italic;
     text-align: right;
     text-decoration: underline;
