@@ -74,47 +74,43 @@ const render_medic = async (params) => {
   
   const a_link = document.querySelector("#medic-pdf");
   a_link.href = linkPDF; // colocando pdf do medicamento
-  a_link.textContent = "Download Bula PDF";
+  a_link.textContent = "PDF BULA";
   console.log(linkPDF);
-
-  /* const obj = document.querySelector('#obj')
-  obj.textContent = medic.principioAtivo */
-
-  //carregando comentários
-
-  /* const userReponse = await saveUser({
-    name : "Teste",
-    email : "diaso.andre@outlook.com",
-    email_reserva : "null",
-    password : "12345"
-  })
-
-  console.log(userReponse) */
-
-  // TESTES
-
-  /* await login({ // login de exemplo
-    email : 'email@gmail.com',
-    password : '1234'
-  }) */
-
-  /* const newComentario = {
-    email : localStorage.getItem('email'),
-    numProcesso : params.numProcesso,
-    content : "Comentário de Teste"
-  }
   
-  const cReponse = await saveComentario(newComentario)
+  console.log(medic.numeroRegistro)
+  const medWikiResponse = await fetch(serverURL + `/medicamentos/get/?numRegistro=${medic.numeroRegistro}`)
 
-  console.log(await cReponse.json()) */
+  if(medWikiResponse.ok)
+  { //medicamento registrado no Servidor da Wikimedic
+    console.log('Medicamento registrado')
+    const informations = document.querySelector('.informations')
+    console.log(informations)
+    const objMedic = await medWikiResponse.json()
+    console.log(objMedic)
+
+    informations.children[0].children[2].textContent = objMedic.indicacao
+    informations.children[1].children[2].textContent = objMedic.posologia
+    informations.children[2].children[2].textContent = objMedic.contraindicacao
+    informations.children[3].children[2].textContent = objMedic.reacoes_advercas
+    informations.children[4].children[2].textContent = objMedic.posologia
+    informations.children[5].children[2].textContent = objMedic.cuidados
+    informations.children[6].children[2].textContent = objMedic.riscos
+    informations.children[7].children[2].textContent = objMedic.especiais
+    informations.children[8].children[2].textContent = objMedic.superdose
+
+  }
+  else
+  { //medicamento not found
+    alert('Esse medicamento não foi registrado por nenhum administrador.')
+  }
 
   console.log("Credenciais de acesso: ");
   console.info(userInfo);
 
   const commentResponse = await fetch(
-    serverURL + "/comentarios/numRegistro/" + medic.numRegistro
+    serverURL + "/comentarios/numRegistro/" + medic.numeroRegistro
   );
-  console.log(await commentResponse.body());
+  console.log(await commentResponse.json());
 };
 
 const medicLoad = async () => {
