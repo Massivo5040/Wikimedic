@@ -84,10 +84,13 @@ const render_medic = async (params) => {
   { //medicamento registrado no Servidor da Wikimedic
     console.log('Medicamento registrado')
     const informations = document.querySelector('.informations')
+    const section_header = document.querySelector('.header')
+
     console.log(informations)
     const objMedic = await medWikiResponse.json()
     console.log(objMedic)
 
+    section_header.children[1].children[1].textContent = objMedic.indicacao
     informations.children[0].children[2].textContent = objMedic.indicacao
     informations.children[1].children[2].textContent = objMedic.posologia
     informations.children[2].children[2].textContent = objMedic.contraindicacao
