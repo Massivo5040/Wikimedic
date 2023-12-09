@@ -84,19 +84,16 @@
     <script>
         async function registerMedication() {
             const medicationData = {
-                numRegistro : document.querySelector('update-numRegistro').value,
-                newMedic: {
-                    name: document.getElementById('update-name').value,
-                    indicacao: document.getElementById('update-indicacao').value,
-                    contraindicacao: document.getElementById('update-contraindicacao').value,
-                    categoria: document.getElementById('update-categoria').value,
-                    cuidados: document.getElementById('update-cuidados').value,
-                    reacao_adversa: document.getElementById('update-reacao_adversa').value,
-                    posologia: document.getElementById('update-posologia').value,
-                    riscos: document.getElementById('update-riscos').value,
-                    especiais: document.getElementById('update-especiais').value,
-                }
-
+                name: document.getElementById('name').value,
+                numRegistro: document.getElementById('numRegistro').value,
+                indicacao: document.getElementById('indicacao').value,
+                contraindicacao: document.getElementById('contraindicacao').value,
+                categoria: document.getElementById('categoria').value,
+                cuidados: document.getElementById('cuidados').value,
+                reacao_adversa: document.getElementById('reacao_adversa').value,
+                posologia: document.getElementById('posologia').value,
+                riscos: document.getElementById('riscos').value,
+                especiais: document.getElementById('especiais').value
             };
 
             const response = await fetch('https://server-wikimedic.onrender.com/medicamentos/validate', {
@@ -119,17 +116,20 @@
         document.querySelector('#registrar').addEventListener('click', registerMedication)
 
         async function updateMedic() {
+            const num = prompt('Digite o numProcesso atual do Medicamento a ser Atualizado.')
             const medicationData = {
-                name: document.getElementById('name').value,
-                numRegistro: document.getElementById('numRegistro').value,
-                indicacao: document.getElementById('indicacao').value,
-                contraindicacao: document.getElementById('contraindicacao').value,
-                categoria: document.getElementById('categoria').value,
-                cuidados: document.getElementById('cuidados').value,
-                reacao_adversa: document.getElementById('reacao_adversa').value,
-                posologia: document.getElementById('posologia').value,
-                riscos: document.getElementById('riscos').value,
-                especiais: document.getElementById('especiais').value,
+                numRegistro: num,
+                newMedic: {
+                    name: document.getElementById('update-name').value,
+                    indicacao: document.getElementById('update-indicacao').value,
+                    contraindicacao: document.getElementById('update-contraindicacao').value,
+                    categoria: document.getElementById('update-categoria').value,
+                    cuidados: document.getElementById('update-cuidados').value,
+                    reacao_adversa: document.getElementById('update-reacao_adversa').value,
+                    posologia: document.getElementById('update-posologia').value,
+                    riscos: document.getElementById('update-riscos').value,
+                    especiais: document.getElementById('update-especiais').value,
+                }
             };
 
             const response = await fetch('https://server-wikimedic.onrender.com/medicamentos/update', {
@@ -148,6 +148,7 @@
             } else {
                 console.log('Algo deu errado');
                 console.log(await response.json())
+                alert('Algo deu Errado!!.')
             }
         }
         document.querySelector('#atualizar').addEventListener('click', updateMedic)
