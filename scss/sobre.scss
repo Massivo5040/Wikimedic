@@ -37,7 +37,7 @@
       height: 200px;
       margin: 0 auto 20px;
       padding: 20px;
-      background-color: bisque;
+      background-color: c.$icon-bgc3;
       border-radius: 50%;
     }
     img {
@@ -127,3 +127,5 @@
     text-decoration: underline;
   }
 }
+
+@import "./responsive/about_us/responsive_sobre.scss";

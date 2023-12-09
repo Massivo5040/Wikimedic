@@ -1,10 +1,10 @@
-@use "../colors" as c;
-@use "../fonts" as f;
+@use "../../colors" as c;
+@use "../../fonts" as f;
 
 @media (max-width: 870px) {
   footer {
     $arf: 8px;
-    height: 350px;
+    height: 400px;
     padding: 20px 0;
     background-color: c.$footer-bgc;
     font-family: f.$archivo;
@@ -12,14 +12,14 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-auto-rows: auto;
-      width: 50%;
+      width: 90%;
       margin: 0 auto;
       .title {
-        font-size: 1.3 * $arf;
+        font-size: 2.4 * $arf;
         color: c.$font-color4;
       }
       .topic {
-        font-size: 1.1 * $arf;
+        font-size: 2 * $arf;
         color: c.$font-color;
       }
     }
@@ -54,13 +54,13 @@
       grid-template-columns: 1fr 1fr 1fr;
       text-align: center;
       img {
-        width: 35px;
-        margin: 10px 7.5px;
+        width: 45px;
+        margin: 10px auto;
       }
       p {
         grid-column-start: 1;
         grid-column-end: 4;
-        font-size: 1.5 * $arf;
+        font-size: 2 * $arf;
       }
     }
   }

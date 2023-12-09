@@ -1,0 +1,282 @@
+@use "../../colors" as c;
+@use "../../fonts" as f;
+@use "../../mixins" as m;
+$arf: 8px;
+
+@media (max-width: 870px) {
+  main {
+    .header {
+      height: 60vh;
+      padding: 100px 50px 30px;
+      background-image: url(../img/security_section_bg.png);
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: cover;
+      font-family: f.$archivo;
+      color: c.$about-project-header-font-color;
+      h1 {
+        width: 85%;
+        font-size: 4.5 * $arf;
+      }
+      div {
+        display: flex;
+        justify-content: space-between;
+        width: 80vw;
+        margin: 70px auto 0;
+      }
+      a {
+        display: inline-block;
+        width: auto;
+        text-align: center;
+        text-decoration: underline;
+        font-size: 1.5 * $arf;
+        color: c.$about-project-header-font-color;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .article {
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+      font-family: f.$archivo;
+      div {
+        h2 {
+          width: 80%;
+          font-size: 3 * $arf;
+        }
+        p {
+          width: 80%;
+          margin-bottom: 20px;
+          font-size: 2 * $arf;
+        }
+      }
+    }
+
+    .articles {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      font-family: f.$archivo;
+      background-color: c.$about-section-bgc;
+      img[alt="Ícone de lupa"] {
+        position: absolute;
+        z-index: -1;
+        left: -150px;
+        top: 150px;
+        height: 70%;
+      }
+      section {
+        h2 {
+          margin: 50px 0;
+          font-size: 3 * $arf;
+          color: c.$font-color4;
+        }
+        p {
+          width: 80%;
+          font-size: 2.5 * $arf;
+        }
+      }
+    }
+
+    .agenda2030 {
+      padding: 30px;
+      font-family: f.$archivo;
+      text-align: center;
+      h2 {
+        font-size: 4 * $arf;
+        font-weight: bold;
+      }
+      .description {
+        width: 90%;
+        margin: 40px auto;
+        font-size: 2.5 * $arf;
+      }
+      .aspects {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+        div {
+          height: 100%;
+          margin-bottom: 30px;
+        }
+        figure {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 60%;
+          padding: 30px;
+          background-color: c.$icon-bgc2;
+          border-radius: 50%;
+        }
+        img {
+          width: 80%;
+        }
+        p {
+          margin-top: 30px;
+          font-size: 2.5 * $arf;
+        }
+      }
+    }
+
+    .interview {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+      font-family: f.$archivo;
+      background-image: url(../img/interview_bg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      h2 {
+        font-size: 3 * $arf;
+        color: c.$font-color4;
+      }
+      p {
+        width: 60%;
+        font-size: 2.5 * $arf;
+        margin: 20px 0;
+      }
+      .btn {
+        margin-top: 30px;
+      }
+      a {
+        position: static;
+        padding: 20px 40px;
+        background-color: c.$card-person-bgc;
+        color: c.$font-color4;
+        border: 2px solid c.$font-color4;
+        border-radius: 40px;
+        font-size: 2 * $arf;
+        &:hover {
+          background-color: map-get(c.$inverted_colors, secondary);
+          color: map-get(c.$inverted_colors, primary);
+          border: 2px solid map-get(c.$inverted_colors, primary);
+        }
+      }
+    }
+
+    .curiosity {
+      padding: 70px 50px;
+      font-family: f.$archivo;
+
+      h2 {
+        margin-bottom: 30px;
+        color: c.$font-color4;
+        font-size: 3 * $arf;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      p {
+        width: 80%;
+        font-size: 2 * $arf;
+      }
+    }
+
+    .cannabis {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      height: auto;
+      padding: 50px 40px;
+      background-image: url(../img/curiosity_bg.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-family: f.$archivo;
+      color: c.$font-color2;
+      div {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: c.$cannabis-bgc;
+      }
+      h2 {
+        font-size: 3 * $arf;
+        font-weight: 300;
+        letter-spacing: 10px;
+      }
+      p {
+        font-size: 1.3 * $arf;
+      }
+      a {
+        position: static;
+        padding: 20px 40px;
+        background-color: c.$card-person-bgc;
+        color: c.$font-color4;
+        border: 2px solid c.$font-color4;
+        border-radius: 40px;
+        font-size: 1.3 * $arf;
+        &:hover {
+          background-color: map-get(c.$inverted_colors, secondary);
+          color: map-get(c.$inverted_colors, primary);
+          border: 2px solid map-get(c.$inverted_colors, primary);
+        }
+      }
+    }
+  }
+
+  .standard_artic {
+    padding: 40px 20px 30px;
+    border: 2px solid c.$article-border;
+    border-radius: 40px;
+    text-align: center;
+    img {
+      width: 95%;
+      border: 1px solid c.$article-border;
+      border-radius: 0 60px 0 0;
+    }
+    figcaption {
+      margin: 20px 0 10px;
+    }
+    a {
+      padding: 10px 30px;
+      border: 2px solid c.$border-color3;
+      border-radius: 30px;
+      font-size: 1.5 * $arf;
+      font-family: f.$archivo;
+      color: c.$font-color3;
+      &:hover {
+        background-color: c.$font-color3;
+        color: c.$font-color2;
+        border: 2px solid transparent;
+      }
+    }
+  }
+
+  .slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+      width: 0;
+      background: transparent;
+    }
+    font-family: f.$archivo;
+    .standard_artic {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      width: 320px;
+      height: 100%;
+      margin: 0 15px;
+      img {
+        width: 80%;
+      }
+    }
+  }
+}

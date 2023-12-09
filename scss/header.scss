@@ -81,4 +81,5 @@ header {
   display: none;
 }
 
-@import "./responsive/responsive_header.scss";
+@import "./responsive/index/responsive_header.scss";
+@import "./responsive/index/responsive_menu.scss";

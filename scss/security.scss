@@ -52,17 +52,16 @@
       font-weight: bold;
     }
     div {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
       margin-top: 50px;
+      width: 90%;
+      padding: 10px;
+      border: 4px solid c.$security-p-border-color;
+      font-size: 1.4 * $arf;
       p {
-        width: 80%;
-        padding: 10px;
-        border: 4px solid c.$security-p-border-color;
-        font-size: 1.4 * $arf;
+        margin-bottom: 20px;
       }
     }
   }
 }
 
-@import "./responsive/responsive_security.scss";
+@import "./responsive/index/responsive_security.scss";

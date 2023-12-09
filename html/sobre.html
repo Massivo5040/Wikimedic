@@ -17,9 +17,9 @@
         <img src="../img/wikimedic.png" alt="Logo da Wikimedic" />
       </div>
       <nav class="main-nav">
-        <a class="selected" href="../index.html">Home</a>
+        <a href="../index.html">Home</a>
         <a href="./hot_drugs.html">Em alta</a>
-        <a href="./sobre.html">Sobre nós</a>
+        <a class="selected" href="./sobre.html">Sobre nós</a>
       </nav>
       <div class="search">
         <input type="text" id="search" />
@@ -37,13 +37,13 @@
           </div>
           <ul>
             <li class="responsive-extra">
-              <a class="selected" href="../index.html">Home</a>
+              <a href="../index.html">Home</a>
             </li>
             <li class="responsive-extra">
               <a href="./hot_drugs.html">Em alta</a>
             </li>
             <li class="responsive-extra">
-              <a href="./sobre.html">Sobre nós</a>
+              <a class="selected" href="./sobre.html">Sobre nós</a>
             </li>
             <li><a href="./pediatria.html">Pediatria</a></li>
             <li><a href="./fitoterapicos.html">Fitoterápicos</a></li>
@@ -91,43 +91,41 @@
         </div>
         <div class="slider">
           <div class="person">
-            <img src="../img/edward.jpg" alt="Foto do aluno André Dias" />
+            <img src="../img/andre_img.jpg" alt="Foto do aluno André Dias" />
             <p class="role">Programador Back-end</p>
             <p class="decription">
-              Sed vel ex non risus feugiat blandit. Sed nec urna libero. Ut elit
-              sem, congue interdum consequat sit amet, viverra.
+              <b>André de Oliveira Dias</b>
             </p>
           </div>
           <div class="person">
-            <img src="../img/tendou.jpg" alt="Foto do aluno Arthur Rolemberg" />
+            <img
+              src="../img/art_img.png"
+              alt="Foto do aluno Arthur Rolemberg"
+            />
             <p class="role">Programador Front-end</p>
             <p class="decription">
-              Sed vel ex non risus feugiat blandit. Sed nec urna libero. Ut elit
-              sem, congue interdum consequat sit amet, viverra.
+              <b>Arthur Rolemberg dos Santos</b>
             </p>
           </div>
           <div class="person">
-            <img src="../img/robin.jpg" alt="Foto da aluna Beatriz Bezerra" />
+            <img src="../img/bea_img.jpg" alt="Foto da aluna Beatriz Bezerra" />
             <p class="role">Designer / Líder de Projeto</p>
             <p class="decription">
-              Sed vel ex non risus feugiat blandit. Sed nec urna libero. Ut elit
-              sem, congue interdum consequat sit amet, viverra.
+              <b>Beatriz Bezerra de Oliveira</b>
             </p>
           </div>
           <div class="person">
-            <img src="../img/yami.jpg" alt="Foto do aluno Eduardo Rossi" />
+            <img src="../img/du_img.png" alt="Foto do aluno Eduardo Rossi" />
             <p class="role">Pesquisador</p>
             <p class="decription">
-              Sed vel ex non risus feugiat blandit. Sed nec urna libero. Ut elit
-              sem, congue interdum consequat sit amet, viverra.
+              <b>Eduardo Rossi de Borba</b>
             </p>
           </div>
           <div class="person">
-            <img src="../img/aoyama.jpg" alt="Foto do aluno Gabriel Moreira" />
+            <img src="../img/gab_img.jpg" alt="Foto do aluno Gabriel Moreira" />
             <p class="role">Programador Front-end</p>
             <p class="decription">
-              Sed vel ex non risus feugiat blandit. Sed nec urna libero. Ut elit
-              sem, congue interdum consequat sit amet, viverra.
+              <b>Gabriel Moreira Silva</b>
             </p>
           </div>
         </div>
@@ -201,23 +199,23 @@
     <footer>
       <div>
         <article class="about_us">
-          <p>
+          <p class="title">
             <a href="./sobre.html">Sobre nós</a>
           </p>
-          <p>
+          <p class="topic">
             <a href="./sobre.html#mission">Missão</a>
           </p>
-          <p>
+          <p class="topic">
             <a href="./sobre.html#vision">Visão</a>
           </p>
-          <p>
+          <p class="topic">
             <a href="./sobre.html#values">Valores</a>
           </p>
         </article>
         <article class="contact">
-          <p>Contato</p>
-          <p>wikimedic@yourcompany.com</p>
-          <p>(11)-00000-0000</p>
+          <p class="title">Contato</p>
+          <p class="topic">wikimedic@yourcompany.com</p>
+          <p class="topic">(11)-00000-0000</p>
         </article>
         <article class="social_media">
           <a href=""
@@ -232,6 +230,35 @@
           <p>2023 - © Wikimedic. Todos os Direitos Reservados</p>
         </article>
       </div>
+      <script type="module">
+        import { serverURL } from "../js/env.js";
+        async function home() {
+          const response = await fetch(
+            "https://bula.vercel.app/pesquisar?nome=AMOXICILINA&pagina=1"
+          );
+          if (!response.ok) {
+            alert(
+              "Servidor Bulario API está offline. \nBase de Dados desligada ou desconectada, alguns medicamentos não estarão disponíveis "
+            );
+          } else {
+            console.log("API Bulario Funcionando");
+          }
+
+          document.cookie = "meuCookie=valor; path=/";
+          console.log(document.cookie);
+
+          const serverResponse = await fetch(serverURL);
+          if (!serverResponse.ok) {
+            alert(
+              "Servidor Wikimedic está offline. Serviços como Login, Comentário e Favoritos estarão indisponíveis"
+            );
+          } else {
+            console.log("Servidor Wikimedic Funcionando!");
+          }
+        }
+        home();
+      </script>
+      <script src="../js/search.js"></script>
     </footer>
     <script src="../js/carousel.js"></script>
   </body>
