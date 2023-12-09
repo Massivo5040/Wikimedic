@@ -1,5 +1,5 @@
 import { serverURL, userInfo } from "./env.js";
-import { saveUser, login, saveComentario } from "./metodoServer.js";
+
 
 const getURLParameters = () => {
   let queryString = window.location.search.substring(1);
@@ -65,11 +65,13 @@ const render_medic = async (params) => {
   const title = document.getElementById("medic-name");
   title.textContent = medic.nomeComercial;
 
+  const response = await retornarPDF(medic.codigoBulaPaciente); // pesquisa do pdf
+  const linkPDF = response.pdf; // link do pdf
+
   /* const tipoMed = document.getElementById("ClassMed")
   tipoMed.textContent = medic.categoriaRegulatoria; */
 
-  const response = await retornarPDF(medic.codigoBulaPaciente); // pesquisa do pdf
-  const linkPDF = response.pdf; // link do pdf
+  
   const a_link = document.querySelector("#medic-pdf");
   a_link.href = linkPDF; // colocando pdf do medicamento
   a_link.textContent = "Download Bula PDF";
