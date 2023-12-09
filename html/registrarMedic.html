@@ -144,10 +144,10 @@
                 console.log('Sucesso');
                 const json = await response.json()
                 console.log(json)
-                alert('Sucesso. ' + json.validacao_status)
-                // Optionally, you can reset the form or redirect to another page upon successful registration
+                alert('Sucesso. ')
             } else {
                 console.log('Algo deu errado');
+                console.log(await response.json())
             }
         }
         document.querySelector('#atualizar').addEventListener('click', updateMedic)
