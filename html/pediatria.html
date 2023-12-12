@@ -93,44 +93,44 @@
         </p>
         <div class="container">
           <span class="material-symbols-rounded" id="left">chevron_left </span>
-          <div class="carousel">
-            <a href="">
+          <div class="carousel" data-number="0">
+            <a href="" class="medicine">
               <figure>
                 <img src="../img/senku.jpg" />
                 <figcaption>Senku 3 bilhões de mL</figcaption>
               </figure>
             </a>
-            <a href="">
+            <a href="" class="medicine">
               <figure>
                 <img src="../img/senku.jpg" />
                 <figcaption>Senku 4 bilhões de mL</figcaption>
               </figure>
             </a>
-            <a href="">
+            <a href="" class="medicine">
               <figure>
                 <img src="../img/senku.jpg" />
                 <figcaption>Senku 5 bilhões de mL</figcaption>
               </figure>
             </a>
-            <a href="">
+            <a href="" class="medicine">
               <figure>
                 <img src="../img/senku.jpg" />
                 <figcaption>Senku 6 bilhões de mL</figcaption>
               </figure>
             </a>
-            <a href="">
+            <a href="" class="medicine">
               <figure>
                 <img src="../img/senku.jpg" />
                 <figcaption>Senku 7 bilhões de mL</figcaption>
               </figure>
             </a>
-            <a href="">
+            <a href="" class="medicine">
               <figure>
                 <img src="../img/senku.jpg" />
                 <figcaption>Senku 8 bilhões de mL</figcaption>
               </figure>
             </a>
-            <a href="">
+            <a href="" class="medicine">
               <figure>
                 <img src="../img/senku.jpg" />
                 <figcaption>Senku 9 bilhões de mL</figcaption>
@@ -169,23 +169,23 @@
     <footer>
       <div>
         <article class="about_us">
-          <p>
+          <p class="title">
             <a href="./sobre.html">Sobre nós</a>
           </p>
-          <p>
+          <p class="topic">
             <a href="./sobre.html#mission">Missão</a>
           </p>
-          <p>
+          <p class="topic">
             <a href="./sobre.html#vision">Visão</a>
           </p>
-          <p>
+          <p class="topic">
             <a href="./sobre.html#values">Valores</a>
           </p>
         </article>
         <article class="contact">
-          <p>Contato</p>
-          <p>wikimedic@yourcompany.com</p>
-          <p>(11)-00000-0000</p>
+          <p class="title">Contato</p>
+          <p class="topic">wikimedic@yourcompany.com</p>
+          <p class="topic">(11)-00000-0000</p>
         </article>
         <article class="social_media">
           <a href=""
@@ -224,21 +224,23 @@
           }
         }
         if (userInfo.id != null && userInfo.id != "") {
-        console.log('Usuário logado')
-        var meuLink = document.getElementById('login-a');
+          console.log("Usuário logado");
+          var meuLink = document.getElementById("login-a");
 
+          var novoElementoI = document.createElement("i");
+          novoElementoI.classList.add("fa-solid");
+          novoElementoI.classList.add("fa-user");
 
-        var novoElementoI = document.createElement('i');
-        novoElementoI.classList.add('fa-solid')
-        novoElementoI.classList.add('fa-user')
+          for (var i = 0; i < meuLink.attributes.length; i++) {
+            novoElementoI.setAttribute(
+              meuLink.attributes[i].name,
+              meuLink.attributes[i].value
+            );
+          }
 
-        for (var i = 0; i < meuLink.attributes.length; i++) {
-          novoElementoI.setAttribute(meuLink.attributes[i].name, meuLink.attributes[i].value);
+          // Substitui o elemento <a> pelo elemento <i>
+          meuLink.parentNode.replaceChild(novoElementoI, meuLink);
         }
-
-        // Substitui o elemento <a> pelo elemento <i>
-        meuLink.parentNode.replaceChild(novoElementoI, meuLink);
-      }
 
         home();
       </script>
