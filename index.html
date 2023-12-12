@@ -169,7 +169,7 @@
           <p>2023- © wikimedic.Todos os Direitos Reservados</p>
         </article>
       </div>
-
+      <script type="module" src="./js/showLoginIcon.js"
       <script type="module">
         import { serverURL } from "./js/env.js";
         async function home() {
@@ -183,9 +183,6 @@
           } else {
             console.log("API Bulario Funcionando");
           }
-
-          document.cookie = "meuCookie=valor; path=/";
-          console.log(document.cookie);
 
           const serverResponse = await fetch(serverURL);
           if (!serverResponse.ok) {
