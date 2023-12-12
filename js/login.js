@@ -17,7 +17,15 @@ login.addEventListener("click", async (e) => {
 
     if (response.ok) {
       setTimeout(()=>{
-        window.location.pathname = '/index.html'
+        if(window.location.pathname.includes('/Wikimedic/'))
+        {
+          window.location.pathname = "/Wikimedic/"
+        }
+        else
+        {
+          window.location.pathname = '/index.html'
+        }
+        
       }, 100)
     }
 
