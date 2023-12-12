@@ -15,7 +15,16 @@ login.addEventListener("click", async (e) => {
       password: password,
     });
 
+    json = await response.json();
+    console.log(json);
+
     if (response.ok) {
+      localStorage.setItem("idUser", json.user.id);
+      localStorage.setItem("name", json.user.name);
+      localStorage.setItem("email", json.user.email);
+      localStorage.setItem('email_reserva', json.user.email_reserva)
+      localStorage.setItem("password", password);
+
       setTimeout(()=>{
         if(window.location.pathname.includes('/Wikimedic/'))
         {
@@ -28,15 +37,5 @@ login.addEventListener("click", async (e) => {
         
       }, 100)
     }
-
-    json = await response.json();
-    if (response.status == 201) {
-      localStorage.setItem("idUser", json.user.id);
-      localStorage.setItem("name", json.user.name);
-      localStorage.setItem("email", json.user.email);
-      localStorage.setItem('email_reserva', json.user.email_reserva)
-      localStorage.setItem("password", password);
-    }
-    console.log(json);
   }
 });
