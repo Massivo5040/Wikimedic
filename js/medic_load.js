@@ -107,9 +107,6 @@ const render_medic = async (params) => {
     alert('Esse medicamento não foi registrado por nenhum administrador.')
   }
 
-  console.log("Credenciais de acesso: ");
-  console.info(userInfo);
-
   const commentResponse = await fetch(
     serverURL + "/comentarios/numRegistro/" + medic.numeroRegistro
   );

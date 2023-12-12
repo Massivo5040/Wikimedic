@@ -163,7 +163,7 @@
       </section>
     </article >
     <script type="module">
-      import { serverURL } from "../js/env.js";
+      import { serverURL, userInfo } from "./js/env.js";
       async function home() {
         const response = await fetch(
           "https://bula.vercel.app/pesquisar?nome=AMOXICILINA&pagina=1"
@@ -176,9 +176,6 @@
           console.log("API Bulario Funcionando");
         }
 
-        document.cookie = "meuCookie=valor; path=/";
-        console.log(document.cookie);
-
         const serverResponse = await fetch(serverURL);
         if (!serverResponse.ok) {
           alert(
@@ -188,6 +185,23 @@
           console.log("Servidor Wikimedic Funcionando!");
         }
       }
+      if (userInfo.id != null && userInfo.id != "") {
+      console.log('Usuário logado')
+      var meuLink = document.getElementById('login-a');
+
+
+      var novoElementoI = document.createElement('i');
+      novoElementoI.classList.add('fa-solid')
+      novoElementoI.classList.add('fa-user')
+
+      for (var i = 0; i < meuLink.attributes.length; i++) {
+        novoElementoI.setAttribute(meuLink.attributes[i].name, meuLink.attributes[i].value);
+      }
+
+      // Substitui o elemento <a> pelo elemento <i>
+      meuLink.parentNode.replaceChild(novoElementoI, meuLink);
+    }
+
       home();
     </script>
     <script src="../js/env.js" type="module"></script>
