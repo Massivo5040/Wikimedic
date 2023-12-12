@@ -9,7 +9,7 @@
 
 <body>
 
-    <h1>Registro de Medicamentos</h1>
+    <h1>Validar Registro de Medicamento</h1>
 
     <form id="medicationForm">
         <label for="name">Nome:</label>
@@ -39,8 +39,11 @@
         <label for="riscos">Riscos:</label>
         <textarea id="riscos" name="riscos" rows="4" required></textarea><br>
 
-        <label for="especiais">Especiais:</label>
+        <label for="especiais">Pacientes Especiais:</label>
         <textarea id="especiais" name="especiais" rows="4" required></textarea><br>
+
+        <label for="superdose">Superdose:</label>
+        <textarea id="superdose" name="superdose" rows="4" required></textarea><br>
 
         <button type="button" id="registrar">Registrar Medicamento</button>
     </form>
@@ -93,7 +96,8 @@
                 reacao_adversa: document.getElementById('reacao_adversa').value,
                 posologia: document.getElementById('posologia').value,
                 riscos: document.getElementById('riscos').value,
-                especiais: document.getElementById('especiais').value
+                especiais: document.getElementById('especiais').value,
+                superdose : document.getElementById('superdose').value
             };
 
             const response = await fetch('https://server-wikimedic.onrender.com/medicamentos/validate', {
