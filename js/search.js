@@ -60,9 +60,10 @@ const pesquisar = async (name) => {
       }
 
       localStorage.setItem("numRegistro", medicamento.numProcesso);
+      const medicName = medicamento.name
       anchorElement.href =
         url +
-        `?numProcesso=${medicamento.numRegistro}&name=${medicamento.name}`;
+        `?numRegistro=${medicamento.numRegistro}&name=${medicName.replace(" ", "-")}`;
       console.log(url);
 
       nomeProdutoElement.appendChild(searchIcon);
