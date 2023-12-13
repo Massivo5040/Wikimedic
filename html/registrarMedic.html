@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Medicamentos</title>
+
+    <link rel="stylesheet" href="../css/registrar.css" />
 </head>
 
 <body>
@@ -12,20 +14,33 @@
     <h1>Validar Registro de Medicamento</h1>
 
     <form id="medicationForm">
+        
+        <div class="form-head">
+            <label for="categoria">Categoria:</label>
+            <select id="categoria" name="categoria"required>
+                <option value="populares">Populares</option>
+                <option value="genéricos">Genéricos</option>
+                <option value="pediátricos">Pediátricos</option>
+                <option value="fitoterápicos">Fitoterápicos</option>
+                <option value="homepáticos">Homeopáticos</option>
+                <option value="similares">Similares</option>
+                <option value="alopáticos">Alopáticos</option>
+                
+            </select>
+
+            <label for="numRegistro">Número de Registro:</label>
+            <input type="text" id="numRegistro" name="numRegistro" required><br>
+        </div>
+
+
         <label for="name">Nome:</label>
         <input type="text" id="name" name="name" required><br>
-
-        <label for="numRegistro">Número de Registro:</label>
-        <input type="text" id="numRegistro" name="numRegistro" required><br>
 
         <label for="indicacao">Indicação:</label>
         <textarea id="indicacao" name="indicacao" rows="4" required></textarea><br>
 
         <label for="contraindicacao">Contraindicação:</label>
         <textarea id="contraindicacao" name="contraindicacao" rows="4" required></textarea><br>
-
-        <label for="categoria">Categoria:</label>
-        <input type="text" id="categoria" name="categoria" required><br>
 
         <label for="cuidados">Cuidados:</label>
         <textarea id="cuidados" name="cuidados" rows="4" required></textarea><br>
@@ -97,7 +112,7 @@
                 posologia: document.getElementById('posologia').value,
                 riscos: document.getElementById('riscos').value,
                 especiais: document.getElementById('especiais').value,
-                superdose : document.getElementById('superdose').value
+                superdose: document.getElementById('superdose').value
             };
 
             const response = await fetch('https://server-wikimedic.onrender.com/medicamentos/validate', {
