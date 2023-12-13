@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
-header .selected a::after {
-  width: 100%;
-}
-
 main .header {
   padding: 100px 0;
   font-size: 4rem;
@@ -10,7 +6,6 @@ main .header {
   color: white;
   letter-spacing: 5px;
   text-align: center;
-  background-image: url(../img/pediatria_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -83,7 +78,7 @@ main .carousel-container .container .carousel {
   display: flex;
   gap: 5%;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   scroll-behavior: smooth;
 }
 main .carousel-container .container .carousel a {
