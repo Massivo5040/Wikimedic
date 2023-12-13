@@ -68,17 +68,17 @@ const render_medic = async (params) => {
     const section_header = document.querySelector('.header')
     const objMedic = await medWikiResponse.json()
     
-    document.querySelector('#medic-name').textContent = objMedic.name
-    section_header.children[1].children[1].textContent = objMedic.indicacao
-    informations.children[0].children[2].textContent = objMedic.indicacao
-    informations.children[1].children[2].textContent = objMedic.posologia
-    informations.children[2].children[2].textContent = objMedic.contraindicacao
-    informations.children[3].children[2].textContent = objMedic.reacoes_advercas
-    informations.children[4].children[2].textContent = objMedic.posologia
-    informations.children[5].children[2].textContent = objMedic.cuidados
-    informations.children[6].children[2].textContent = objMedic.riscos
-    informations.children[7].children[2].textContent = objMedic.especiais
-    informations.children[8].children[2].textContent = objMedic.superdose
+    document.querySelector('#medic-name').innerHTML = objMedic.name
+    section_header.children[1].children[1].innerHTML = objMedic.indicacao
+    informations.children[0].children[2].innerHTML = objMedic.indicacao
+    informations.children[1].children[2].innerHTML = objMedic.posologia
+    informations.children[2].children[2].innerHTML = objMedic.contraindicacao
+    informations.children[3].children[2].innerHTML = objMedic.reacoes_advercas
+    informations.children[4].children[2].innerHTML = objMedic.posologia
+    informations.children[5].children[2].innerHTML = objMedic.cuidados
+    informations.children[6].children[2].innerHTML = objMedic.riscos
+    informations.children[7].children[2].innerHTML = objMedic.especiais
+    informations.children[8].children[2].innerHTML = objMedic.superdose
 
     const commentResponse = await fetch(
       serverURL + "/comentarios/numRegistro/" + objMedic.numeroRegistro
