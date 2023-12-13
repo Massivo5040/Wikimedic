@@ -46,3 +46,23 @@ form input
 {
     min-width: 30%;
 }
+
+table
+{
+    margin: 30px;
+    padding: 0px;
+    width: 50%;
+}
+
+td
+{
+    border: 1px solid black;
+    margin: 0px;
+    padding: 5px;
+}
+
+tr
+{
+    padding: 0px;
+    margin: 0px;
+}
