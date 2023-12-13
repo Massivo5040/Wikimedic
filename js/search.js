@@ -1,10 +1,19 @@
-const PesquisarMedicamentos = async (name) => {
+import { serverURL } from "./env.js"
+const PesquisarMedicamentos = async (n) => {
   // conecta a api ajudando a retornar
+  const data = {
+    name : n
+  }
+  console.log(data)
   try {
     const response = await fetch(
-      `https://bula.vercel.app/pesquisar?nome=${name}&pagina=1`,
+      serverURL+`/medicamentos/search`,
       {
-        method: "GET",
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        }
       }
     );
 
@@ -13,7 +22,7 @@ const PesquisarMedicamentos = async (name) => {
     }
 
     const json = await response.json();
-    return json.content;
+    return json
   } catch (error) {
     throw error;
   }
@@ -46,13 +55,15 @@ const pesquisar = async (name) => {
       //?numProcesso=${medicamento.numProcesso}&name=${medicamento.nomeProduto.replace(" ", "_")}
 
       let url = "./html/medic.html";
-      if (window.location.pathname == "/Wikimedic/html/medic.html") {
+      if (window.location.pathname.startsWith('/Wikimedic/html/')) {
         url = "./medic.html";
       }
-      localStorage.setItem("numProcesso", medicamento.numProcesso);
+
+      localStorage.setItem("numRegistro", medicamento.numProcesso);
+      const medicName = medicamento.name
       anchorElement.href =
         url +
-        `?numProcesso=${medicamento.numProcesso}&name=${medicamento.nomeProduto}`;
+        `?numRegistro=${medicamento.numRegistro}&name=${medicName.replace(" ", "-")}`;
       console.log(url);
 
       nomeProdutoElement.appendChild(searchIcon);
@@ -61,7 +72,7 @@ const pesquisar = async (name) => {
        * Cria um elemento div para o nome do produto
        * e adiciona o texto com o nome do produto
        */
-      anchorElement.textContent = medicamento.nomeProduto;
+      anchorElement.textContent = medicamento.name;
 
       // Adiciona o novo elemento ao elemento pai
       parentElement.appendChild(nomeProdutoElement);

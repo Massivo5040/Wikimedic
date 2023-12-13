@@ -58,38 +58,17 @@ const retornarPDF = async (codigoBulaPaciente) => {
 };
 
 const render_medic = async (params) => {
-  // função main, tudo ocorre dentro dela
-
-  const medic = await returnMedic(params.numProcesso); // objeto que representa o medicamento, nele podemos acessar todas as propriedades
-
-  const title = document.getElementById("medic-name");
-  title.textContent = medic.nomeComercial;
-
-  const response = await retornarPDF(medic.codigoBulaPaciente); // pesquisa do pdf
-  const linkPDF = response.pdf; // link do pdf
-
-  /* const tipoMed = document.getElementById("ClassMed")
-  tipoMed.textContent = medic.categoriaRegulatoria; */
-
   
-  const a_link = document.querySelector("#medic-pdf");
-  a_link.href = linkPDF; // colocando pdf do medicamento
-  a_link.textContent = "PDF BULA";
-  console.log(linkPDF);
-  
-  console.log(medic.numeroRegistro)
-  const medWikiResponse = await fetch(serverURL + `/medicamentos/get/?numRegistro=${medic.numeroRegistro}`)
+  const medWikiResponse = await fetch(serverURL + `/medicamentos/get/?numRegistro=${params.numRegistro}`)
 
   if(medWikiResponse.ok)
   { //medicamento registrado no Servidor da Wikimedic
-    console.log('Medicamento registrado')
+    
     const informations = document.querySelector('.informations')
     const section_header = document.querySelector('.header')
-
-    console.log(informations)
     const objMedic = await medWikiResponse.json()
-    console.log(objMedic)
-
+    
+    document.querySelector('#medic-name').textContent = objMedic.name
     section_header.children[1].children[1].textContent = objMedic.indicacao
     informations.children[0].children[2].textContent = objMedic.indicacao
     informations.children[1].children[2].textContent = objMedic.posologia
@@ -101,32 +80,21 @@ const render_medic = async (params) => {
     informations.children[7].children[2].textContent = objMedic.especiais
     informations.children[8].children[2].textContent = objMedic.superdose
 
+    const commentResponse = await fetch(
+      serverURL + "/comentarios/numRegistro/" + objMedic.numeroRegistro
+    );
+    console.log(await commentResponse.json());
+
   }
   else
   { //medicamento not found
     alert('Esse medicamento não foi registrado por nenhum administrador.')
-  }
-
-  const commentResponse = await fetch(
-    serverURL + "/comentarios/numRegistro/" + medic.numeroRegistro
-  );
-  console.log(await commentResponse.json());
+  } 
 };
 
 const medicLoad = async () => {
   const params = getURLParameters();
-
-  if (params.numProcesso != null) {
-    try {
-      render_medic(params);
-    } catch (err) {
-      console.log(err);
-    } // execução da função que renderiza as informações na tela
-  } else {
-    console.warn("Erro!! Sem parâmetros de consulta");
-    const numProcesso = localStorage.getItem("numProcesso");
-    render_medic({ numProcesso });
-  }
+  render_medic(params)
 }
 
 medicLoad()
