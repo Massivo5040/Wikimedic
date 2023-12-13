@@ -68,6 +68,11 @@ td
     padding: 5px;
 }
 
+td *
+{
+    margin: 3px;
+}
+
 tr
 {
     padding: 0px;
@@ -81,4 +86,13 @@ tr
     border-radius: 5px;
     padding: 5px;
     background-color: rgb(240, 240, 44);
+}
+
+.delete-button
+{
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(233, 75, 75);
 }
