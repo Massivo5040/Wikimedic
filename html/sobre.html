@@ -258,21 +258,23 @@
           }
         }
         if (userInfo.id != null && userInfo.id != "") {
-        console.log('Usuário logado')
-        var meuLink = document.getElementById('login-a');
+          console.log("Usuário logado");
+          var meuLink = document.getElementById("login-a");
 
+          var novoElementoI = document.createElement("i");
+          novoElementoI.classList.add("fa-solid");
+          novoElementoI.classList.add("fa-user");
 
-        var novoElementoI = document.createElement('i');
-        novoElementoI.classList.add('fa-solid')
-        novoElementoI.classList.add('fa-user')
+          for (var i = 0; i < meuLink.attributes.length; i++) {
+            novoElementoI.setAttribute(
+              meuLink.attributes[i].name,
+              meuLink.attributes[i].value
+            );
+          }
 
-        for (var i = 0; i < meuLink.attributes.length; i++) {
-          novoElementoI.setAttribute(meuLink.attributes[i].name, meuLink.attributes[i].value);
+          // Substitui o elemento <a> pelo elemento <i>
+          meuLink.parentNode.replaceChild(novoElementoI, meuLink);
         }
-
-        // Substitui o elemento <a> pelo elemento <i>
-        meuLink.parentNode.replaceChild(novoElementoI, meuLink);
-      }
 
         home();
       </script>
