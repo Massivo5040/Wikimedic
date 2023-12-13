@@ -79,7 +79,7 @@
 
     <form id="medicationForm">
         <p id="medSelected"></p>
-
+        
         <div class="form-head">
             <label for="update-categoria">Categoria:</label>
             <select id="update-categoria" name="categoria" required>
@@ -234,14 +234,14 @@
                     tdLink.appendChild(a)
 
                     const tdButton = document.createElement('td')
-                    const button = document.createElement('span')
-                    tdButton.appendChild(button)
+                    const updateButton = document.createElement('span')
+                    tdButton.appendChild(updateButton)
 
-                    button.classList.add('update-button')
-                    button.classList.add('material-symbols-rounded')
+                    updateButton.classList.add('update-button')
+                    updateButton.classList.add('material-symbols-rounded')
 
-                    button.innerHTML = "edit"
-                    button.addEventListener('click', () => {
+                    updateButton.innerHTML = "edit"
+                    updateButton.addEventListener('click', () => {
                         document.querySelector('#medSelected').textContent = `Medicamento Selecionado: ${i.name}. Número Registro salvo: ${i.numRegistro}`
                         document.querySelector('#update-name').value = i.name
                         document.querySelector('#update-numRegistro').value = i.numRegistro
@@ -255,6 +255,29 @@
 
                         alert('Vá até o formulário de atualização')
                     })
+
+                    const deleteButton = document.createElement('span')
+                    deleteButton.classList.add('material-symbols-rounded')
+                    deleteButton.classList.add('delete-button')
+                    deleteButton.innerHTML = 'delete_forever'
+
+                    deleteButton.addEventListener('click', async ()=>{
+                        const response = await fetch('https://server-wikimedic.onrender.com' + `/medicamentos/delete/numRegistro/${i.numRegistro}`, 
+                        {
+                            method: "DELETE"
+                        })
+
+                        if(response.ok)
+                        {
+                            alert('Medicamento Deletado')
+                        }
+                        else
+                        {
+                            alert('Erro ao deletar Medicamento')
+                        }
+                    })
+
+                    tdButton.appendChild(deleteButton)
 
                     tr.appendChild(tdName)
                     tr.appendChild(tdNumRegistro)
