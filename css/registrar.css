@@ -54,6 +54,12 @@ table
     width: 50%;
 }
 
+#tableHead
+{
+    background-color: rgb(63, 108, 231);
+    color: white;
+}
+
 td
 {
     border: 1px solid black;
@@ -65,4 +71,9 @@ tr
 {
     padding: 0px;
     margin: 0px;
+}
+
+td button
+{
+    cursor: pointer;
 }
