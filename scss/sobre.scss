@@ -13,17 +13,18 @@
 .standard_style {
   padding: 3% 5%;
   h2 {
+    margin-bottom: 3%;
+    font-size: 3rem;
     font-family: f.$archivo;
     font-weight: 700;
     color: c.$font-color4;
-    margin-bottom: 3%;
   }
   .text-sobre {
     display: grid;
     grid-template-columns: 4fr 7fr;
     p {
       width: 27ch;
-      font-size: 95%;
+      font-size: 1.3rem;
       font-family: f.$archivo;
     }
   }

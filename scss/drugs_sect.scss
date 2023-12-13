@@ -19,7 +19,7 @@ main {
 
   .importance {
     @include m.elements_grid(2);
-    padding: 40px;
+    padding: 40px 100px;
     font-family: f.$archivo;
     h2 {
       width: 90%;
@@ -59,6 +59,7 @@ main {
       @include m.carousel();
     }
   }
+
   .benefits {
     padding: 70px 0 70px 70px;
     font-family: f.$archivo;
@@ -70,14 +71,18 @@ main {
       font-weight: 300;
       text-align: center;
     }
-    div {
+    section {
       @include m.elements_grid(3);
       column-gap: 80px;
       width: 100%;
-      // margin: 0 auto;
+    }
+    h3 {
+      margin-bottom: 10px;
+      text-align: center;
+      font-size: 2rem;
+      color: c.$font-color4;
     }
     p {
-      width: 90%;
       font-size: 1.2rem;
     }
   }

@@ -12,10 +12,11 @@
   padding: 3% 5%;
 }
 .standard_style h2 {
+  margin-bottom: 3%;
+  font-size: 3rem;
   font-family: "Archivo", sans-serif;
   font-weight: 700;
   color: #003d72;
-  margin-bottom: 3%;
 }
 .standard_style .text-sobre {
   display: grid;
@@ -23,7 +24,7 @@
 }
 .standard_style .text-sobre p {
   width: 27ch;
-  font-size: 95%;
+  font-size: 1.3rem;
   font-family: "Archivo", sans-serif;
 }
 .standard_style .icons {

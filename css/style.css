@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +18,7 @@
 .login .menu .menu-faketrigger {
   position: absolute;
   right: 0;
-  z-index: 1000;
+  z-index: 970;
   width: 35px;
   height: 25px;
   opacity: 0;
@@ -42,7 +45,7 @@
   flex-direction: column;
   gap: 5px;
   position: relative;
-  z-index: 999;
+  z-index: 950;
 }
 .login .menu .menu-lines span {
   display: block;
@@ -50,15 +53,15 @@
   height: 5px;
   background-color: black;
   border-radius: 20px;
-  transition: all ease 200ms;
+  transition: all ease 500ms;
 }
 .login .menu ul {
   display: flex;
   flex-direction: column;
   gap: 20px;
   position: absolute;
-  z-index: 998;
-  right: -2vh;
+  z-index: 900;
+  right: -3vh;
   top: -2vw;
   padding: 13vh 0 5vh 0;
   width: 300px;
@@ -74,6 +77,9 @@
   list-style: none;
 }
 
+header .search {
+  position: relative;
+}
 header .search #result {
   position: absolute;
   top: -10px;
@@ -108,9 +114,9 @@ header {
   top: 0;
   display: flex;
   justify-content: space-between;
-  padding: 15px 10px;
+  padding: 15px 20px 15px 10px;
   height: 13vh;
-  width: 100%;
+  width: 100vw;
   background-color: white;
   font-family: "Archivo", sans-serif;
 }
@@ -134,6 +140,7 @@ header a:hover::after {
 }
 header .logo {
   width: 15%;
+  margin: auto 0;
 }
 header .logo img {
   width: 100%;
@@ -169,7 +176,94 @@ header .login {
 header .login a {
   margin: auto 0;
 }
+header .selected::after {
+  width: 100%;
+}
 
+.responsive-extra {
+  display: none;
+}
+
+@media (max-width: 870px) {
+  .search input {
+    width: 70%;
+  }
+  .logo {
+    display: none;
+  }
+  .main-nav {
+    display: none;
+  }
+  .responsive-extra {
+    display: block !important;
+  }
+}
+@media (max-width: 870px) {
+  .login .menu {
+    position: relative;
+  }
+  .login .menu .menu-faketrigger {
+    position: absolute;
+    right: 0;
+    z-index: 970;
+    width: 35px;
+    height: 25px;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .login .menu .menu-faketrigger:checked ~ .menu-lines span:nth-child(1) {
+    transform-origin: 0% 0%;
+    transform: rotate(45deg) scaleX(1.25);
+    margin-bottom: 4.5px;
+  }
+  .login .menu .menu-faketrigger:checked ~ .menu-lines span:nth-child(2) {
+    opacity: 0;
+  }
+  .login .menu .menu-faketrigger:checked ~ .menu-lines span:nth-child(3) {
+    transform-origin: 0% 100%;
+    transform: rotate(-45deg) scaleX(1.25);
+    margin-top: 4.5px;
+  }
+  .login .menu .menu-faketrigger:checked ~ ul {
+    margin-right: 0;
+  }
+  .login .menu .menu-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    z-index: 950;
+  }
+  .login .menu .menu-lines span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    border-radius: 20px;
+    transition: all ease 500ms;
+  }
+  .login .menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    z-index: 900;
+    right: -3vh;
+    top: -2vw;
+    padding: 13vh 0 5vh 0;
+    width: 300px;
+    height: auto;
+    text-align: center;
+    font-size: 12px;
+    background-color: white;
+    border-radius: 30px;
+    margin-right: -300px;
+    transition: all ease 200ms;
+  }
+  .login .menu ul li {
+    list-style: none;
+  }
+}
 footer {
   background-color: rgba(67, 157, 215, 0.5333333333);
   padding: 20px 0;
@@ -182,26 +276,24 @@ footer div {
   width: 50%;
   margin: 0 auto;
 }
+footer div .title {
+  font-size: 20.8px;
+  color: #003d72;
+}
+footer div .title a:visited {
+  color: #003d72;
+}
+footer div .topic {
+  font-size: 17.6px;
+  color: black;
+}
+footer div .topic a:visited {
+  color: black;
+}
 footer .about_us {
   display: flex;
   flex-direction: column;
   gap: 15px;
-}
-footer .about_us p:nth-of-type(1) a {
-  font-size: 1.3rem;
-  color: #003d72;
-}
-footer .about_us p:nth-of-type(2) a {
-  font-size: 1.1rem;
-  color: black;
-}
-footer .about_us p:nth-of-type(3) a {
-  font-size: 1.1rem;
-  color: black;
-}
-footer .about_us p:nth-of-type(4) a {
-  font-size: 1.1rem;
-  color: black;
 }
 footer .about_us a {
   position: relative;
@@ -224,18 +316,6 @@ footer .contact {
   flex-direction: column;
   gap: 15px;
 }
-footer .contact p:nth-of-type(1) {
-  font-size: 1.3rem;
-  color: #003d72;
-}
-footer .contact p:nth-of-type(2) {
-  font-size: 1.1rem;
-  color: black;
-}
-footer .contact p:nth-of-type(3) {
-  font-size: 1.1rem;
-  color: black;
-}
 footer .social_media {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -246,8 +326,72 @@ footer .social_media img {
   margin: 0 7.5px;
 }
 
+@media (max-width: 870px) {
+  footer {
+    height: 400px;
+    padding: 20px 0;
+    background-color: rgba(67, 157, 215, 0.5333333333);
+    font-family: "Archivo", sans-serif;
+  }
+  footer div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    width: 90%;
+    margin: 0 auto;
+  }
+  footer div .title {
+    font-size: 19.2px;
+    color: #003d72;
+  }
+  footer div .topic {
+    font-size: 16px;
+    color: black;
+  }
+  footer .about_us {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  footer .about_us a {
+    position: relative;
+  }
+  footer .about_us a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s;
+  }
+  footer .about_us a:hover::after {
+    width: 100%;
+  }
+  footer .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  footer .social_media {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+  }
+  footer .social_media img {
+    width: 45px;
+    margin: 10px auto;
+  }
+  footer .social_media p {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    font-size: 16px;
+  }
+}
 html {
   margin: 0;
+  scroll-behavior: smooth;
 }
 html body {
   font-size: medium;
