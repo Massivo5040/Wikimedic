@@ -1,9 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;700;900&family=Passion+One:wght@400;700;900&display=swap");
+
 body
 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    font-family: "Archivo", sans-serif;
 }
 
 .form-head
@@ -12,11 +17,32 @@ body
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
+    
 }
 
-form
+.form-head label
 {
+    margin: 10px;
+}
+
+form 
+{
+    font-family: "Archivo", sans-serif;
     border: 1px solid black;
     padding: 10px;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    min-width: 50%;
+}
+
+form textarea
+{
+    width: 70%;
+    margin-bottom: 30px;
+}
+
+form input
+{
+    min-width: 30%;
 }
