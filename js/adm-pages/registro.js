@@ -27,6 +27,7 @@ async function registerMedication() {
         const json = await response.json()
         console.log(json)
         alert('Sucesso. ' + json.validacao_status)
+        location.reload()
     } else {
         console.log('Algo deu errado');
     }
@@ -81,7 +82,7 @@ async function updateMedic() {
 }
 document.querySelector('#atualizar').addEventListener('click', updateMedic);
 
-(async () => {
+const loadTable = async () => {
     const response = await fetch('https://server-wikimedic.onrender.com/medicamentos');
     if (response.ok) {
         const json = await response.json()
@@ -133,13 +134,14 @@ document.querySelector('#atualizar').addEventListener('click', updateMedic);
             deleteButton.innerHTML = 'delete_forever'
 
             deleteButton.addEventListener('click', async () => {
-                const response = await fetch('https://server-wikimedic.onrender.com' + `/medicamentos/delete/numRegistro/${i.numRegistro}`,
+                const response = await fetch('https://server-wikimedic.onrender.com' + `/medicamentos/delete/numProcesso/${i.numRegistro}`,
                     {
                         method: "DELETE"
                     })
 
                 if (response.ok) {
                     alert('Medicamento Deletado')
+                    location.reload()
                 }
                 else {
                     alert('Erro ao deletar Medicamento')
@@ -156,4 +158,6 @@ document.querySelector('#atualizar').addEventListener('click', updateMedic);
             document.querySelector('#tableLoadMedic').appendChild(tr)
         });
     }
-})()
+}
+
+loadTable()
