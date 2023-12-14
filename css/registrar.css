@@ -38,7 +38,8 @@ form
 
 form textarea
 {
-    width: 100%;
+    min-width: 100%;
+    min-height: 250px;
     margin-bottom: 30px;
 }
 
