@@ -28,6 +28,15 @@ async function registerMedication() {
         console.log(json)
         alert('Sucesso. ' + json.validacao_status)
         location.reload()
+        document.querySelector('#name').value = ""
+        document.querySelector('#numRegistro').value = ""
+        document.querySelector('#categoria').value = "populares"
+        document.querySelector('#indicacao').value = ""
+        document.querySelector('#contraindicacao').value = ""
+        document.querySelector('#reacao_adversa').value = ""
+        document.querySelector('#posologia').value = ""
+        document.querySelector('#riscos').value = ""
+        document.querySelector('#especiais').value = ""
     } else {
         console.log('Algo deu errado');
     }
@@ -48,6 +57,7 @@ async function updateMedic() {
             posologia: document.getElementById('update-posologia').value,
             riscos: document.getElementById('update-riscos').value,
             especiais: document.getElementById('update-especiais').value,
+            superdose: document.getElementById('update-superdose').value
         }
     };
 
@@ -74,6 +84,7 @@ async function updateMedic() {
         document.querySelector('#update-posologia').value = ""
         document.querySelector('#update-riscos').value = ""
         document.querySelector('#update-especiais').value = ""
+        location.reload()
     } else {
         console.log('Algo deu errado');
         console.log(await response.json())
@@ -124,6 +135,7 @@ const loadTable = async () => {
                 document.querySelector('#update-posologia').value = i.posologia
                 document.querySelector('#update-riscos').value = i.riscos
                 document.querySelector('#update-especiais').value = i.especiais
+                document.querySelector('#update-superdose').value = i.superdose
 
                 alert('Vá até o formulário de atualização')
             })
