@@ -58,6 +58,10 @@ const pesquisar = async (name) => {
       if (window.location.pathname.startsWith('/Wikimedic/html/')) {
         url = "./medic.html";
       }
+      else if(window.location.pathname.startsWith('/html/'))
+      {
+        url = "./medic.html"
+      }
 
       localStorage.setItem("numRegistro", medicamento.numProcesso);
       const medicName = medicamento.name
