@@ -1,44 +1,53 @@
 let numRegistroNow = ''
 async function registerMedication() {
-    const medicationData = {
-        name: document.getElementById('name').value,
-        numRegistro: document.getElementById('numRegistro').value,
-        indicacao: document.getElementById('indicacao').value,
-        contraindicacao: document.getElementById('contraindicacao').value,
-        categoria: document.getElementById('categoria').value,
-        cuidados: document.getElementById('cuidados').value,
-        reacao_adversa: document.getElementById('reacao_adversa').value,
-        posologia: document.getElementById('posologia').value,
-        riscos: document.getElementById('riscos').value,
-        especiais: document.getElementById('especiais').value,
-        superdose: document.getElementById('superdose').value
-    };
 
-    const response = await fetch('https://server-wikimedic.onrender.com/medicamentos/validate', {
-        method: 'POST',
-        headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-        },
-        body: JSON.stringify(medicationData),
-    });
+    if (document.getElementById('numRegistro').value != "" && document.getElementById('numRegistro').value != " ") {
+        const medicationData = {
+            name: document.getElementById('name').value,
+            numRegistro: document.getElementById('numRegistro').value,
+            indicacao: document.getElementById('indicacao').value,
+            contraindicacao: document.getElementById('contraindicacao').value,
+            categoria: document.getElementById('categoria').value,
+            cuidados: document.getElementById('cuidados').value,
+            reacao_adversa: document.getElementById('reacao_adversa').value,
+            posologia: document.getElementById('posologia').value,
+            riscos: document.getElementById('riscos').value,
+            especiais: document.getElementById('especiais').value,
+            superdose: document.getElementById('superdose').value
+        };
 
-    if (response.ok) {
-        console.log('Sucesso');
-        const json = await response.json()
-        console.log(json)
-        alert('Sucesso. ' + json.validacao_status)
-        location.reload()
-        document.querySelector('#name').value = ""
-        document.querySelector('#numRegistro').value = ""
-        document.querySelector('#categoria').value = "populares"
-        document.querySelector('#indicacao').value = ""
-        document.querySelector('#contraindicacao').value = ""
-        document.querySelector('#reacao_adversa').value = ""
-        document.querySelector('#posologia').value = ""
-        document.querySelector('#riscos').value = ""
-        document.querySelector('#especiais').value = ""
-    } else {
-        console.log('Algo deu errado');
+        const response = await fetch('https://server-wikimedic.onrender.com/medicamentos/validate', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+            body: JSON.stringify(medicationData),
+        });
+
+        if (response.ok) {
+            console.log('Sucesso');
+            const json = await response.json()
+            console.log(json)
+            alert(json.validacao_status)
+            document.querySelector('#name').value = ""
+            document.querySelector('#numRegistro').value = ""
+            document.querySelector('#categoria').value = "populares"
+            document.querySelector('#indicacao').value = ""
+            document.querySelector('#contraindicacao').value = ""
+            document.querySelector('#reacao_adversa').value = ""
+            document.querySelector('#posologia').value = ""
+            document.querySelector('#riscos').value = ""
+            document.querySelector('#especiais').value = ""
+            location.reload()
+        } else {
+            const json = await response.json()
+            console.log('Algo deu errado');
+            alert('json')
+        }
+    }
+    else
+    {
+        alert('Preencha todos os campos do registro do medicamento corretamente. O numRegistro é único e não deve estar em branco.')
     }
 }
 document.querySelector('#registrar').addEventListener('click', registerMedication)
@@ -151,12 +160,18 @@ const loadTable = async () => {
                         method: "DELETE"
                     })
 
-                if (response.ok) {
+                if (response.ok) 
+                {
                     alert('Medicamento Deletado')
                     location.reload()
                 }
+                else if(response.status = 404)
+                {
+                    alert('Medicamento not found. Ou o Medicamento já foi deletado, ou houve um erro no registro.')
+                }
                 else {
-                    alert('Erro ao deletar Medicamento')
+                    const json = await response.json()
+                    alert('Erro ao deletar Medicamento. ' + json)
                 }
             })
 
