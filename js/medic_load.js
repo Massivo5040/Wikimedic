@@ -73,7 +73,7 @@ const render_medic = async (params) => {
     informations.children[0].children[2].innerHTML = objMedic.indicacao
     informations.children[1].children[2].innerHTML = objMedic.posologia
     informations.children[2].children[2].innerHTML = objMedic.contraindicacao
-    informations.children[3].children[2].innerHTML = objMedic.reacoes_advercas
+    informations.children[3].children[2].innerHTML = objMedic.reacao_adversa
     informations.children[4].children[2].innerHTML = objMedic.posologia
     informations.children[5].children[2].innerHTML = objMedic.cuidados
     informations.children[6].children[2].innerHTML = objMedic.riscos
